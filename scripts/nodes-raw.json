@@ -1,0 +1,4894 @@
+{
+  "floors": [
+    {
+      "area": 1,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f1_11221",
+      "name": "悖论迷宫: 第1区域 11221",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuner_scale_star.PNG",
+              "name": "跃动星辰的调律者之秤",
+              "name_kr": "별을 품은 조율자의 저울"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "legendary"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            1,
+            0
+          ],
+          "to": [
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "area": 1,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f1_12321",
+      "name": "悖论迷宫: 第1区域 12321",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuner_scale_star.PNG",
+              "name": "跃动星辰的调律者之秤",
+              "name_kr": "별을 품은 조율자의 저울"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            1
+          ],
+          "to": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 1,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f1_13322",
+      "name": "悖论迷宫: 第1区域 13322",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuner_scale_star.PNG",
+              "name": "跃动星辰的调律者之秤",
+              "name_kr": "별을 품은 조율자의 저울"
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            3,
+            1
+          ],
+          "to": [
+            4,
+            1
+          ]
+        },
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 1,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f1_22113",
+      "name": "悖论迷宫: 第1区域 22113",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuner_scale_star.PNG",
+              "name": "跃动星辰的调律者之秤",
+              "name_kr": "별을 품은 조율자의 저울"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            2
+          ],
+          "to": [
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 1,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f1_23132",
+      "name": "悖论迷宫: 第1区域 23132",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuner_scale_star.PNG",
+              "name": "跃动星辰的调律者之秤",
+              "name_kr": "별을 품은 조율자의 저울"
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "icon_id": "armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            4
+          ],
+          "to": [
+            1,
+            4
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 2,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f2_12322",
+      "name": "悖论迷宫: 第2区域 12322",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_convert_box.PNG",
+              "name": "太初传世武器变换书礼盒",
+              "name_kr": "태초 레거시 ▶ 레거시 변환서 상자"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/prime_stella.PNG",
+              "name": "太初星辉礼盒 (1个)",
+              "name_kr": "프라임 스텔라 1개 상자"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 2,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f2_22222",
+      "name": "悖论迷宫: 第2区域 22222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_convert_box.PNG",
+              "name": "太初传世武器变换书礼盒",
+              "name_kr": "태초 레거시 ▶ 레거시 변환서 상자"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/prime_stella.PNG",
+              "name": "太初星辉礼盒 (1个)",
+              "name_kr": "프라임 스텔라 1개 상자"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            1
+          ],
+          "to": [
+            4,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 2,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f2_22232",
+      "name": "悖论迷宫: 第2区域 22232",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/prime_stella.PNG",
+              "name": "太初星辉礼盒 (1个)",
+              "name_kr": "프라임 스텔라 1개 상자"
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_convert_box.PNG",
+              "name": "太初传世武器变换书礼盒",
+              "name_kr": "태초 레거시 ▶ 레거시 변환서 상자"
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            2,
+            1
+          ],
+          "to": [
+            3,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            2
+          ],
+          "to": [
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 2,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f2_31222",
+      "name": "悖论迷宫: 第2区域 31222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/prime_stella.PNG",
+              "name": "太初星辉礼盒 (1个)",
+              "name_kr": "프라임 스텔라 1개 상자"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_convert_box.PNG",
+              "name": "太初传世武器变换书礼盒",
+              "name_kr": "태초 레거시 ▶ 레거시 변환서 상자"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            1
+          ],
+          "to": [
+            4,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 2,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f2_32122",
+      "name": "悖论迷宫: 第2区域 32122",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "unique"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_convert_box.PNG",
+              "name": "太初传世武器变换书礼盒",
+              "name_kr": "태초 레거시 ▶ 레거시 변환서 상자"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/prime_stella.PNG",
+              "name": "太初星辉礼盒 (1个)",
+              "name_kr": "프라임 스텔라 1개 상자"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            2
+          ],
+          "to": [
+            1,
+            2
+          ]
+        },
+        {
+          "from": [
+            3,
+            1
+          ],
+          "to": [
+            4,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 3,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f3_11222",
+      "name": "悖论迷宫: 第3区域 11222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            4
+          ],
+          "to": [
+            1,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            5
+          ],
+          "to": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 3,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f3_12322",
+      "name": "悖论迷宫: 第3区域 12322",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            4
+          ],
+          "to": [
+            1,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            5
+          ],
+          "to": [
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 3,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f3_21211",
+      "name": "悖论迷宫: 第3区域 21211",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            2,
+            1
+          ],
+          "to": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 3,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f3_21223",
+      "name": "悖论迷宫: 第3区域 21223",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "dual_phenomenon"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            2,
+            2
+          ],
+          "to": [
+            3,
+            2
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 3,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f3_22221",
+      "name": "悖论迷宫: 第3区域 22221",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "legendary"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "dual_phenomenon"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            2
+          ],
+          "to": [
+            2,
+            2
+          ]
+        },
+        {
+          "from": [
+            3,
+            4
+          ],
+          "to": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 4,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f4_route1",
+      "name": "悖论迷宫: 第4区域 路线1",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            4
+          ],
+          "to": [
+            1,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            2
+          ],
+          "to": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 4,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f4_route2",
+      "name": "悖论迷宫: 第4区域 路线2",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        },
+        {
+          "from": [
+            2,
+            2
+          ],
+          "to": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 4,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f4_route3",
+      "name": "悖论迷宫: 第4区域 路线3",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            2
+          ],
+          "to": [
+            1,
+            2
+          ]
+        },
+        {
+          "from": [
+            2,
+            1
+          ],
+          "to": [
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 4,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f4_route4",
+      "name": "悖论迷宫: 第4区域 路线4",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            2
+          ],
+          "to": [
+            1,
+            2
+          ]
+        },
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 4,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f4_route5",
+      "name": "悖论迷宫: 第4区域 路线5",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "unique"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/condensed_mist_memory.PNG",
+              "name": "浓缩的迷雾记忆 (悖论迷宫)",
+              "name_kr": "응축된 안개의 기억 (역설의 미궁)"
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "epic"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            2
+          ],
+          "to": [
+            2,
+            2
+          ]
+        },
+        {
+          "from": [
+            2,
+            4
+          ],
+          "to": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 5,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f5_12222",
+      "name": "悖论迷宫: 第5区域 12222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "tuner_left_trace",
+          "tier": "legendary"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 5,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f5_21222",
+      "name": "悖论迷宫: 第5区域 21222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "legendary"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 5,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f5_21232",
+      "name": "悖论迷宫: 第5区域 21232",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "legendary"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "primeval"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            2
+          ],
+          "to": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 5,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f5_22312",
+      "name": "悖论迷宫: 第5区域 22312",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "legendary"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            3,
+            4
+          ],
+          "to": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 5,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f5_33122",
+      "name": "悖论迷宫: 第5区域 33122",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "giant_armament_warehouse",
+          "tier": "primeval"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "deviated_thousand_seas_sky"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "legendary"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/pilgrimage_seal.PNG",
+              "name": "巡礼之印",
+              "name_kr": "순례의 인장",
+              "count": 1000
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/void_souls.PNG",
+              "name": "虚无之魂",
+              "name_kr": "보이드 소울",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "epic"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            6
+          ],
+          "to": [
+            1,
+            6
+          ]
+        },
+        {
+          "from": [
+            3,
+            1
+          ],
+          "to": [
+            4,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "iconDict": {
+    "central_checkpoint_start": {
+      "id": "central_checkpoint_start",
+      "name": "中心关卡",
+      "name_kr": "메인 관문",
+      "description": "位于中央的巨大关卡。必须通过此关卡才能前往下一个区域。",
+      "description_kr": "중앙에 위치한 거대한 관문. 다음 구역으로 이동하려면 반드시 통과해야 한다.",
+      "icon": {
+        "fixed": "0",
+        "hover": "1"
+      }
+    },
+    "central_checkpoint": {
+      "id": "central_checkpoint",
+      "name": "中心关卡",
+      "name_kr": "메인 관문",
+      "description": "位于中央的巨大关卡。必须通过此关卡才能前往下一个区域。",
+      "description_kr": "중앙에 위치한 거대한 관문. 다음 구역으로 이동하려면 반드시 통과해야 한다.",
+      "icon": {
+        "fixed": "4",
+        "hover": "5"
+      }
+    },
+    "central_checkpoint_last": {
+      "id": "central_checkpoint_last",
+      "name": "中心关卡",
+      "name_kr": "메인 관문",
+      "description": "位于中央的巨大关卡。必须通过此关卡才能前往下一个区域。",
+      "description_kr": "중앙에 위치한 거대한 관문. 다음 구역으로 이동하려면 반드시 통과해야 한다.",
+      "icon": {
+        "fixed": "8",
+        "hover": "9"
+      }
+    },
+    "relic_excavation_zone": {
+      "id": "relic_excavation_zone",
+      "name": "遗物发掘地带",
+      "name_kr": "유물 발굴 지대",
+      "description": "通过调查可以回收遗物的区域。使用遗物可获得辅助战斗的力量，但无法预知将获得哪种遗物。",
+      "description_kr": "조사를 통해 유물을 회수할 수 있는 구역.\n유물을 사용하면 전투를 보조하는 힘을 얻지만,\n어떤 유물을 획득할지는 알 수 없다.",
+      "icon": {
+        "fixed": "12",
+        "hover": "13"
+      }
+    },
+    "armament_warehouse": {
+      "id": "armament_warehouse",
+      "name": "战备仓库",
+      "name_kr": "장비 창고",
+      "description": "残留着不规则记忆与痕迹的地方。似乎可以获得各式装备。",
+      "description_kr": "미약한 충격으로 여러 공간이 내비친다.\n너머에 알 수 없는 무구가 있는 듯하다.",
+      "icon": {
+        "uncommon": "16",
+        "uncommon_hover": "17",
+        "rare": "24",
+        "rare_hover": "25",
+        "unique": "28",
+        "unique_hover": "29",
+        "legendary": "32",
+        "legendary_hover": "33",
+        "epic": "36",
+        "epic_hover": "37",
+        "primeval": "40",
+        "primeval_hover": "41"
+      },
+      "rewards": [
+        {
+          "image": "/rewards/equipment_set_box_{tier}.PNG",
+          "label": "自选"
+        }
+      ]
+    },
+    "tuner_trace": {
+      "id": "tuner_trace",
+      "name": "调律者痕迹",
+      "name_kr": "조율자의 흔적",
+      "description": "观测到特殊反应的地点。据说此处发现了各种各样的星蕴石。",
+      "description_kr": "약한 파동이 느껴지는 구간.\n미지의 존재가 불길한 움직임을 관측한 흔적이 남아있다.",
+      "icon": {
+        "rare": "44",
+        "rare_hover": "45",
+        "unique": "48",
+        "unique_hover": "49",
+        "legendary": "52",
+        "legendary_hover": "53",
+        "epic": "56",
+        "epic_hover": "57",
+        "primeval": "60",
+        "primeval_hover": "61"
+      },
+      "rewards": [
+        {
+          "image": "/rewards/oath_crystal_box_{tier}.PNG"
+        }
+      ]
+    },
+    "giant_armament_warehouse": {
+      "id": "giant_armament_warehouse",
+      "name": "巨大的战备仓库",
+      "name_kr": "오래된 장비 창고",
+      "description": "有报告称在外围诡异的残影中发现了多种装备。似乎可以获得拥有未知力量的装备。",
+      "description_kr": "정리되지 않은 장비 데이터가 뒤섞여 저장된다.\n접근 시마다 구성 정보가 달라진다.\n다양한 장비가 발견되었다는 보고가 있다.",
+      "icon": {
+        "rare": "64",
+        "rare_hover": "65",
+        "unique": "68",
+        "unique_hover": "69",
+        "legendary": "72",
+        "legendary_hover": "73",
+        "epic": "76",
+        "epic_hover": "77",
+        "primeval": "80",
+        "primeval_hover": "81"
+      },
+      "rewards": [
+        {
+          "image": "/rewards/equipment_set_box_{tier}.PNG",
+          "label": "随机"
+        }
+      ]
+    },
+    "tuner_left_trace": {
+      "id": "tuner_left_trace",
+      "name": "调律者留下的痕迹",
+      "name_kr": "조율자의 자취",
+      "description": "有报告称发现了特殊星蕴石。似乎可以获得多种星蕴石。",
+      "description_kr": "자취만 남은 희미한 기록.\n흐릿한 파편이 간헐적으로 드러난다.",
+      "icon": {
+        "rare": "84",
+        "rare_hover": "85",
+        "unique": "88",
+        "unique_hover": "89",
+        "legendary": "92",
+        "legendary_hover": "93",
+        "epic": "96",
+        "epic_hover": "97",
+        "primeval": "100",
+        "primeval_hover": "101"
+      },
+      "rewards": [
+        {
+          "image": "/rewards/oath_crystal_box_{tier}.PNG"
+        }
+      ]
+    },
+    "labyrinth_supply_base": {
+      "id": "labyrinth_supply_base",
+      "name": "迷宫补给基地",
+      "name_kr": "미궁 개척 거점",
+      "description": "为支援迷宫区域探索而设立的补给区域。可以获取进行额外探索所需的许可券。",
+      "description_kr": "밝혀지지 않은 장소를 개척하기 전, 잠시 숨을 돌릴 수 있는 장소.\n이 곳을 확보하면 새로운 길을 개척하기 위한 준비를 할 수 있을 것 같다.",
+      "icon": {
+        "key": "124",
+        "key_hover": "125",
+        "ticket": "104",
+        "ticket_hover": "105"
+      }
+    },
+    "chaotic_radiance_pilgrimage": {
+      "id": "chaotic_radiance_pilgrimage",
+      "name": "错乱的光辉巡礼",
+      "name_kr": "어긋난 광휘의 순례",
+      "description": "这是曾朝着光芒前行的巡礼残影。它因未知的原因渗入迷宫，呈现出与原本光辉截然不同的形态。",
+      "description_kr": "빛을 향해 나아가던 순례의 잔상.\n정체를 알 수 없는 이유로 미궁에 스며들어,\n본래의 광휘와는 다른 모습을 보인다.",
+      "icon": {
+        "fixed": "112",
+        "hover": "113"
+      },
+      "rewards": [
+        {
+          "image": "/rewards/doom_oracle.PNG",
+          "label": "账绑"
+        }
+      ]
+    },
+    "chaotic_life_pilgrimage": {
+      "id": "chaotic_life_pilgrimage",
+      "name": "错乱的生命巡礼",
+      "name_kr": "어긋난 생명의 순례",
+      "description": "这道巡礼的痕迹本源自其他土地。却不知为何出现在悖论迷宫之中。因而失去了原有的意义，只余下扭曲的路径。",
+      "description_kr": "본래 다른 땅에서 이어지던 순례의 흔적.\n어째서인지 역설의 미궁 안에 나타나,\n의미를 잃은 채 왜곡된 길로 남아 있다.",
+      "icon": {
+        "fixed": "108",
+        "hover": "109"
+      }
+    },
+    "dual_phenomenon": {
+      "id": "dual_phenomenon",
+      "name": "双重现象",
+      "name_kr": "이중 현상 : 호수와 비공정",
+      "description": "因异常现象，多个场所与记忆正交错显现。通过探索来确认一下吧。",
+      "description_kr": "이상 현상으로 두 공간이 동시에 겹쳐 보인다\n깊은 곳 달이 잠긴 수면과 황혼을 가르는 거대한 비공정이 중첩된다.",
+      "icon": {
+        "fixed": "120",
+        "hover": "121"
+      }
+    },
+    "deviated_thousand_seas_sky": {
+      "id": "deviated_thousand_seas_sky",
+      "name": "偏离的千海之天",
+      "name_kr": "이탈한 천해의 하늘",
+      "description": "此地同时残留着生命痕迹与终末景象。无人知晓它为何会存在于迷宫之中。",
+      "description_kr": "생명의 흔적과 종말의 풍경이 함께 남은 장소.\n이곳이 왜 미궁에 존재하는지는 알 수 없다.",
+      "icon": {
+        "fixed": "116",
+        "hover": "117"
+      }
+    },
+    "legion_compressed": {
+      "id": "legion_compressed",
+      "name": "终末笼罩的罗盘",
+      "name_kr": "종말이 드리운 나침반",
+      "description": "在封印了狄瑞吉气息的贾维的罗盘中，洛佩斯现身了。必须全力压制住这位掌控着终末之力的强敌。",
+      "description_kr": "디레지에의 기운을 봉인한 자비의 나침반에 로페즈가 나타났다.\n종말의 힘으로 무장한 로페즈를 제압해야 한다.",
+      "icon": {
+        "fixed": "128",
+        "hover": "129"
+      }
+    }
+  }
+}
