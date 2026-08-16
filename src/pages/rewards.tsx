@@ -180,11 +180,9 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
             <li key={b.area}>
               <a
                 href={`#/floors/${b.area}`}
-                title={b.perSeed.map((s) => `${s.seedCode}: ${s.count}マス`).join('\n')}
                 className="inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-[11px] transition-colors hover:bg-secondary"
               >
                 {b.area}区域
-                <span className="font-mono text-muted-foreground tabular-nums">{b.count}</span>
               </a>
             </li>
           ))}
