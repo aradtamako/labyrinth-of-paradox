@@ -125,9 +125,26 @@ out.push('')
 out.push(`export const RAW_NODE_TYPES: RawNodeType[] = ${JSON.stringify(typeEntries, null, 2)}`)
 out.push('')
 
+function seedCode(floorId, area, seedIndex) {
+  const raw = floorId.split(`_f${area}_`)[1]
+  if (!raw) return `配置${seedIndex}`
+
+  const compact = /^(\d+)([a-z])$/i.exec(raw)
+  if (compact) return `${compact[1]}-${compact[2].toUpperCase()}`
+
+  const parts = raw.split('_')
+  if (!/^\d+$/.test(parts[0])) return `配置${seedIndex}`
+  if (!parts[1]) return parts[0]
+
+  const suffix = /^[a-z]$/i.test(parts[1])
+    ? parts[1].toUpperCase()
+    : String.fromCharCode(64 + Number(parts[1]))
+  return `${parts[0]}-${suffix}`
+}
+
 const rawFloors = floors.map((f) => ({
   area: f.area,
-  seedCode: /_(\d+)$/.exec(f.floor_id)?.[1] ?? `配置${f.seedIndex}`,
+  seedCode: seedCode(f.floor_id, f.area, f.seedIndex),
   cols: f.grid.cols,
   rows: f.grid.rows,
   nodes: f.nodes.map((n) => ({
