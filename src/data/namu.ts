@@ -49,7 +49,8 @@ export const SUPPLY_BASE_REWARD: Record<string, { name: string; count: number }>
 
 /**
  * 区域ごとに中身が変わるマスの報酬。
- * キーは `${区域}:${ノード種別ID}`。
+ * キーは `${区域}:${ノード種別ID}`。等級で報酬が変わる場合は
+ * `${区域}:${ノード種別ID}:${等級}` を使う。
  * α → 装備倉庫、β → 古びた装備倉庫、γ/Υ → 調律者の名残・痕跡 に対応する。
  */
 export const AREA_REWARDS: Record<string, { name: string; nameKr: string; note?: string }> = {
@@ -139,6 +140,294 @@ export const AREA_REWARDS: Record<string, { name: string; nameKr: string; note?:
   '5:deviated_thousand_seas_sky': {
     name: '啓示：千海を抱く天 討伐券',
     nameKr: '계시 : 천해를 품은 하늘 토벌권',
+  },
+
+  // --- 第6区域 ---
+  '6:tuner_trace': {
+    name: 'ユニーク誓約結晶 選択箱',
+    nameKr: '유니크 서약 결정 선택 상자',
+  },
+  '6:giant_armament_warehouse': {
+    name: '115Lvセット 燦爛たるレジェンダリー〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 찬란한 레전더리~태초 장비 항아리 선택 상자',
+  },
+
+  // --- 第7区域 ---
+  '7:giant_armament_warehouse': {
+    name: '115Lvセット 燦爛たるエピック〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 영롱한 에픽~태초 장비 항아리 선택 상자',
+  },
+  '7:tuner_left_trace:epic': {
+    name: 'エピック誓約結晶壺',
+    nameKr: '에픽 서약 결정 항아리',
+  },
+  '7:tuner_left_trace:unique': {
+    name: '華麗なユニーク〜太初 誓約結晶壺',
+    nameKr: '화려한 유니크~태초 서약 결정 항아리',
+  },
+
+  // --- 第8区域 ---
+  '8:dual_phenomenon': {
+    name: '解放された凶夢 + 星座亀の大書庫 討伐券',
+    nameKr: '해방된 흉몽 + 별거북 대서고 토벌권',
+    note: '登場ボス：急襲者ジェルミオ＆ 無垢なるペカトール',
+  },
+  '8:armament_warehouse': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115레벨 세트 에픽 장비 선택 상자',
+  },
+  '8:giant_armament_warehouse': {
+    name: '115Lvセット 燦爛たるレジェンダリー〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 찬란한 레전더리~태초 장비 항아리 선택 상자',
+  },
+
+  // --- 第9区域 ---
+  '9:giant_armament_warehouse:epic': {
+    name: '115Lvセット 燦爛たるエピック〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 영롱한 에픽~태초 장비 항아리 선택 상자',
+  },
+  '9:giant_armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー壺 選択箱',
+    nameKr: '115레벨 세트 태초 악세서리 항아리 선택 상자',
+  },
+
+  // --- 第10区域 ---
+  '10:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+  '10:tuner_trace:unique': {
+    name: 'ユニーク誓約結晶 選択箱',
+    nameKr: '유니크 서약 결정 선택 상자',
+  },
+  '10:giant_armament_warehouse:legendary': {
+    name: '115Lvセット 燦爛たるレジェンダリー〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 찬란한 레전더리~태초 장비 항아리 선택 상자',
+  },
+  '10:tuner_left_trace:unique': {
+    name: '華麗なユニーク〜太初 誓約結晶壺',
+    nameKr: '화려한 유니크~태초 서약 결정 항아리',
+  },
+  '10:deviated_thousand_seas_sky': {
+    name: '啓示：千海を抱く天 討伐券',
+    nameKr: '계시 : 천해를 품은 하늘 토벌권',
+  },
+
+  // --- 第11区域 ---
+  '11:tuner_trace:unique': {
+    name: 'ユニーク誓約結晶 選択箱',
+    nameKr: '유니크 서약 결정 선택 상자',
+  },
+  '11:giant_armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー壺 選択箱',
+    nameKr: '115레벨 세트 태초 악세서리 항아리 선택 상자',
+  },
+
+  // --- 第12区域 ---
+  '12:giant_armament_warehouse:epic': {
+    name: '115Lvセット 燦爛たるエピック〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 영롱한 에픽~태초 장비 항아리 선택 상자',
+  },
+  '12:tuner_left_trace:unique': {
+    name: '華麗なユニーク〜太初 誓約結晶壺',
+    nameKr: '화려한 유니크~태초 서약 결정 항아리',
+  },
+  '12:deviated_thousand_seas_sky': {
+    name: '啓示：千海を抱く天 討伐券',
+    nameKr: '계시 : 천해를 품은 하늘 토벌권',
+  },
+
+  // --- 第13区域 ---
+  '13:dual_phenomenon': {
+    name: '星座亀の大書庫 + 背教者の城 討伐券',
+    nameKr: '별거북 대서고 + 배교자의 성 토벌권',
+    note: '登場ボス：沈黙のカラ＆ 嘘のベリディクス',
+  },
+  '13:deviated_thousand_seas_sky': {
+    name: '啓示：千海を抱く天 討伐券',
+    nameKr: '계시 : 천해를 품은 하늘 토벌권',
+  },
+  '13:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115레벨 세트 에픽 장비 선택 상자',
+  },
+  '13:tuner_left_trace:legendary': {
+    name: 'レジェンダリー誓約結晶壺',
+    nameKr: '레전더리 서약 결정 항아리',
+  },
+
+  // --- 第14区域 ---
+  '14:armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー 選択箱',
+    nameKr: '115레벨 세트 태초 악세서리 선택 상자',
+  },
+  '14:giant_armament_warehouse:legendary': {
+    name: '115Lvセット 燦爛たるレジェンダリー〜太初 装備壺 選択箱',
+    nameKr: '115레벨 세트 찬란한 레전더리~태초 장비 항아리 선택 상자',
+  },
+
+  // --- 第15区域 ---
+  '15:legion_compressed': {
+    name: 'アポカリプス：アンティエンバイ 2段階討伐券',
+    nameKr: '아포칼립스 : 안티엔바이 2단계 토벌권',
+    note: '登場ボス：終末の刃 ロペズ',
+  },
+  '15:deviated_thousand_seas_sky': {
+    name: '啓示：千海を抱く天 討伐券',
+    nameKr: '계시 : 천해를 품은 하늘 토벌권',
+  },
+
+  // --- 第16区域 ---
+  '16:armament_warehouse:primeval': {
+    name: '太初 一般武器 選択箱',
+    nameKr: '태초 일반 무기 선택 상자',
+  },
+  '16:tuner_left_trace:legendary': {
+    name: '燦爛たるレジェンダリー〜太初 誓約結晶壺',
+    nameKr: '찬란한 레전더리~태초 서약 결정 항아리',
+  },
+
+  // --- 第17区域 ---
+  '17:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115레벨 세트 에픽 장비 선택 상자',
+  },
+  '17:giant_armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー壺 選択箱',
+    nameKr: '115레벨 세트 태초 악세서리 항아리 선택 상자',
+  },
+  '17:tuner_left_trace:epic': {
+    name: 'エピック誓約結晶壺',
+    nameKr: '에픽 서약 결정 항아리',
+  },
+
+  // --- 第18区域 ---
+  '18:tuner_left_trace:unique': {
+    name: '華麗なユニーク〜太初 誓約結晶壺',
+    nameKr: '화려한 유니크~태초 서약 결정 항아리',
+  },
+
+  // --- 第19区域 ---
+  '19:dual_phenomenon': {
+    name: '背教者の城 + 最後の任務 討伐券',
+    nameKr: '배교자의 성 + 최후의 과업 토벌권',
+    note: '登場ボス：解放されたビオレンティア＆ シャピロ・グラシア',
+  },
+  '19:tuner_left_trace:legendary': {
+    name: 'レジェンダリー誓約結晶壺',
+    nameKr: '레전더리 서약 결정 항아리',
+  },
+
+  // --- 第20区域 ---
+  '20:tuner_left_trace:legendary': {
+    name: '燦爛たるレジェンダリー〜太初 誓約結晶壺',
+    nameKr: '찬란한 레전더리~태초 서약 결정 항아리',
+  },
+
+  // --- 第21区域 ---
+  '21:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+  '21:giant_armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー 選択箱',
+    nameKr: '115Lv 세트 태초 액세서리 선택 상자',
+  },
+
+  // --- 第22区域 ---
+  '22:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115Lv 세트 에픽 장비 선택 상자',
+  },
+  '22:tuner_left_trace:unique': {
+    name: '華麗なユニーク〜太初 誓約結晶壺',
+    nameKr: '화려한 유니크~태초 서약 결정 항아리',
+  },
+
+  // --- 第23区域 ---
+  '23:armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー 選択箱',
+    nameKr: '115Lv 세트 태초 액세서리 선택 상자',
+  },
+
+  // --- 第24区域 ---
+  '24:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+  '24:tuner_left_trace:legendary': {
+    name: '燦爛たるレジェンダリー〜太初 誓約結晶壺',
+    nameKr: '찬란한 레전더리~태초 서약 결정 항아리',
+  },
+
+  // --- 第25区域 ---
+  '25:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115Lv 세트 에픽 장비 선택 상자',
+  },
+  '25:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+
+  // --- 第26区域 ---
+  '26:tuner_left_trace:epic': {
+    name: 'エピック誓約結晶壺',
+    nameKr: '에픽 서약 결정 항아리',
+  },
+
+  // --- 第27区域 ---
+  '27:giant_armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー 選択箱',
+    nameKr: '115Lv 세트 태초 액세서리 선택 상자',
+  },
+  '27:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+  '27:tuner_left_trace:legendary': {
+    name: '燦爛たるレジェンダリー〜太初 誓約結晶壺',
+    nameKr: '찬란한 레전더리~태초 서약 결정 항아리',
+  },
+
+  // --- 第28区域 ---
+  '28:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115Lv 세트 에픽 장비 선택 상자',
+  },
+
+  // --- 第29区域 ---
+  '29:armament_warehouse:primeval': {
+    name: '115Lvセット 太初アクセサリー 選択箱',
+    nameKr: '115Lv 세트 태초 액세서리 선택 상자',
+  },
+  '29:tuner_trace:legendary': {
+    name: 'レジェンダリー誓約結晶 選択箱',
+    nameKr: '레전더리 서약 결정 선택 상자',
+  },
+
+  // --- 第30区域 ---
+  '30:tuner_left_trace:epic': {
+    name: 'エピック誓約結晶壺',
+    nameKr: '에픽 서약 결정 항아리',
+  },
+  '30:tuner_left_trace:legendary': {
+    name: 'レジェンダリー誓約結晶壺',
+    nameKr: '레전더리 서약 결정 항아리',
+  },
+  '30:tuner_left_trace:primeval': {
+    name: '太初誓約結晶壺',
+    nameKr: '태초 서약 결정 항아리',
+  },
+
+  // --- 第31区域 ---
+  '31:armament_warehouse:epic': {
+    name: '115Lvセット エピック装備 選択箱',
+    nameKr: '115Lv 세트 에픽 장비 선택 상자',
+  },
+  '31:tuner_left_trace:primeval': {
+    name: '太初誓約結晶壺',
+    nameKr: '태초 서약 결정 항아리',
   },
 }
 

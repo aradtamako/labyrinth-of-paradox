@@ -124,8 +124,17 @@ const REWARD_JA: Record<string, string> = {
   '별을 품은 조율자의 저울': '星を抱いた調律者の天秤',
   '순례의 인장': '巡礼の印章',
   '태초 레거시 ▶ 레거시 변환서 상자': '太初レガシー ▶ レガシー変換書 箱',
+  '태초 레거시 선택 변경권 상자': '太初レガシー選択変更券箱',
   '프라임 스텔라 1개 상자': 'プライムステラ 1個箱',
   '보이드 소울': 'ヴォイドソウル',
+  '은하를 초월한 조율자의 저울': '銀河を超越した調律者の天秤',
+  '성단을 울리는 조율자의 저울': '星団を響かせる調律者の天秤',
+  '검은 재앙 1개 상자': '黒い災厄 1個箱',
+  '광휘의 흔적 1개 상자': '光輝の痕跡 1個箱',
+  '광휘의 소울': '光輝のソウル',
+  '에픽 서약 결정 제작서 선택 상자': 'エピック誓約結晶製作書選択箱',
+  '검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자':
+    '黒い病気のレガシー ▶ ディレジエ レガシー変換書 箱',
 }
 
 const REWARD_NOTE: Record<string, string> = {
@@ -274,7 +283,9 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
   }
 
   // 区域ごとに中身が変わるマス（装備倉庫・調律者・討伐券系）。
-  const override = AREA_REWARDS[`${area}:${raw.typeId}`]
+  const override =
+    AREA_REWARDS[`${area}:${raw.typeId}:${raw.tier ?? ''}`] ??
+    AREA_REWARDS[`${area}:${raw.typeId}`]
   if (override) {
     const template = defaultRewardsFor(raw.typeId, raw.tier)[0]
     const image = rewardIconForName(override.name) ?? template?.image
