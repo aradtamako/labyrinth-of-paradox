@@ -27,3 +27,10 @@ scripts/html-cache/
 scripts/img.tmp
 
 scripts/umi-cache/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
