@@ -117,6 +117,22 @@ export const SUBJUGATION_TICKETS: SubjugationTicket[] = [
       url: 'https://df.pure-db.com/guide?no=1537',
     },
   },
+  {
+    // レギオン（アポカリプス：アンティエンバイ）系の討伐券。二重現象系6種とは別カウントで、
+    // クリア報酬も2段階分まとめて獲得する点が異なる。公式アップデートページ未掲載のため、
+    // 必要名声は「アポカリプス：アンティエンバイ」ガイドの入場名声から採る。
+    name: 'アポカリプス：アンティエンバイ 2段階討伐券',
+    iconId: TICKET_ICON.apocalypseAntienbai,
+    effect: '該当ダンジョンの2段階分のクリア報酬をまとめて獲得する。',
+    acquire:
+      'レギオン関門（アポカリプス：アンティエンバイ）撃破時。毎週、傭兵団レベルに比例したキャラクター数だけ撃破できる（スロット数 = 傭兵団レベル − 3）。',
+    fame: '73,993 以上',
+    conditions: ['レギオンと二重現象は別カウント'],
+    source: {
+      label: '必要名声は「アポカリプス：アンティエンバイ」ガイドの入場名声より（公式アップデートページ未掲載）',
+      url: 'https://df.pure-db.com/guide?no=1534',
+    },
+  },
 ]
 
 export const SUBJUGATION_NOTE = '討伐券は週間で最大100回まで使用できる。'
