@@ -737,20 +737,11 @@ export interface SeedHit {
   digits: string
 }
 
+/** シードコードを持つマップ画像の一覧。収録パターン数の表示に使う。 */
 const SEED_INDEX: SeedHit[] = FLOORS.flatMap((floor) =>
   floor.images
     .filter((image) => image.seed)
     .map((image) => ({ floor, image, digits: seedDigits(image.seed!) })),
 )
-
-/**
- * ゲーム内で数えた部屋数（例 '23333'）から該当マップを引く。
- * 途中まで入力した段階でも前方一致で候補を出す。
- */
-export function searchSeed(query: string): SeedHit[] {
-  const q = query.replace(/\D/g, '')
-  if (!q) return []
-  return SEED_INDEX.filter((hit) => hit.digits.startsWith(q))
-}
 
 export const SEED_COUNT = SEED_INDEX.length

@@ -55,7 +55,7 @@ export function OverviewPage() {
               <ArrowRight className="size-4" />
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground">{t.overview.seedSearchNote(SEED_COUNT)}</p>
+          <p className="text-sm text-muted-foreground">{t.overview.seedCountNote(SEED_COUNT)}</p>
         </div>
       </section>
 

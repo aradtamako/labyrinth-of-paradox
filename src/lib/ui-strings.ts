@@ -83,7 +83,7 @@ const ja = {
     seedStep3Body:
       '7区域のように青い線まで一致する場合は、どちらのシードでも開ける必要があるマスを1つ開け、中身（調査券か入場券か）で判定する。',
     seedCta: '区域マップを開く',
-    seedSearchNote: (count: number) => `シードコードでの検索にも対応（全 ${count} パターン）。`,
+    seedCountNote: (count: number) => `収録しているシードマップは全 ${count} パターン。`,
 
     featuresEyebrow: '収録データ',
     featuresTitle: 'このサイトで見られるもの',
@@ -116,16 +116,19 @@ const ja = {
 
   floors: {
     title: '区域マップ',
-    lead: '区域を選ぶと5種類のシードマップを表示する。マップ右端の列の部屋数を上から数えた数字を入力すれば、該当するシードを横断検索できる。',
-    searchPlaceholder: 'シードコードで検索（例：23333）',
-    searchLabel: 'シードコードで検索',
-    noHitsTitle: (digits: string) => `「${digits}」に一致するシードは見つからなかった。`,
-    noHitsBody: '右端の列を上から数えた数字か確認してほしい。1〜3区域は 1 を含むコードもある。',
-    hits: (digits: string, n: number) => `${digits} で始まるシード ${n} 件`,
+    lead: '区域を選ぶと5種類のシードマップを表示する。報酬名で検索すれば、その報酬が出る区域だけを絞り込める。',
+    searchPlaceholder: '報酬名で検索（例：終末の啓示）',
+    searchLabel: '報酬名で検索',
+    noHitsTitle: (query: string) => `「${query}」に一致する報酬は見つからなかった。`,
+    noHitsBody:
+      '報酬名の一部だけでも検索できる。日本語・英語・韓国語のほか、マスの種別名や等級でも引ける。',
+    hits: (query: string, n: number) => `「${query}」の報酬がある区域 ${n} 件`,
     cardFame: '名声',
     cardMapCount: (n: number) => `マップ ${n} 枚`,
     cardSeedCount: (n: number) => `・シード ${n} 種`,
     cardRewardsLabel: '主要報酬',
+    /** 検索結果のカードで、検索語に一致した報酬を並べるリストの見出し。 */
+    cardMatchedLabel: '一致した報酬',
     cardRewardsMore: (n: number) => `ほか ${n} 件`,
     rewardNodeTypes: (types: string) => `出るマス：${types}`,
     rewardAreaCount: (n: number, total: number) => `${total}区域中 ${n} 区域に出現`,
@@ -289,8 +292,7 @@ const en: UiText = {
     seedStep3Body:
       'When even the blue lines match — as in area 7 — open a room that both candidate seeds require you to open anyway, and identify the seed from what is inside (a survey ticket or an entry ticket).',
     seedCta: 'Open area maps',
-    seedSearchNote: (count: number) =>
-      `Seed-code search is supported as well (${count} patterns in total).`,
+    seedCountNote: (count: number) => `${count} seed map patterns are covered in total.`,
 
     featuresEyebrow: "What's inside",
     featuresTitle: 'What you can look up here',
@@ -324,18 +326,19 @@ const en: UiText = {
 
   floors: {
     title: 'Area Maps',
-    lead: 'Pick an area to see its five seed maps. Enter the room counts you read off the rightmost column, top to bottom, to search every area at once.',
-    searchPlaceholder: 'Search by seed code (e.g. 23333)',
-    searchLabel: 'Search by seed code',
-    noHitsTitle: (digits: string) => `No seed matches "${digits}".`,
+    lead: 'Pick an area to see its five seed maps. Search by reward name to narrow the list down to the areas that drop it.',
+    searchPlaceholder: 'Search by reward name (e.g. Revelation)',
+    searchLabel: 'Search by reward name',
+    noHitsTitle: (query: string) => `No reward matches "${query}".`,
     noHitsBody:
-      'Double-check that you counted the rightmost column from the top. Codes for areas 1–3 may contain a 1.',
-    hits: (digits: string, n: number) =>
-      n === 1 ? `1 seed starting with ${digits}` : `${n} seeds starting with ${digits}`,
+      'Part of a reward name is enough. Japanese, English and Korean names all work, as do node type names and tiers.',
+    hits: (query: string, n: number) =>
+      n === 1 ? `1 area drops "${query}"` : `${n} areas drop "${query}"`,
     cardFame: 'Fame',
     cardMapCount: (n: number) => (n === 1 ? '1 map' : `${n} maps`),
     cardSeedCount: (n: number) => (n === 1 ? ' · 1 seed' : ` · ${n} seeds`),
     cardRewardsLabel: 'Key rewards',
+    cardMatchedLabel: 'Matching rewards',
     cardRewardsMore: (n: number) => (n === 1 ? '1 more' : `${n} more`),
     rewardNodeTypes: (types: string) => `Found in: ${types}`,
     rewardAreaCount: (n: number, total: number) => `Appears in ${n} of ${total} areas`,
