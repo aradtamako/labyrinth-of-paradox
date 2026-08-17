@@ -1,6 +1,6 @@
 import { SiteHeader } from '@/components/site-header'
 import { useI18n } from '@/lib/i18n'
-import { useRoute, useScrollReset } from '@/lib/router'
+import { useRoute, useScrollRestoration } from '@/lib/router'
 import { FloorDetailPage } from '@/pages/floor-detail'
 import { FloorListPage } from '@/pages/floor-list'
 import { OverviewPage } from '@/pages/overview'
