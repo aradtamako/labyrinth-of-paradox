@@ -251,7 +251,7 @@ export function RewardRow({ reward }: { reward: Reward }) {
           )}
         </span>
         {reward.note && (
-          <span className="mt-0.5 block text-[11px] leading-relaxed text-muted-foreground">
+          <span className="mt-0.5 block whitespace-pre-line text-[11px] leading-relaxed text-muted-foreground">
             {reward.note}
           </span>
         )}
