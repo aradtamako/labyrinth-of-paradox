@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 import { TIER_COLORS, iconSrc, rewardCountLabel } from '@/data/node-types'
 import type { MapNode, Reward, SeedMap } from '@/data/node-types'
+import { useI18n } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 /**
@@ -13,6 +14,7 @@ import { cn } from '@/lib/utils'
  * マスにポインタを乗せる（キーボードなら Tab で移動する）と、そのマスの種別と報酬が出る。
  */
 export function LabyrinthMap({ map }: { map: SeedMap }) {
+  const { t } = useI18n()
   const [selected, setSelected] = useState<MapNode | null>(null)
 
   useEffect(() => {
@@ -75,7 +77,7 @@ export function LabyrinthMap({ map }: { map: SeedMap }) {
           <NodeDetail node={selected} onClose={() => setSelected(null)} />
         ) : (
           <div className="rounded-xl border border-dashed px-4 py-6 text-sm leading-relaxed text-muted-foreground">
-            マスをクリックすると、ここに内容を表示する。カーソルを乗せるだけでも吹き出しで確認できる。
+            {t.map.emptyPanel}
           </div>
         )}
       </aside>
@@ -104,6 +106,7 @@ function NodeCell({
    */
   onSelect: () => void
 }) {
+  const { t, x } = useI18n()
   const tierColor = node.tier ? TIER_COLORS[node.tier] : undefined
   const [hoverOpen, setHoverOpen] = useState(false)
 
@@ -138,7 +141,7 @@ function NodeCell({
             onFocus={onSelect}
             onBlur={() => setHoverOpen(false)}
             onPointerLeave={() => setHoverOpen(false)}
-            aria-label={`${node.type.name}${node.tierLabel ? `（${node.tierLabel}）` : ''}`}
+            aria-label={t.map.nodeLabel(x(node.type.name), node.tierLabel && x(node.tierLabel))}
             style={tierColor ? ({ '--tier': tierColor } as React.CSSProperties) : undefined}
             className={cn(
               'relative grid size-full place-items-center rounded-lg transition',
@@ -175,6 +178,7 @@ function NodeDetail({
   compact?: boolean
   onClose?: () => void
 }) {
+  const { t, x } = useI18n()
   const tierColor = node.tier ? TIER_COLORS[node.tier] : undefined
 
   return (
@@ -182,7 +186,7 @@ function NodeDetail({
       <div className="flex items-start gap-3">
         <img src={iconSrc(node.icon)} alt="" className="size-11 shrink-0 object-contain" />
         <div className="min-w-0 flex-1">
-          <h3 className="leading-tight font-semibold">{node.type.name}</h3>
+          <h3 className="leading-tight font-semibold">{x(node.type.name)}</h3>
           <p className="mt-0.5 text-xs text-muted-foreground">{node.type.nameKr}</p>
           {node.tierLabel && (
             <Badge
@@ -190,7 +194,7 @@ function NodeDetail({
               className="mt-1.5"
               style={tierColor ? { color: tierColor, borderColor: tierColor } : undefined}
             >
-              {node.tierLabel}
+              {x(node.tierLabel)}
             </Badge>
           )}
         </div>
@@ -199,7 +203,7 @@ function NodeDetail({
             variant="ghost"
             size="icon"
             onClick={onClose}
-            aria-label="表示を閉じる"
+            aria-label={t.map.close}
             className="-mt-1 -mr-1 size-7 shrink-0"
           >
             <X className="size-3.5" />
@@ -207,21 +211,23 @@ function NodeDetail({
         )}
       </div>
 
-      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{node.type.description}</p>
+      <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+        {x(node.type.description)}
+      </p>
 
       {(node.rewards.length > 0 || node.rewardText) && (
         <div className="mt-3 border-t pt-3">
-          <div className="text-xs font-medium text-muted-foreground">報酬</div>
+          <div className="text-xs font-medium text-muted-foreground">{t.map.rewardsHeading}</div>
           {node.rewards.length > 0 && (
             <ul className="mt-2 space-y-2">
               {node.rewards.map((r) => (
-                <RewardRow key={r.name} reward={r} />
+                <RewardRow key={r.name.ja} reward={r} />
               ))}
             </ul>
           )}
           {node.rewardText && (
             <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
-              {node.rewardText}
+              {x(node.rewardText)}
             </p>
           )}
         </div>
@@ -231,7 +237,8 @@ function NodeDetail({
 }
 
 export function RewardRow({ reward }: { reward: Reward }) {
-  const countLabel = rewardCountLabel(reward)
+  const { x, locale } = useI18n()
+  const countLabel = rewardCountLabel(reward, locale)
 
   return (
     <li className="flex items-start gap-2.5">
@@ -240,19 +247,19 @@ export function RewardRow({ reward }: { reward: Reward }) {
       )}
       <span className="min-w-0">
         <span className="flex flex-wrap items-baseline gap-x-1.5 text-sm">
-          <span className="font-medium">{reward.name}</span>
+          <span className="font-medium">{x(reward.name)}</span>
           {countLabel && (
             <span className="font-mono text-xs text-muted-foreground tabular-nums">{countLabel}</span>
           )}
           {reward.label && (
             <Badge variant="secondary" className="px-1.5 py-0 text-[10px] font-normal">
-              {reward.label}
+              {x(reward.label)}
             </Badge>
           )}
         </span>
         {reward.note && (
           <span className="mt-0.5 block whitespace-pre-line text-[11px] leading-relaxed text-muted-foreground">
-            {reward.note}
+            {x(reward.note)}
           </span>
         )}
       </span>

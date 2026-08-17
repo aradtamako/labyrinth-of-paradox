@@ -1,4 +1,5 @@
 import { SiteHeader } from '@/components/site-header'
+import { useI18n } from '@/lib/i18n'
 import { useRoute, useScrollReset } from '@/lib/router'
 import { FloorDetailPage } from '@/pages/floor-detail'
 import { FloorListPage } from '@/pages/floor-list'
@@ -28,13 +29,12 @@ export default function App() {
 }
 
 function SiteFooter() {
+  const { t } = useI18n()
+
   return (
     <footer className="mt-16 border-t">
       <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">
-        <p>
-          ダンジョン&ファイター「逆説の迷宮」の非公式攻略データベース。
-          ゲーム内の画像・名称の権利は NEXON および Neople に帰属する。
-        </p>
+        <p>{t.footer.disclaimer}</p>
       </div>
     </footer>
   )

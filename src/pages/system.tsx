@@ -19,16 +19,17 @@ import {
   TICKETS,
 } from '@/data/official'
 import { materialIcon } from '@/data/item-icons'
+import { useI18n } from '@/lib/i18n'
+import type { Localized } from '@/lib/locale'
 
 export function SystemPage() {
+  const { t, x } = useI18n()
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <header className="max-w-2xl">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">システム</h1>
-        <p className="mt-2 leading-relaxed text-muted-foreground">
-          逆説の迷宮を支える各種チケット、傭兵団、討伐、バッファー派遣の仕様。
-          すべて公式アップデートページの記載に基づく。
-        </p>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{t.system.title}</h1>
+        <p className="mt-2 leading-relaxed text-muted-foreground">{t.system.lead}</p>
         <a
           href={OFFICIAL_SOURCE}
           target="_blank"
@@ -36,26 +37,26 @@ export function SystemPage() {
           className="mt-3 inline-flex items-center gap-1.5 text-sm text-primary hover:underline"
         >
           <ExternalLink className="size-3.5" />
-          公式アップデートページ
+          {t.system.officialLink}
         </a>
       </header>
 
       <section className="mt-10">
-        <SectionTitle icon={<Ticket className="size-4" />} title="チケット" />
+        <SectionTitle icon={<Ticket className="size-4" />} title={t.system.ticketsTitle} />
         <div className="mt-4 grid gap-4 lg:grid-cols-3">
-          {TICKETS.map((t) => (
-            <Card key={t.name}>
+          {TICKETS.map((ticket) => (
+            <Card key={ticket.name.ja}>
               <CardHeader>
-                <CardTitle className="text-base">{t.name}</CardTitle>
+                <CardTitle className="text-base">{x(ticket.name)}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 text-sm">
                 <div>
-                  <div className="text-xs text-muted-foreground">用途</div>
-                  <p className="mt-0.5 leading-relaxed">{t.use}</p>
+                  <div className="text-xs text-muted-foreground">{t.system.ticketUse}</div>
+                  <p className="mt-0.5 leading-relaxed">{x(ticket.use)}</p>
                 </div>
                 <div>
-                  <div className="text-xs text-muted-foreground">入手方法</div>
-                  <p className="mt-0.5 leading-relaxed">{t.acquire}</p>
+                  <div className="text-xs text-muted-foreground">{t.system.ticketAcquire}</div>
+                  <p className="mt-0.5 leading-relaxed">{x(ticket.acquire)}</p>
                 </div>
               </CardContent>
             </Card>
@@ -64,56 +65,60 @@ export function SystemPage() {
       </section>
 
       <section className="mt-12">
-        <SectionTitle icon={<Swords className="size-4" />} title="討伐券" />
-        <p className="mt-1.5 text-sm text-muted-foreground">{SUBJUGATION_NOTE}</p>
+        <SectionTitle icon={<Swords className="size-4" />} title={t.system.subjugationTitle} />
+        <p className="mt-1.5 text-sm text-muted-foreground">{x(SUBJUGATION_NOTE)}</p>
 
         <div className="mt-4 overflow-x-auto rounded-xl border">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="min-w-56">討伐券</TableHead>
-                <TableHead className="min-w-48">効果</TableHead>
-                <TableHead className="min-w-52">入手方法</TableHead>
-                <TableHead className="min-w-32">必要名声</TableHead>
-                <TableHead className="min-w-56">使用条件</TableHead>
+                <TableHead className="min-w-56">{t.system.colTicket}</TableHead>
+                <TableHead className="min-w-48">{t.system.colEffect}</TableHead>
+                <TableHead className="min-w-52">{t.system.colAcquire}</TableHead>
+                <TableHead className="min-w-32">{t.system.colFame}</TableHead>
+                <TableHead className="min-w-56">{t.system.colConditions}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {SUBJUGATION_TICKETS.map((t) => (
-                <TableRow key={t.name}>
+              {SUBJUGATION_TICKETS.map((ticket) => (
+                <TableRow key={ticket.name.ja}>
                   <TableCell className="font-medium whitespace-normal">
                     <div className="flex items-center gap-3">
                       <img
-                        src={materialIcon(t.iconId)}
+                        src={materialIcon(ticket.iconId)}
                         alt=""
                         className="size-10 shrink-0 object-contain"
                       />
-                      <span>{t.name}</span>
+                      <span>{x(ticket.name)}</span>
                     </div>
                   </TableCell>
-                  <TableCell className="whitespace-normal text-muted-foreground">{t.effect}</TableCell>
-                  <TableCell className="whitespace-normal text-muted-foreground">{t.acquire}</TableCell>
+                  <TableCell className="whitespace-normal text-muted-foreground">
+                    {x(ticket.effect)}
+                  </TableCell>
+                  <TableCell className="whitespace-normal text-muted-foreground">
+                    {x(ticket.acquire)}
+                  </TableCell>
                   <TableCell className="whitespace-normal">
-                    <span className="font-mono tabular-nums">{t.fame}</span>
-                    {t.source && (
+                    <span className="font-mono tabular-nums">{x(ticket.fame)}</span>
+                    {ticket.source && (
                       <a
-                        href={t.source.url}
+                        href={ticket.source.url}
                         target="_blank"
                         rel="noreferrer noopener"
-                        title={t.source.label}
+                        title={x(ticket.source.label)}
                         className="mt-1 flex items-center gap-1 text-xs text-muted-foreground hover:text-primary hover:underline"
                       >
                         <ExternalLink className="size-3" />
-                        別ソース
+                        {t.system.altSource}
                       </a>
                     )}
                   </TableCell>
                   <TableCell className="whitespace-normal">
                     <ul className="flex flex-wrap gap-1">
-                      {t.conditions.map((c) => (
-                        <li key={c}>
+                      {ticket.conditions.map((c) => (
+                        <li key={c.ja}>
                           <Badge variant="secondary" className="font-normal">
-                            {c}
+                            {x(c)}
                           </Badge>
                         </li>
                       ))}
@@ -127,8 +132,16 @@ export function SystemPage() {
       </section>
 
       <section className="mt-12 grid gap-4 lg:grid-cols-2">
-        <SpecCard icon={<Users className="size-4" />} title="傭兵団" items={MERCENARY_SPECS} />
-        <SpecCard icon={<Send className="size-4" />} title="バッファー派遣" items={DISPATCH_SPECS} />
+        <SpecCard
+          icon={<Users className="size-4" />}
+          title={t.system.mercenaryTitle}
+          items={MERCENARY_SPECS}
+        />
+        <SpecCard
+          icon={<Send className="size-4" />}
+          title={t.system.dispatchTitle}
+          items={DISPATCH_SPECS}
+        />
       </section>
     </div>
   )
@@ -152,8 +165,10 @@ function SpecCard({
 }: {
   icon: React.ReactNode
   title: string
-  items: string[]
+  items: Localized[]
 }) {
+  const { x } = useI18n()
+
   return (
     <Card>
       <CardHeader>
@@ -167,9 +182,9 @@ function SpecCard({
       <CardContent>
         <ul className="space-y-2.5">
           {items.map((item) => (
-            <li key={item} className="flex gap-2.5 text-sm leading-relaxed">
+            <li key={item.ja} className="flex gap-2.5 text-sm leading-relaxed">
               <span aria-hidden className="mt-2 size-1 shrink-0 rounded-full bg-muted-foreground/60" />
-              <span>{item}</span>
+              <span>{x(item)}</span>
             </li>
           ))}
         </ul>
