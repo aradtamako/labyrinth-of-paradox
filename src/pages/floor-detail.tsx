@@ -13,10 +13,11 @@ import type { SeedMap } from '@/data/node-types'
 import { AREA_STAT_BY_AREA, GATE_NOTES, HP_NOTE, NAMU_SOURCE } from '@/data/namu'
 import type { AreaStat } from '@/data/namu'
 import { useI18n } from '@/lib/i18n'
+import { localizedHash } from '@/lib/locale'
 import { cn } from '@/lib/utils'
 
 export function FloorDetailPage({ floorKey }: { floorKey: string }) {
-  const { t, x } = useI18n()
+  const { t, x, locale } = useI18n()
   const floor = FLOOR_BY_KEY.get(floorKey)
 
   if (!floor) {
@@ -24,7 +25,7 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
       <div className="mx-auto max-w-6xl px-4 py-20 text-center">
         <h1 className="text-xl font-semibold">{t.floorDetail.notFound}</h1>
         <Button asChild variant="outline" className="mt-5">
-          <a href="#/floors">
+          <a href={localizedHash(locale, '#/floors')}>
             <ArrowLeft className="size-4" />
             {t.floorDetail.backToList}
           </a>
@@ -46,7 +47,7 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <a
-        href="#/floors"
+        href={localizedHash(locale, '#/floors')}
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-3.5" />
@@ -155,7 +156,7 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
       <nav className="mt-10 flex items-center justify-between gap-3 border-t pt-6">
         {prev ? (
           <Button asChild variant="ghost">
-            <a href={`#/floors/${prev.key}`}>
+            <a href={localizedHash(locale, `#/floors/${prev.key}`)}>
               <ArrowLeft className="size-4" />
               {x(prev.label)}
             </a>
@@ -165,7 +166,7 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
         )}
         {next && (
           <Button asChild variant="ghost">
-            <a href={`#/floors/${next.key}`}>
+            <a href={localizedHash(locale, `#/floors/${next.key}`)}>
               {x(next.label)}
               <ArrowRight className="size-4" />
             </a>
