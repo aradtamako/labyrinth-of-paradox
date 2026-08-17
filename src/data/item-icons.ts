@@ -5,7 +5,7 @@
 
 export const materialIcon = (id: number) => `/stackable/material/${id}.png`
 
-/** 討伐券6種のアイテムID。 */
+/** 討伐券7種のアイテムID。 */
 export const TICKET_ICON = {
   /** 啓示：千海を抱く天 討伐券 */
   revelationSky: 1020,
@@ -19,6 +19,8 @@ export const TICKET_ICON = {
   libraryApostate: 1024,
   /** 背教者の城 & 最後の任務 討伐券 */
   apostateFinalTask: 1025,
+  /** アポカリプス：アンティエンバイ 2段階討伐券 */
+  apocalypseAntienbai: 1026,
 } as const
 
 /** 나무위키側の報酬名から討伐券アイコンを引くための対応表。 */
@@ -29,6 +31,7 @@ export const SUBJUGATION_REWARD_ICON: Record<string, number> = {
   '解放された凶夢 + 星座亀の大書庫 討伐券': TICKET_ICON.nightmareLibrary,
   '星座亀の大書庫 + 背教者の城 討伐券': TICKET_ICON.libraryApostate,
   '背教者の城 + 最後の任務 討伐券': TICKET_ICON.apostateFinalTask,
+  'アポカリプス：アンティエンバイ 2段階討伐券': TICKET_ICON.apocalypseAntienbai,
 }
 
 export const materialIconForReward = (name: string) => {
