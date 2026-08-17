@@ -6,9 +6,14 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 import { Input } from '@/components/ui/input'
-import { FLOORS, searchSeed, seedLabel, thumbFor } from '@/data/floors'
+import { FLOORS, thumbFor } from '@/data/floors'
 import type { Floor } from '@/data/floors'
-import { AREAS_WITH_NODES, areaHighlights, rewardCountLabel } from '@/data/node-types'
+import {
+  AREAS_WITH_NODES,
+  areaHighlights,
+  rewardCountLabel,
+  searchAreaRewards,
+} from '@/data/node-types'
 import type { AreaHighlight } from '@/data/node-types'
 import { useI18n } from '@/lib/i18n'
 import { canonical, localizedHash } from '@/lib/locale'
@@ -16,8 +21,17 @@ import { canonical, localizedHash } from '@/lib/locale'
 export function FloorListPage() {
   const { t } = useI18n()
   const [query, setQuery] = useState('')
-  const digits = query.replace(/\D/g, '')
-  const hits = useMemo(() => searchSeed(digits), [digits])
+  const q = query.trim()
+  // 報酬名で区域を絞り込む。一致した報酬はカード側でそのまま並べる。
+  const hits = useMemo(
+    () =>
+      q
+        ? FLOORS.map((floor) => ({ floor, rewards: searchAreaRewards(floor.areas, q) })).filter(
+            (hit) => hit.rewards.length > 0,
+          )
+        : [],
+    [q],
+  )
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -31,10 +45,9 @@ export function FloorListPage() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          inputMode="numeric"
           placeholder={t.floors.searchPlaceholder}
           aria-label={t.floors.searchLabel}
-          className="pr-9 pl-9 font-mono tracking-wider"
+          className="pr-9 pl-9"
         />
         {query && (
           <Button
@@ -49,8 +62,8 @@ export function FloorListPage() {
         )}
       </div>
 
-      {digits ? (
-        <SeedResults digits={digits} hits={hits} />
+      {q ? (
+        <RewardResults query={q} hits={hits} />
       ) : (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FLOORS.map((floor) => (
@@ -62,13 +75,19 @@ export function FloorListPage() {
   )
 }
 
-function SeedResults({ digits, hits }: { digits: string; hits: ReturnType<typeof searchSeed> }) {
-  const { t, x, locale } = useI18n()
+interface FloorHit {
+  floor: Floor
+  /** 検索語に一致した報酬。カードにはこれを並べる。 */
+  rewards: AreaHighlight[]
+}
+
+function RewardResults({ query, hits }: { query: string; hits: FloorHit[] }) {
+  const { t } = useI18n()
 
   if (hits.length === 0) {
     return (
       <div className="mt-8 rounded-xl border border-dashed px-6 py-14 text-center">
-        <p className="font-medium">{t.floors.noHitsTitle(digits)}</p>
+        <p className="font-medium">{t.floors.noHitsTitle(query)}</p>
         <p className="mt-1.5 text-sm text-muted-foreground">{t.floors.noHitsBody}</p>
       </div>
     )
@@ -76,29 +95,10 @@ function SeedResults({ digits, hits }: { digits: string; hits: ReturnType<typeof
 
   return (
     <div className="mt-8">
-      <p className="text-sm text-muted-foreground">{t.floors.hits(digits, hits.length)}</p>
+      <p className="text-sm text-muted-foreground">{t.floors.hits(query, hits.length)}</p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {hits.map((hit) => (
-          <a
-            key={`${hit.floor.key}-${hit.image.src}`}
-            href={localizedHash(locale, `#/floors/${hit.floor.key}`)}
-            className="group overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-md"
-          >
-            <div className="overflow-hidden bg-muted/40">
-              <img
-                src={thumbFor(hit.image.src)}
-                alt={`${x(hit.floor.label)} ${seedLabel(hit.image, locale)}`}
-                loading="lazy"
-                className="w-full transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            </div>
-            <div className="flex items-center justify-between gap-2 border-t px-3.5 py-2.5">
-              <span className="font-mono text-sm font-semibold tracking-wider">
-                {seedLabel(hit.image, locale)}
-              </span>
-              <Badge variant="secondary">{x(hit.floor.label)}</Badge>
-            </div>
-          </a>
+          <FloorCard key={hit.floor.key} floor={hit.floor} rewards={hit.rewards} />
         ))}
       </div>
     </div>
@@ -188,10 +188,11 @@ function RewardIcon({ highlight }: { highlight: AreaHighlight }) {
   )
 }
 
-function FloorCard({ floor }: { floor: Floor }) {
+/** rewards を渡すと、その区域の目玉報酬の代わりに渡されたものを並べる（検索結果用）。 */
+function FloorCard({ floor, rewards }: { floor: Floor; rewards?: AreaHighlight[] }) {
   const { t, x, locale } = useI18n()
   const thumb = floor.images.find((i) => !i.legend && !i.figure) ?? floor.images[0]
-  const highlights = areaHighlights(floor.areas)
+  const highlights = rewards ?? areaHighlights(floor.areas)
 
   return (
     <a
@@ -222,7 +223,10 @@ function FloorCard({ floor }: { floor: Floor }) {
 
         {highlights.length > 0 ? (
           <div className="mt-2.5">
-            <ul className="flex flex-wrap gap-1" aria-label={t.floors.cardRewardsLabel}>
+            <ul
+              className="flex flex-wrap gap-1"
+              aria-label={rewards ? t.floors.cardMatchedLabel : t.floors.cardRewardsLabel}
+            >
               {highlights.map((h) => (
                 <li key={canonical(h.reward.name)}>
                   <RewardIcon highlight={h} />
