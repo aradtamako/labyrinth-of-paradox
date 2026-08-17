@@ -2,11 +2,16 @@ import { RAW_FLOORS, RAW_NODE_TYPES } from './labyrinth-nodes'
 import type { RawFloor, RawNode } from './labyrinth-nodes'
 import { rewardIconForName } from './item-icons'
 import { AREA_REWARDS, SUPPLY_BASE_REWARD, TYPE_REWARD_TEXT } from './namu'
+import { canonical } from '@/lib/locale'
+import type { Locale, Localized } from '@/lib/locale'
 
 /**
- * ノード種別・等級・報酬名の日本語訳。
+ * ノード種別・等級・報酬名の訳。
  * 韓国語の原文は labyrinth-nodes.ts（自動生成）側に残してあるので、
- * 訳が付いていない項目は原文をそのまま表示する。
+ * 訳が付いていない項目は日本語・英語とも原文をそのまま表示する。
+ *
+ * アイコン対応表や報酬インデックスの ID など、言語で変わってはいけない内部キーは
+ * すべて日本語表記（canonical()）を使う。
  */
 
 export const NODE_DATA_SOURCE = {
@@ -17,16 +22,16 @@ export const NODE_DATA_SOURCE = {
 /** 装備・結晶ノードの等級。マスのアイコン色がそのまま等級に対応する。 */
 export type Tier = 'uncommon' | 'rare' | 'unique' | 'legendary' | 'epic' | 'primeval' | 'key' | 'ticket'
 
-export const TIER_LABELS: Record<string, string> = {
-  uncommon: 'アンコモン',
-  rare: 'レア',
-  unique: 'ユニーク',
-  legendary: 'レジェンダリー',
-  epic: 'エピック',
-  primeval: '太初',
-  key: '迷宮調査券',
-  ticket: '外郭入場券',
-  fixed: '固定',
+export const TIER_LABELS: Record<string, Localized> = {
+  uncommon: { ja: 'アンコモン', en: 'Uncommon' },
+  rare: { ja: 'レア', en: 'Rare' },
+  unique: { ja: 'ユニーク', en: 'Unique' },
+  legendary: { ja: 'レジェンダリー', en: 'Legendary' },
+  epic: { ja: 'エピック', en: 'Epic' },
+  primeval: { ja: '太初', en: 'Primordial' },
+  key: { ja: '迷宮調査券', en: 'Labyrinth Survey Ticket' },
+  ticket: { ja: '外郭入場券', en: 'Outer Gate Entry Ticket' },
+  fixed: { ja: '固定', en: 'Fixed' },
 }
 
 /** 等級ごとの色。カード枠やバッジの着色に使う。 */
@@ -42,148 +47,219 @@ export const TIER_COLORS: Record<string, string> = {
 }
 
 interface TypeTranslation {
-  name: string
-  description: string
+  name: Localized
+  description: Localized
   /** 元データの韓国語名が区域固有で不正確な場合の差し替え。 */
   nameKr?: string
 }
 
-const TYPE_JA: Record<string, TypeTranslation> = {
+const CENTRAL_CHECKPOINT_DESC: Localized = {
+  ja: '中央に位置する巨大な関門。次の区域へ進むには必ず通過しなければならない。',
+  en: 'A huge gate at the centre of the map. You must pass through it to reach the next area.',
+}
+
+const TYPE_TEXT: Record<string, TypeTranslation> = {
   central_checkpoint_start: {
-    name: 'メイン関門（開始）',
-    description: '中央に位置する巨大な関門。次の区域へ進むには必ず通過しなければならない。',
+    name: { ja: 'メイン関門（開始）', en: 'Main Gate (first)' },
+    description: CENTRAL_CHECKPOINT_DESC,
   },
   central_checkpoint: {
-    name: 'メイン関門',
-    description: '中央に位置する巨大な関門。次の区域へ進むには必ず通過しなければならない。',
+    name: { ja: 'メイン関門', en: 'Main Gate' },
+    description: CENTRAL_CHECKPOINT_DESC,
   },
   central_checkpoint_last: {
-    name: 'メイン関門（最終）',
-    description: '中央に位置する巨大な関門。次の区域へ進むには必ず通過しなければならない。',
+    name: { ja: 'メイン関門（最終）', en: 'Main Gate (last)' },
+    description: CENTRAL_CHECKPOINT_DESC,
   },
   relic_excavation_zone: {
-    name: '遺物発掘地帯',
-    description:
-      '調査によって遺物を回収できる区域。遺物を使うと戦闘を補助する力を得られるが、どの遺物が手に入るかは分からない。',
+    name: { ja: '遺物発掘地帯', en: 'Relic Excavation Zone' },
+    description: {
+      ja: '調査によって遺物を回収できる区域。遺物を使うと戦闘を補助する力を得られるが、どの遺物が手に入るかは分からない。',
+      en: 'An area where surveying recovers relics. Using a relic grants power that assists you in battle, but there is no telling which relic you will find.',
+    },
   },
   armament_warehouse: {
-    name: '装備倉庫',
-    description: '微かな衝撃で複数の空間が透けて見える。その向こうに未知の武具があるようだ。',
+    name: { ja: '装備倉庫', en: 'Armament Warehouse' },
+    description: {
+      ja: '微かな衝撃で複数の空間が透けて見える。その向こうに未知の武具があるようだ。',
+      en: 'A faint shock makes several spaces show through at once. Unknown arms seem to lie beyond them.',
+    },
   },
   giant_armament_warehouse: {
-    name: '古びた装備倉庫',
-    description:
-      '整理されていない装備データが入り混じって保存されている。アクセスのたびに構成が変わる。多様な装備が発見されたという報告がある。',
+    name: { ja: '古びた装備倉庫', en: 'Ancient Armament Warehouse' },
+    description: {
+      ja: '整理されていない装備データが入り混じって保存されている。アクセスのたびに構成が変わる。多様な装備が発見されたという報告がある。',
+      en: 'Unsorted equipment data is stored here all jumbled together, and the contents change with every access. A wide variety of equipment has reportedly been found inside.',
+    },
   },
   tuner_trace: {
-    name: '調律者の痕跡',
-    description: '弱い波動が感じられる区間。未知の存在が不吉な動きを観測した痕跡が残っている。',
+    name: { ja: '調律者の痕跡', en: "Tuner's Trace" },
+    description: {
+      ja: '弱い波動が感じられる区間。未知の存在が不吉な動きを観測した痕跡が残っている。',
+      en: 'A stretch where a faint wave can be felt. It bears the traces of an unknown presence observing some ominous movement.',
+    },
   },
   tuner_left_trace: {
-    name: '調律者の名残',
-    description: '名残だけが残る微かな記録。ぼやけた破片が断続的に現れる。',
+    name: { ja: '調律者の名残', en: "Tuner's Remnant" },
+    description: {
+      ja: '名残だけが残る微かな記録。ぼやけた破片が断続的に現れる。',
+      en: 'A faint record of which only remnants survive. Blurred fragments surface on and off.',
+    },
   },
   labyrinth_supply_base: {
-    name: '迷宮開拓拠点',
-    description:
-      '未知の場所を開拓する前に、ひと息つける場所。ここを確保すれば新しい道を開く準備ができそうだ。',
+    name: { ja: '迷宮開拓拠点', en: 'Labyrinth Supply Base' },
+    description: {
+      ja: '未知の場所を開拓する前に、ひと息つける場所。ここを確保すれば新しい道を開く準備ができそうだ。',
+      en: 'A place to catch your breath before pushing into unknown ground. Securing it should leave you ready to open a new path.',
+    },
   },
   chaotic_radiance_pilgrimage: {
-    name: '歪んだ光輝の巡礼',
-    description:
-      '光へ向かっていた巡礼の残像。理由は分からないが迷宮に入り込み、本来の光輝とは異なる姿を見せている。',
+    name: { ja: '歪んだ光輝の巡礼', en: 'Chaotic Radiance Pilgrimage' },
+    description: {
+      ja: '光へ向かっていた巡礼の残像。理由は分からないが迷宮に入り込み、本来の光輝とは異なる姿を見せている。',
+      en: 'The afterimage of a pilgrimage that was heading towards the light. For reasons unknown it wandered into the labyrinth, and now wears a shape unlike the radiance it once had.',
+    },
   },
   chaotic_life_pilgrimage: {
-    name: '歪んだ生命の巡礼',
-    description:
-      '本来は別の地で続いていた巡礼の痕跡。なぜか逆説の迷宮に現れ、意味を失ったまま歪んだ道として残っている。',
+    name: { ja: '歪んだ生命の巡礼', en: 'Chaotic Life Pilgrimage' },
+    description: {
+      ja: '本来は別の地で続いていた巡礼の痕跡。なぜか逆説の迷宮に現れ、意味を失ったまま歪んだ道として残っている。',
+      en: 'Traces of a pilgrimage that should have continued elsewhere. Somehow it surfaced in the Labyrinth of Paradox, left behind as a distorted road stripped of meaning.',
+    },
   },
   dual_phenomenon: {
     // 元データの名称は1区域の組み合わせ（湖と飛空艇）に固定されているが、
     // 実際は区域ごとに重なるダンジョンが変わるので総称に直している。
-    name: '二重現象',
+    name: { ja: '二重現象', en: 'Dual Phenomenon' },
     nameKr: '이중 현상',
-    description:
-      '異常現象により2つの空間が同時に重なって見える。重なるダンジョンの組み合わせは区域ごとに変わる。',
+    description: {
+      ja: '異常現象により2つの空間が同時に重なって見える。重なるダンジョンの組み合わせは区域ごとに変わる。',
+      en: 'An anomaly makes two spaces appear overlapped at once. Which pair of dungeons overlaps changes from area to area.',
+    },
   },
   deviated_thousand_seas_sky: {
-    name: '離脱した千海の空',
-    description: '生命の痕跡と終末の風景がともに残る場所。なぜここが迷宮に存在するのかは分からない。',
+    name: { ja: '離脱した千海の空', en: 'Deviated Thousand Seas Sky' },
+    description: {
+      ja: '生命の痕跡と終末の風景がともに残る場所。なぜここが迷宮に存在するのかは分からない。',
+      en: 'A place where traces of life and scenes of the apocalypse remain side by side. Why it exists inside the labyrinth is unknown.',
+    },
   },
   legion_compressed: {
-    name: '終末の落ちた羅針盤',
-    description:
-      'ディレジエの気配を封じた慈悲の羅針盤にロペスが現れた。終末の力で武装したロペスを制圧しなければならない。',
+    name: { ja: '終末の落ちた羅針盤', en: 'Compass Where Doom Fell' },
+    description: {
+      ja: 'ディレジエの気配を封じた慈悲の羅針盤にロペスが現れた。終末の力で武装したロペスを制圧しなければならない。',
+      en: "Lopez has appeared at the Compass of Mercy that sealed away Diregie's presence. Armed with the power of doom, he must be put down.",
+    },
   },
 }
 
 /** ノード単位で設定されている報酬名の訳。 */
-const REWARD_JA: Record<string, string> = {
-  '종말의 계시 1개 상자': '終末の啓示 1個箱',
-  '응축된 안개의 기억 (역설의 미궁)': '凝縮された霧の記憶（逆説の迷宮）',
-  '별을 품은 조율자의 저울': '星を抱いた調律者の天秤',
-  '순례의 인장': '巡礼の印章',
-  '태초 레거시 ▶ 레거시 변환서 상자': '太初レガシー ▶ レガシー変換書 箱',
-  '태초 레거시 선택 변경권 상자': '太初レガシー選択変更券箱',
-  '프라임 스텔라 1개 상자': 'プライムステラ 1個箱',
-  '보이드 소울': 'ヴォイドソウル',
-  '은하를 초월한 조율자의 저울': '銀河を超越した調律者の天秤',
-  '성단을 울리는 조율자의 저울': '星団を響かせる調律者の天秤',
-  '검은 재앙 1개 상자': '黒い災厄 1個箱',
-  '광휘의 흔적 1개 상자': '光輝の痕跡 1個箱',
-  '광휘의 소울': '光輝のソウル',
-  '솔리드 소울': 'ソリッドソウル',
-  '태초 장비 승급서 선택 상자': '太初昇級選択箱',
-  '에픽 서약 결정 제작서 선택 상자': 'エピック誓約結晶製作書選択箱',
-  '검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자':
-    '黒い病気のレガシー ▶ ディレジエ レガシー変換書 箱',
+const REWARD_TEXT: Record<string, Localized> = {
+  '종말의 계시 1개 상자': { ja: '終末の啓示 1個箱', en: 'Doom Oracle ×1 Box' },
+  '응축된 안개의 기억 (역설의 미궁)': {
+    ja: '凝縮された霧の記憶（逆説の迷宮）',
+    en: 'Condensed Memory of Mist (Labyrinth of Paradox)',
+  },
+  '별을 품은 조율자의 저울': {
+    ja: '星を抱いた調律者の天秤',
+    en: "Star-Embracing Tuner's Scale",
+  },
+  '순례의 인장': { ja: '巡礼の印章', en: 'Pilgrimage Seal' },
+  '태초 레거시 ▶ 레거시 변환서 상자': {
+    ja: '太初レガシー ▶ レガシー変換書 箱',
+    en: 'Primordial Legacy ▶ Legacy Conversion Scroll Box',
+  },
+  '태초 레거시 선택 변경권 상자': {
+    ja: '太初レガシー選択変更券箱',
+    en: 'Primordial Legacy Selection Change Ticket Box',
+  },
+  '프라임 스텔라 1개 상자': { ja: 'プライムステラ 1個箱', en: 'Prime Stella ×1 Box' },
+  '보이드 소울': { ja: 'ヴォイドソウル', en: 'Void Soul' },
+  '은하를 초월한 조율자의 저울': {
+    ja: '銀河を超越した調律者の天秤',
+    en: "Galaxy-Transcending Tuner's Scale",
+  },
+  '성단을 울리는 조율자의 저울': {
+    ja: '星団を響かせる調律者の天秤',
+    en: "Cluster-Resounding Tuner's Scale",
+  },
+  '검은 재앙 1개 상자': { ja: '黒い災厄 1個箱', en: 'Black Calamity ×1 Box' },
+  '광휘의 흔적 1개 상자': { ja: '光輝の痕跡 1個箱', en: 'Trace of Radiance ×1 Box' },
+  '광휘의 소울': { ja: '光輝のソウル', en: 'Radiance Soul' },
+  '솔리드 소울': { ja: 'ソリッドソウル', en: 'Solid Soul' },
+  '태초 장비 승급서 선택 상자': {
+    ja: '太初昇級選択箱',
+    en: 'Primordial Upgrade Scroll Selection Box',
+  },
+  '에픽 서약 결정 제작서 선택 상자': {
+    ja: 'エピック誓約結晶製作書選択箱',
+    en: 'Epic Oath Crystal Crafting Scroll Selection Box',
+  },
+  '검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자': {
+    ja: '黒い病気のレガシー ▶ ディレジエ レガシー変換書 箱',
+    en: 'Legacy of the Black Plague ▶ Diregie Legacy Conversion Scroll Box',
+  },
 }
 
-const REWARD_NOTE: Record<string, string> = {
-  '凝縮された霧の記憶（逆説の迷宮）': '霧ノ誓約経験値 +143,500',
-  '太初昇級選択箱':
-    '消耗品／アカウント帰属\n' +
-    '使用時、太初武器昇級書・太初アクセサリー昇級書のいずれかを選択して獲得できる。\n' +
-    'エピック 一般/レガシー武器・アクセサリーを太初装備に昇級可能。\n' +
-    '- 一般/レガシー武器 ▶ 同一職業群の太初武器\n' +
-    '- アクセサリー ▶ 同一セット同一部位の太初アクセサリー\n' +
-    '※ 黒芽エピックアクセサリーは昇級不可。\n' +
-    '※ 調律済み装備を昇級すると調律は初期化され、調律に使用した素材は返還される。',
+/** 報酬名（日本語表記）から引く補足文。 */
+const REWARD_NOTE: Record<string, Localized> = {
+  '凝縮された霧の記憶（逆説の迷宮）': {
+    ja: '霧ノ誓約経験値 +143,500',
+    en: 'Mist Oath EXP +143,500',
+  },
+  太初昇級選択箱: {
+    ja:
+      '消耗品／アカウント帰属\n' +
+      '使用時、太初武器昇級書・太初アクセサリー昇級書のいずれかを選択して獲得できる。\n' +
+      'エピック 一般/レガシー武器・アクセサリーを太初装備に昇級可能。\n' +
+      '- 一般/レガシー武器 ▶ 同一職業群の太初武器\n' +
+      '- アクセサリー ▶ 同一セット同一部位の太初アクセサリー\n' +
+      '※ 黒芽エピックアクセサリーは昇級不可。\n' +
+      '※ 調律済み装備を昇級すると調律は初期化され、調律に使用した素材は返還される。',
+    en:
+      'Consumable / account-bound\n' +
+      'On use, choose either a Primordial Weapon Upgrade Scroll or a Primordial Accessory Upgrade Scroll.\n' +
+      'Upgrades epic normal/legacy weapons and accessories into primordial equipment.\n' +
+      '- Normal/legacy weapon ▶ primordial weapon of the same class group\n' +
+      '- Accessory ▶ primordial accessory of the same set and slot\n' +
+      '※ Black Sprout epic accessories cannot be upgraded.\n' +
+      '※ Upgrading tuned equipment resets its tuning, and the materials used for tuning are returned.',
+  },
 }
 
 /** iconDict 側に入っている等級テンプレート報酬の訳。 */
-const DEFAULT_REWARD_JA: Record<string, string> = {
-  equipment_set_box: '装備セット箱',
-  oath_crystal_box: '誓約結晶壺',
-  doom_oracle: '終末の啓示',
+const DEFAULT_REWARD_TEXT: Record<string, Localized> = {
+  equipment_set_box: { ja: '装備セット箱', en: 'Equipment Set Box' },
+  oath_crystal_box: { ja: '誓約結晶壺', en: 'Oath Crystal Jar' },
+  doom_oracle: { ja: '終末の啓示', en: 'Doom Oracle' },
 }
 
-const DEFAULT_LABEL_JA: Record<string, string> = {
-  自选: '選択',
-  随机: 'ランダム',
-  账绑: 'アカウント帰属',
+const DEFAULT_LABEL_TEXT: Record<string, Localized> = {
+  自选: { ja: '選択', en: 'Selectable' },
+  随机: { ja: 'ランダム', en: 'Random' },
+  账绑: { ja: 'アカウント帰属', en: 'Account-bound' },
 }
 
 // ---- 公開する型 ----------------------------------------------------------
 
 export interface Reward {
-  name: string
+  name: Localized
   nameKr?: string
   count?: number
   /** 「100〜150」のように幅がある場合の表示用。count の代わりに使う。 */
   countRange?: [number, number]
   image?: string
   /** 「選択」「ランダム」「アカウント帰属」など、報酬の受け取り方の注記。 */
-  label?: string
+  label?: Localized
   /** 登場ボスなどの補足。 */
-  note?: string
+  note?: Localized
 }
 
 export interface NodeType {
   id: string
-  name: string
+  name: Localized
   nameKr: string
-  description: string
+  description: Localized
   descriptionKr: string
 }
 
@@ -192,11 +268,11 @@ export interface MapNode {
   col: number
   type: NodeType
   tier?: string
-  tierLabel?: string
+  tierLabel?: Localized
   icon: number
   rewards: Reward[]
   /** 報酬の獲得条件など、나무위키由来の補足文。 */
-  rewardText?: string
+  rewardText?: Localized
   /** 同じ内容のノードをまとめるためのキー。 */
   key: string
 }
@@ -212,16 +288,21 @@ export interface SeedMap {
 
 // ---- 変換 ----------------------------------------------------------------
 
+/** 訳が無い項目は韓国語の原文をそのまま両言語に入れる。 */
+function fallback(text: string): Localized {
+  return { ja: text, en: text }
+}
+
 export const NODE_TYPES: Map<string, NodeType> = new Map(
   RAW_NODE_TYPES.map((t) => {
-    const ja = TYPE_JA[t.id]
+    const translated = TYPE_TEXT[t.id]
     return [
       t.id,
       {
         id: t.id,
-        name: ja?.name ?? t.nameKr,
-        nameKr: ja?.nameKr ?? t.nameKr,
-        description: ja?.description ?? t.descriptionKr,
+        name: translated?.name ?? fallback(t.nameKr),
+        nameKr: translated?.nameKr ?? t.nameKr,
+        description: translated?.description ?? fallback(t.descriptionKr),
         descriptionKr: t.descriptionKr,
       },
     ]
@@ -230,12 +311,8 @@ export const NODE_TYPES: Map<string, NodeType> = new Map(
 
 const RAW_TYPE_BY_ID = new Map(RAW_NODE_TYPES.map((t) => [t.id, t]))
 
-function translateReward(nameKr: string): string {
-  return REWARD_JA[nameKr] ?? nameKr
-}
-
-function rewardNoteForName(name: string): string | undefined {
-  return REWARD_NOTE[name]
+function translateReward(nameKr: string): Localized {
+  return REWARD_TEXT[nameKr] ?? fallback(nameKr)
 }
 
 /** 等級テンプレート（equipment_set_box_{tier} など）から報酬名を組み立てる。 */
@@ -247,19 +324,24 @@ function defaultRewardsFor(typeId: string, tier: string | undefined): Reward[] {
     if (!r.image) return []
     const base = r.image.replace(/^\/rewards\//, '').replace(/\.PNG$/i, '')
     const stem = base.replace(/_\{tier\}$/, '')
-    const jaBase = DEFAULT_REWARD_JA[stem]
-    if (!jaBase) return []
+    const baseName = DEFAULT_REWARD_TEXT[stem]
+    if (!baseName) return []
 
     const resolved = tier && base.includes('{tier}') ? base.replace('{tier}', tier) : base
-    const name = base.includes('{tier}')
-      ? `${TIER_LABELS[tier ?? ''] ?? ''}${jaBase}`.trim()
-      : jaBase
+    // 日本語は「エピック誓約結晶壺」と続けて書くが、英語は語の区切りに空白がいる。
+    const tierLabel = TIER_LABELS[tier ?? '']
+    const name: Localized = base.includes('{tier}')
+      ? {
+          ja: `${tierLabel?.ja ?? ''}${baseName.ja}`.trim(),
+          en: `${tierLabel?.en ?? ''} ${baseName.en}`.trim(),
+        }
+      : baseName
 
     return [
       {
         name,
         image: `/rewards/${resolved}.PNG`,
-        ...(r.label ? { label: DEFAULT_LABEL_JA[r.label] ?? r.label } : {}),
+        ...(r.label ? { label: DEFAULT_LABEL_TEXT[r.label] ?? fallback(r.label) } : {}),
       },
     ]
   })
@@ -274,7 +356,7 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
   if (raw.typeId === 'labyrinth_supply_base' && raw.tier) {
     const base = SUPPLY_BASE_REWARD[raw.tier]
     if (base) {
-      const image = rewardIconForName(base.name)
+      const image = rewardIconForName(canonical(base.name))
       return [{ name: base.name, count: base.count, ...(image ? { image } : {}) }]
     }
   }
@@ -283,11 +365,11 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
   if (raw.typeId === 'chaotic_radiance_pilgrimage') {
     return [
       {
-        name: '終末の啓示',
+        name: DEFAULT_REWARD_TEXT.doom_oracle,
         nameKr: '종말의 계시',
         countRange: [100, 150],
         image: '/rewards/doom_oracle.PNG',
-        label: 'アカウント帰属',
+        label: DEFAULT_LABEL_TEXT.账绑,
       },
     ]
   }
@@ -298,7 +380,7 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
     AREA_REWARDS[`${area}:${raw.typeId}`]
   if (override) {
     const template = defaultRewardsFor(raw.typeId, raw.tier)[0]
-    const image = rewardIconForName(override.name) ?? template?.image
+    const image = rewardIconForName(canonical(override.name)) ?? template?.image
     return [
       {
         name: override.name,
@@ -312,13 +394,14 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
 
   const explicit: Reward[] = (raw.rewards ?? []).map((r) => {
     const name = translateReward(r.nameKr)
-    const image = rewardIconForName(name) ?? r.image
+    const image = rewardIconForName(canonical(name)) ?? r.image
+    const note = REWARD_NOTE[canonical(name)]
     return {
       name,
       nameKr: r.nameKr,
       ...(r.count ? { count: r.count } : {}),
       ...(image ? { image } : {}),
-      ...(rewardNoteForName(name) ? { note: rewardNoteForName(name) } : {}),
+      ...(note ? { note } : {}),
     }
   })
   if (explicit.length) return explicit
@@ -339,7 +422,7 @@ function buildNode(area: number, raw: RawNode): MapNode {
     icon: raw.icon,
     rewards,
     rewardText: TYPE_REWARD_TEXT[raw.typeId],
-    key: [raw.typeId, raw.tier ?? '', rewards.map((r) => r.name).join('+')].join('|'),
+    key: [raw.typeId, raw.tier ?? '', rewards.map((r) => canonical(r.name)).join('+')].join('|'),
   }
 }
 
@@ -401,13 +484,17 @@ export interface RewardEntry {
   byArea: AreaBreakdown[]
 }
 
+/** 言語を切り替えても同じ報酬が同じエントリに畳まれるよう、ID は日本語表記で作る。 */
 function rewardId(r: Reward): string {
-  return `${r.name}#${r.count ?? ''}#${r.countRange?.join('-') ?? ''}`
+  return `${canonical(r.name)}#${r.count ?? ''}#${r.countRange?.join('-') ?? ''}`
 }
 
 /** 「×1,000」「×100〜150」のような個数表記。個数指定がなければ空。 */
-export function rewardCountLabel(r: Reward): string {
-  if (r.countRange) return `×${r.countRange[0]}〜${r.countRange[1]}`
+export function rewardCountLabel(r: Reward, locale: Locale): string {
+  if (r.countRange) {
+    const dash = locale === 'ja' ? '〜' : '–'
+    return `×${r.countRange[0]}${dash}${r.countRange[1]}`
+  }
   if (r.count) return `×${r.count.toLocaleString()}`
   return ''
 }
@@ -453,7 +540,9 @@ for (const entry of rewardIndex.values()) {
 }
 
 export const REWARDS: RewardEntry[] = [...rewardIndex.values()].sort(
-  (a, b) => b.occurrences.length - a.occurrences.length || a.reward.name.localeCompare(b.reward.name),
+  (a, b) =>
+    b.occurrences.length - a.occurrences.length ||
+    canonical(a.reward.name).localeCompare(canonical(b.reward.name)),
 )
 
 /** カタカナをひらがなに変換する（検索時の表記ゆれ吸収用）。 */
@@ -461,17 +550,24 @@ function toHiragana(s: string): string {
   return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
 }
 
-/** 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。カタカナ/ひらがなは区別しない。 */
+/**
+ * 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。
+ * カタカナ/ひらがなは区別せず、表示中の言語にかかわらず日本語・英語・韓国語すべてを検索対象にする。
+ */
 export function searchRewards(query: string): RewardEntry[] {
   const q = toHiragana(query.trim().toLowerCase())
   if (!q) return REWARDS
   return REWARDS.filter((e) => {
     const haystack = toHiragana(
       [
-        e.reward.name,
+        e.reward.name.ja,
+        e.reward.name.en,
         e.reward.nameKr ?? '',
-        ...e.types.flatMap((t) => [t.name, t.nameKr]),
-        ...e.tiers.map((t) => TIER_LABELS[t] ?? t),
+        ...e.types.flatMap((t) => [t.name.ja, t.name.en, t.nameKr]),
+        ...e.tiers.flatMap((t) => {
+          const label = TIER_LABELS[t]
+          return label ? [label.ja, label.en] : [t]
+        }),
       ]
         .join(' ')
         .toLowerCase(),
