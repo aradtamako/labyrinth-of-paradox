@@ -576,6 +576,53 @@ export function searchRewards(query: string): RewardEntry[] {
   })
 }
 
+// ---- 区域ごとの目玉報酬 --------------------------------------------------
+
+export interface AreaHighlight {
+  reward: Reward
+  /** この報酬が出るノード種別（重複なし）。 */
+  types: NodeType[]
+  tiers: string[]
+  /** この報酬が出現する区域数。少ないほどその区域固有。 */
+  areaCount: number
+}
+
+/**
+ * 区域の性格を表す報酬。迷宮調査券・外郭入場券・終末の啓示のように
+ * ノードデータを持つ全区域で同じように出るものは、区域を選ぶ判断材料に
+ * ならないので除く。
+ */
+const areaHighlightIndex = new Map<number, AreaHighlight[]>()
+for (const area of AREAS_WITH_NODES) {
+  // REWARDS は出現数の多い順。sort は安定なので、区域数が並んだものは
+  // その区域で見かけやすい順のまま残る。
+  areaHighlightIndex.set(
+    area,
+    REWARDS.filter((e) => e.areas.includes(area) && e.areas.length < AREAS_WITH_NODES.length)
+      .map((e) => ({
+        reward: e.reward,
+        types: e.types,
+        tiers: e.tiers,
+        areaCount: e.areas.length,
+      }))
+      .sort((a, b) => a.areaCount - b.areaCount),
+  )
+}
+
+/** 区域（複数可）の目玉報酬を、その区域固有のものから順に返す。 */
+export function areaHighlights(areas: number[]): AreaHighlight[] {
+  if (areas.length === 1) return areaHighlightIndex.get(areas[0]) ?? []
+
+  const merged = new Map<string, AreaHighlight>()
+  for (const area of areas) {
+    for (const highlight of areaHighlightIndex.get(area) ?? []) {
+      const id = rewardId(highlight.reward)
+      if (!merged.has(id)) merged.set(id, highlight)
+    }
+  }
+  return [...merged.values()].sort((a, b) => a.areaCount - b.areaCount)
+}
+
 /** ノード種別ごとの出現数。種別一覧の表示に使う。 */
 export interface NodeTypeStat {
   type: NodeType

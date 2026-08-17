@@ -125,6 +125,10 @@ const ja = {
     cardFame: '名声',
     cardMapCount: (n: number) => `マップ ${n} 枚`,
     cardSeedCount: (n: number) => `・シード ${n} 種`,
+    cardRewardsLabel: '主要報酬',
+    cardRewardsMore: (n: number) => `ほか ${n} 件`,
+    rewardNodeTypes: (types: string) => `出るマス：${types}`,
+    rewardAreaCount: (n: number, total: number) => `${total}区域中 ${n} 区域に出現`,
   },
 
   floorDetail: {
@@ -331,6 +335,10 @@ const en: UiText = {
     cardFame: 'Fame',
     cardMapCount: (n: number) => (n === 1 ? '1 map' : `${n} maps`),
     cardSeedCount: (n: number) => (n === 1 ? ' · 1 seed' : ` · ${n} seeds`),
+    cardRewardsLabel: 'Key rewards',
+    cardRewardsMore: (n: number) => (n === 1 ? '1 more' : `${n} more`),
+    rewardNodeTypes: (types: string) => `Found in: ${types}`,
+    rewardAreaCount: (n: number, total: number) => `Appears in ${n} of ${total} areas`,
   },
 
   floorDetail: {
