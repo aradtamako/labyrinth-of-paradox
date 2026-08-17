@@ -95,7 +95,7 @@ export function OverviewPage() {
           <FeatureCard
             icon={<ScrollText className="size-4" />}
             title="討伐券と傭兵団"
-            body="討伐券5種の必要名声・入手条件、傭兵団レベルとバッファー派遣の仕様。"
+            body="討伐券6種の必要名声・入手条件、傭兵団レベルとバッファー派遣の仕様。"
             href="#/system"
             cta="システムへ"
           />
