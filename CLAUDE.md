@@ -7,7 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ダンジョン&ファイター（アラド戦記）の特殊ダンジョン「逆説の迷宮」の非公式攻略サイト。
 Vite + React 19 + TypeScript + Tailwind CSS v4 + shadcn/ui の SPA を Cloudflare Workers に静的配信する。
 
-**UI テキスト・コード内コメントは日本語で書く。** データ由来の韓国語原文は訳を付けず残す設計になっている箇所があるので、既存の書き分けに従う。
+**コード内コメントは日本語で書く。** データ由来の韓国語原文は訳を付けず残す設計になっている箇所があるので、既存の書き分けに従う。
+**表示テキストは日本語と英語の2言語**（後述の i18n 層）。片方だけ足すと `tsc` が落ちる。
 
 ## コマンド
 
@@ -28,6 +29,24 @@ npm run thumbs   # public/maps/thumbs/*.webp を再生成（sharp）
 ### ルーティング
 
 React Router は使わない。`src/lib/router.ts` の自前ハッシュルーター（`#/`, `#/floors`, `#/floors/:key`, `#/rewards`, `#/system`）を `App.tsx` が直接分岐する。ページを足すときは `Route` 型・`parse()`・`hrefFor()`・`App.tsx` の4箇所を揃える。
+
+### i18n（日本語 / 英語）
+
+表示言語は `ja` / `en` の2つ。ライブラリは使わず自前で持っている。
+
+| ファイル | 役割 |
+| --- | --- |
+| `src/lib/locale.ts` | `Locale` / `Localized`（`{ ja, en }`）型と `tr()` / `canonical()` / `numberRuns()`。React 非依存なのでデータ層からも読める |
+| `src/lib/ui-strings.ts` | UI 文言の辞書。日本語版 `ja` を `UiText` 型の基準にして `en` をそれに合わせるので、**英語の訳漏れは `tsc` で落ちる** |
+| `src/lib/i18n.tsx` | `I18nProvider`（`main.tsx` で App を包む）と `useI18n()`。localStorage `lop-locale` に保存し、無ければ `navigator.language` で判定 |
+
+コンポーネント側は `const { t, x, locale } = useI18n()` の3つを使い分ける:
+
+- `t` … UI 文言の辞書（`t.rewards.title`）。値を埋めるものは関数（`t.common.area(3)`）
+- `x` … データ層の `Localized` を現在の言語の文字列にする（`x(floor.label)`）
+- `locale` … `rewardCountLabel(r, locale)` や `seedLabel(image, locale)` のように言語で組み立てが変わる関数に渡す
+
+**データ層の表示テキストは文字列ではなく `Localized`。** 内部キー（`item-icons.ts` の対応表、報酬インデックスの ID、React の `key`）は言語を切り替えても変わらないよう、必ず日本語表記（`canonical()` または `.ja`）を使う。報酬検索（`searchRewards()`）は表示中の言語にかかわらず日本語・英語・韓国語すべてを対象にする。
 
 ### データ層が本体
 
@@ -51,7 +70,7 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 3. 元データのマス単位報酬（`REWARD_JA` で訳す）
 4. 等級テンプレート（`equipment_set_box_{tier}` など）
 
-訳が無い項目は韓国語原文にフォールバックする。新しいノード種別・報酬が出てきたら `node-types.ts` の `TYPE_JA` / `REWARD_JA` に足すだけでよく、生成ファイル側は触らない。
+訳が無い項目は韓国語原文にフォールバックする（`fallback()` が両言語に原文を入れる）。新しいノード種別・報酬が出てきたら `node-types.ts` の `TYPE_TEXT` / `REWARD_TEXT` に足すだけでよく、生成ファイル側は触らない。
 
 `REWARDS` は全シードマップを走査して作る逆引きインデックス（報酬名+個数で1エントリ、区域ごとに畳んだ `byArea` 付き）。報酬ページの検索はこれを引く。
 
