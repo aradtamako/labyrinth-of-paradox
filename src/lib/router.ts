@@ -1,5 +1,8 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 
+import { localizedHash } from '@/lib/locale'
+import type { Locale } from '@/lib/locale'
+
 /**
  * ごく小さなハッシュルーター。SPA なのでサーバー側の設定なしで動かせるよう
  * history API ではなく location.hash を使う。
@@ -15,6 +18,8 @@ export type Route =
 function parse(hash: string): Route {
   const path = hash.replace(/^#\/?/, '').split('?')[0]
   const parts = path.split('/').filter(Boolean)
+
+  if (parts[0] === 'ja' || parts[0] === 'en') parts.shift()
 
   if (parts[0] === 'floors') {
     return parts[1] ? { name: 'floor', key: decodeURIComponent(parts[1]) } : { name: 'floors' }
@@ -40,18 +45,31 @@ export function navigate(to: string) {
   window.location.hash = to
 }
 
-export function hrefFor(route: Route): string {
-  switch (route.name) {
-    case 'floors':
-      return '#/floors'
-    case 'floor':
-      return `#/floors/${encodeURIComponent(route.key)}`
-    case 'rewards':
-      return '#/rewards'
-    case 'system':
-      return '#/system'
-    default:
-      return '#/'
+export function hrefFor(route: Route, locale?: Locale): string {
+  const path = (() => {
+    switch (route.name) {
+      case 'floors':
+        return '#/floors'
+      case 'floor':
+        return `#/floors/${encodeURIComponent(route.key)}`
+      case 'rewards':
+        return '#/rewards'
+      case 'system':
+        return '#/system'
+      default:
+        return '#/'
+    }
+  })()
+
+  return locale ? localizedHash(locale, path) : path
+}
+
+/** 旧形式のハッシュURLも受け入れ、現在の言語を付与した形式へ変換する。 */
+export function normalizeHash(locale: Locale): void {
+  const hash = window.location.hash || '#/'
+  const normalized = localizedHash(locale, hash)
+  if (hash !== normalized) {
+    window.history.replaceState(window.history.state, '', normalized)
   }
 }
 

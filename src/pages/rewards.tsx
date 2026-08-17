@@ -18,6 +18,7 @@ import {
 } from '@/data/node-types'
 import type { RewardEntry } from '@/data/node-types'
 import { useI18n } from '@/lib/i18n'
+import { localizedHash } from '@/lib/locale'
 import { cn } from '@/lib/utils'
 
 export function RewardsPage() {
@@ -180,7 +181,7 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
           {entry.byArea.map((b) => (
             <li key={b.area}>
               <a
-                href={`#/floors/${b.area}`}
+                href={localizedHash(locale, `#/floors/${b.area}`)}
                 className="inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-[11px] transition-colors hover:bg-secondary"
               >
                 {t.common.area(b.area)}

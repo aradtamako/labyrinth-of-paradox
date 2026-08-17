@@ -9,9 +9,10 @@ import { NAMU_SOURCE } from '@/data/namu'
 import { AREAS_WITH_NODES, NODE_DATA_SOURCE } from '@/data/node-types'
 import { ENTRY_SPECS, OFFICIAL_SOURCE } from '@/data/official'
 import { useI18n } from '@/lib/i18n'
+import { localizedHash } from '@/lib/locale'
 
 export function OverviewPage() {
-  const { t, x } = useI18n()
+  const { t, x, locale } = useI18n()
   const nodeAreas = t.common.areaList(AREAS_WITH_NODES)
 
   return (
@@ -49,7 +50,7 @@ export function OverviewPage() {
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Button asChild>
-            <a href="#/floors">
+            <a href={localizedHash(locale, '#/floors')}>
               {t.overview.seedCta}
               <ArrowRight className="size-4" />
             </a>
@@ -65,28 +66,28 @@ export function OverviewPage() {
             icon={<Layers className="size-4" />}
             title={t.overview.featureMapsTitle(MAX_AREA)}
             body={t.overview.featureMapsBody(FLOORS.length, nodeAreas)}
-            href="#/floors"
+            href={localizedHash(locale, '#/floors')}
             cta={t.overview.featureMapsCta}
           />
           <FeatureCard
             icon={<Gift className="size-4" />}
             title={t.overview.featureRewardsTitle}
             body={t.overview.featureRewardsBody}
-            href="#/rewards"
+            href={localizedHash(locale, '#/rewards')}
             cta={t.overview.featureRewardsCta}
           />
           <FeatureCard
             icon={<KeySquare className="size-4" />}
             title={t.overview.featureTicketsTitle}
             body={t.overview.featureTicketsBody}
-            href="#/system"
+            href={localizedHash(locale, '#/system')}
             cta={t.overview.featureSystemCta}
           />
           <FeatureCard
             icon={<ScrollText className="size-4" />}
             title={t.overview.featureSubjugationTitle}
             body={t.overview.featureSubjugationBody}
-            href="#/system"
+            href={localizedHash(locale, '#/system')}
             cta={t.overview.featureSystemCta}
           />
         </div>
@@ -127,7 +128,7 @@ export function OverviewPage() {
 }
 
 function Hero() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
 
   return (
     <div className="relative overflow-hidden rounded-2xl border bg-card px-6 py-10 sm:px-10 sm:py-14">
@@ -147,13 +148,13 @@ function Hero() {
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <Button asChild size="lg">
-            <a href="#/floors">
+            <a href={localizedHash(locale, '#/floors')}>
               {t.overview.heroMaps}
               <ArrowRight className="size-4" />
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#/system">{t.overview.heroSystem}</a>
+            <a href={localizedHash(locale, '#/system')}>{t.overview.heroSystem}</a>
           </Button>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">

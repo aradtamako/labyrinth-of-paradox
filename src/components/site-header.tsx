@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import { useI18n } from '@/lib/i18n'
+import { localizedHash } from '@/lib/locale'
 import type { UiText } from '@/lib/ui-strings'
 import type { Route } from '@/lib/router'
 import { useTheme } from '@/lib/theme'
@@ -18,7 +19,7 @@ const NAV = [
 
 export function SiteHeader({ route }: { route: Route }) {
   const { theme, toggle } = useTheme()
-  const { t, toggle: toggleLocale } = useI18n()
+  const { t, locale, toggle: toggleLocale } = useI18n()
   const [open, setOpen] = useState(false)
 
   const isActive = (match: string) =>
@@ -27,7 +28,7 @@ export function SiteHeader({ route }: { route: Route }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
-        <a href="#/" className="group flex min-w-0 items-center gap-2.5">
+        <a href={localizedHash(locale, '#/')} className="group flex min-w-0 items-center gap-2.5">
           <LabyrinthMark />
           <span className="flex min-w-0 flex-col leading-none">
             <span className="truncate text-[15px] font-semibold tracking-tight">{t.brand.title}</span>
@@ -39,7 +40,7 @@ export function SiteHeader({ route }: { route: Route }) {
           {NAV.map((item) => (
             <a
               key={item.href}
-              href={item.href}
+              href={localizedHash(locale, item.href)}
               className={cn(
                 'rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
                 isActive(item.match)
@@ -98,7 +99,7 @@ export function SiteHeader({ route }: { route: Route }) {
                 {NAV.map((item) => (
                   <a
                     key={item.href}
-                    href={item.href}
+                    href={localizedHash(locale, item.href)}
                     onClick={() => setOpen(false)}
                     className={cn(
                       'rounded-md px-3 py-2 text-sm font-medium transition-colors',

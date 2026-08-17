@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { FLOORS, searchSeed, seedLabel, thumbFor } from '@/data/floors'
 import type { Floor } from '@/data/floors'
 import { useI18n } from '@/lib/i18n'
+import { localizedHash } from '@/lib/locale'
 
 export function FloorListPage() {
   const { t } = useI18n()
@@ -76,7 +77,7 @@ function SeedResults({ digits, hits }: { digits: string; hits: ReturnType<typeof
         {hits.map((hit) => (
           <a
             key={`${hit.floor.key}-${hit.image.src}`}
-            href={`#/floors/${hit.floor.key}`}
+            href={localizedHash(locale, `#/floors/${hit.floor.key}`)}
             className="group overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-md"
           >
             <div className="overflow-hidden bg-muted/40">
@@ -101,13 +102,13 @@ function SeedResults({ digits, hits }: { digits: string; hits: ReturnType<typeof
 }
 
 function FloorCard({ floor }: { floor: Floor }) {
-  const { t, x } = useI18n()
+  const { t, x, locale } = useI18n()
   const thumb = floor.images.find((i) => !i.legend && !i.figure) ?? floor.images[0]
   const seeds = floor.images.filter((i) => i.seed).length
 
   return (
     <a
-      href={`#/floors/${floor.key}`}
+      href={localizedHash(locale, `#/floors/${floor.key}`)}
       className="group flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-md"
     >
       {thumb && (
