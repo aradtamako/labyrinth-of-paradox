@@ -456,19 +456,26 @@ export const REWARDS: RewardEntry[] = [...rewardIndex.values()].sort(
   (a, b) => b.occurrences.length - a.occurrences.length || a.reward.name.localeCompare(b.reward.name),
 )
 
-/** 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。 */
+/** カタカナをひらがなに変換する（検索時の表記ゆれ吸収用）。 */
+function toHiragana(s: string): string {
+  return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
+}
+
+/** 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。カタカナ/ひらがなは区別しない。 */
 export function searchRewards(query: string): RewardEntry[] {
-  const q = query.trim().toLowerCase()
+  const q = toHiragana(query.trim().toLowerCase())
   if (!q) return REWARDS
   return REWARDS.filter((e) => {
-    const haystack = [
-      e.reward.name,
-      e.reward.nameKr ?? '',
-      ...e.types.flatMap((t) => [t.name, t.nameKr]),
-      ...e.tiers.map((t) => TIER_LABELS[t] ?? t),
-    ]
-      .join(' ')
-      .toLowerCase()
+    const haystack = toHiragana(
+      [
+        e.reward.name,
+        e.reward.nameKr ?? '',
+        ...e.types.flatMap((t) => [t.name, t.nameKr]),
+        ...e.tiers.map((t) => TIER_LABELS[t] ?? t),
+      ]
+        .join(' ')
+        .toLowerCase(),
+    )
     return haystack.includes(q)
   })
 }
