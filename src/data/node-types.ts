@@ -550,15 +550,19 @@ function toHiragana(s: string): string {
   return s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
 }
 
+/** 検索語・検索対象の正規化。カタカナ/ひらがなと大文字小文字は区別しない。 */
+function normalize(s: string): string {
+  return toHiragana(s.trim().toLowerCase())
+}
+
 /**
- * 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。
- * カタカナ/ひらがなは区別せず、表示中の言語にかかわらず日本語・英語・韓国語すべてを検索対象にする。
+ * 報酬1件ぶんの検索対象文字列（報酬名・韓国語名・ノード種別名・等級）。
+ * 表示中の言語にかかわらず日本語・英語・韓国語すべてを引けるようにまとめてある。
  */
-export function searchRewards(query: string): RewardEntry[] {
-  const q = toHiragana(query.trim().toLowerCase())
-  if (!q) return REWARDS
-  return REWARDS.filter((e) => {
-    const haystack = toHiragana(
+const HAYSTACKS = new Map<string, string>(
+  REWARDS.map((e) => [
+    e.id,
+    normalize(
       [
         e.reward.name.ja,
         e.reward.name.en,
@@ -568,12 +572,21 @@ export function searchRewards(query: string): RewardEntry[] {
           const label = TIER_LABELS[t]
           return label ? [label.ja, label.en] : [t]
         }),
-      ]
-        .join(' ')
-        .toLowerCase(),
-    )
-    return haystack.includes(q)
-  })
+      ].join(' '),
+    ),
+  ]),
+)
+
+/** query は normalize() 済みであること。 */
+function matchesQuery(entry: RewardEntry, query: string): boolean {
+  return HAYSTACKS.get(entry.id)?.includes(query) ?? false
+}
+
+/** 報酬名・韓国語名・ノード種別名のいずれかに引っかかれば拾う。 */
+export function searchRewards(query: string): RewardEntry[] {
+  const q = normalize(query)
+  if (!q) return REWARDS
+  return REWARDS.filter((e) => matchesQuery(e, q))
 }
 
 // ---- 区域ごとの目玉報酬 --------------------------------------------------
@@ -587,6 +600,19 @@ export interface AreaHighlight {
   areaCount: number
 }
 
+function toHighlight(e: RewardEntry): AreaHighlight {
+  return { reward: e.reward, types: e.types, tiers: e.tiers, areaCount: e.areas.length }
+}
+
+/** 区域ごとの報酬（目玉に限らない全件）。REWARDS と同じく出現数の多い順。 */
+const areaRewardIndex = new Map<number, RewardEntry[]>()
+for (const area of AREAS_WITH_NODES) {
+  areaRewardIndex.set(
+    area,
+    REWARDS.filter((e) => e.areas.includes(area)),
+  )
+}
+
 /**
  * 区域の性格を表す報酬。迷宮調査券・外郭入場券・終末の啓示のように
  * ノードデータを持つ全区域で同じように出るものは、区域を選ぶ判断材料に
@@ -598,13 +624,9 @@ for (const area of AREAS_WITH_NODES) {
   // その区域で見かけやすい順のまま残る。
   areaHighlightIndex.set(
     area,
-    REWARDS.filter((e) => e.areas.includes(area) && e.areas.length < AREAS_WITH_NODES.length)
-      .map((e) => ({
-        reward: e.reward,
-        types: e.types,
-        tiers: e.tiers,
-        areaCount: e.areas.length,
-      }))
+    (areaRewardIndex.get(area) ?? [])
+      .filter((e) => e.areas.length < AREAS_WITH_NODES.length)
+      .map(toHighlight)
       .sort((a, b) => a.areaCount - b.areaCount),
   )
 }
@@ -618,6 +640,24 @@ export function areaHighlights(areas: number[]): AreaHighlight[] {
     for (const highlight of areaHighlightIndex.get(area) ?? []) {
       const id = rewardId(highlight.reward)
       if (!merged.has(id)) merged.set(id, highlight)
+    }
+  }
+  return [...merged.values()].sort((a, b) => a.areaCount - b.areaCount)
+}
+
+/**
+ * 区域（複数可）で手に入る報酬を、報酬名で絞り込む。
+ * 一致が無ければ空配列。区域一覧の検索はこれを引く。
+ */
+export function searchAreaRewards(areas: number[], query: string): AreaHighlight[] {
+  const q = normalize(query)
+  if (!q) return []
+
+  const merged = new Map<string, AreaHighlight>()
+  for (const area of areas) {
+    for (const entry of areaRewardIndex.get(area) ?? []) {
+      if (merged.has(entry.id) || !matchesQuery(entry, q)) continue
+      merged.set(entry.id, toHighlight(entry))
     }
   }
   return [...merged.values()].sort((a, b) => a.areaCount - b.areaCount)
