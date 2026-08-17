@@ -7,6 +7,18 @@ export type Locale = 'ja' | 'en'
 
 export const LOCALES: Locale[] = ['ja', 'en']
 
+/** ハッシュURLに含まれる言語コードを取得する。 */
+export function localeFromHash(hash: string): Locale | undefined {
+  const first = hash.replace(/^#\/?/, '').split(/[/?]/)[0]
+  return first === 'ja' || first === 'en' ? first : undefined
+}
+
+/** 内部ハッシュURLに現在の言語コードを付与する。 */
+export function localizedHash(locale: Locale, path: string): string {
+  const normalized = path.replace(/^#\/?/, '').replace(/^(ja|en)(?:\/|$)/, '')
+  return `#/${locale}/${normalized}`
+}
+
 /** 日本語と英語を1組にした表示用テキスト。データ層の文言はすべてこの形で持つ。 */
 export interface Localized {
   ja: string
