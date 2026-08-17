@@ -154,7 +154,9 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
           )}
         </div>
         {reward.nameKr && <p className="mt-0.5 text-xs text-muted-foreground">{reward.nameKr}</p>}
-        {reward.note && <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{reward.note}</p>}
+        {reward.note && (
+          <p className="mt-1 whitespace-pre-line text-xs leading-relaxed text-muted-foreground">{reward.note}</p>
+        )}
 
         <ul className="mt-2 flex flex-wrap gap-1">
           {reward.label && (
