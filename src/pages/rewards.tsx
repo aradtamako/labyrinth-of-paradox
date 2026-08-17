@@ -17,21 +17,21 @@ import {
   searchRewards,
 } from '@/data/node-types'
 import type { RewardEntry } from '@/data/node-types'
+import { useI18n } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 export function RewardsPage() {
+  const { t, x } = useI18n()
   const [query, setQuery] = useState('')
   const results = useMemo(() => searchRewards(query), [query])
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <header className="max-w-2xl">
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">報酬一覧</h1>
-        <p className="mt-2 leading-relaxed text-muted-foreground">
-          ノードデータを取り込んだ区域に出現する報酬をまとめたもの。報酬名・ノード種別・等級で検索できる。
-        </p>
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{t.rewards.title}</h1>
+        <p className="mt-2 leading-relaxed text-muted-foreground">{t.rewards.lead}</p>
         <p className="mt-2 text-sm text-muted-foreground">
-          収録区域：{AREAS_WITH_NODES.map((a) => `${a}区域`).join('・')}
+          {t.rewards.coverage(t.common.areaList(AREAS_WITH_NODES))}
         </p>
       </header>
 
@@ -40,8 +40,8 @@ export function RewardsPage() {
         <Input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="報酬名・ノード種別・等級で検索"
-          aria-label="報酬を検索"
+          placeholder={t.rewards.searchPlaceholder}
+          aria-label={t.rewards.searchLabel}
           className="pr-9 pl-9"
         />
         {query && (
@@ -49,7 +49,7 @@ export function RewardsPage() {
             variant="ghost"
             size="icon"
             onClick={() => setQuery('')}
-            aria-label="検索をクリア"
+            aria-label={t.common.clearSearch}
             className="absolute top-1/2 right-1 size-7 -translate-y-1/2"
           >
             <X className="size-3.5" />
@@ -58,16 +58,14 @@ export function RewardsPage() {
       </div>
 
       <p className="mt-4 text-sm text-muted-foreground">
-        <span className="font-semibold text-foreground">{results.length}</span> 件
-        {query && ` / 全 ${REWARDS.length} 件`}
-        <span className="ml-2 text-xs">
-          （区域バッジの数字は該当マスの総数。その区域の全シード合計）
-        </span>
+        <span className="font-semibold text-foreground">{results.length}</span> {t.rewards.resultCount}
+        {query && t.rewards.resultTotal(REWARDS.length)}
+        <span className="ml-2 text-xs">{t.rewards.resultNote}</span>
       </p>
 
       {results.length === 0 ? (
         <div className="mt-6 rounded-xl border border-dashed px-6 py-14 text-center text-sm text-muted-foreground">
-          該当する報酬が見つからなかった。
+          {t.rewards.empty}
         </div>
       ) : (
         <ul className="mt-4 grid gap-3 md:grid-cols-2">
@@ -80,10 +78,8 @@ export function RewardsPage() {
       <Separator className="mt-14" />
 
       <section className="mt-8">
-        <h2 className="text-lg font-semibold tracking-tight">ノード種別</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          マップ上のマスの種類。等級を持つマスはアイコンの色で等級が分かる。
-        </p>
+        <h2 className="text-lg font-semibold tracking-tight">{t.rewards.nodeTypesTitle}</h2>
+        <p className="mt-1 text-sm text-muted-foreground">{t.rewards.nodeTypesLead}</p>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {NODE_TYPE_STATS.map((stat) => (
             <li key={stat.type.id} className="rounded-xl border bg-card p-4">
@@ -94,7 +90,7 @@ export function RewardsPage() {
                   ))}
                 </div>
                 <div className="min-w-0">
-                  <h3 className="text-sm leading-tight font-semibold">{stat.type.name}</h3>
+                  <h3 className="text-sm leading-tight font-semibold">{x(stat.type.name)}</h3>
                   <p className="mt-0.5 text-xs text-muted-foreground">{stat.type.nameKr}</p>
                 </div>
                 <span className="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">
@@ -102,7 +98,7 @@ export function RewardsPage() {
                 </span>
               </div>
               <p className="mt-2.5 text-xs leading-relaxed text-muted-foreground">
-                {stat.type.description}
+                {x(stat.type.description)}
               </p>
               {stat.tiers.length > 0 && (
                 <ul className="mt-2.5 flex flex-wrap gap-1">
@@ -119,7 +115,7 @@ export function RewardsPage() {
       </section>
 
       <p className="mt-10 text-xs leading-relaxed text-muted-foreground">
-        ノード配置・報酬データの出典：
+        {t.rewards.sourceLead}
         <a
           href={NODE_DATA_SOURCE.url}
           target="_blank"
@@ -135,8 +131,9 @@ export function RewardsPage() {
 }
 
 function RewardCard({ entry }: { entry: RewardEntry }) {
+  const { t, x, locale } = useI18n()
   const { reward } = entry
-  const countLabel = rewardCountLabel(reward)
+  const countLabel = rewardCountLabel(reward, locale)
 
   return (
     <li className="flex gap-3 rounded-xl border bg-card p-4">
@@ -148,21 +145,23 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
 
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-baseline gap-1.5">
-          <h3 className="font-semibold tracking-tight">{reward.name}</h3>
+          <h3 className="font-semibold tracking-tight">{x(reward.name)}</h3>
           {countLabel && (
             <span className="font-mono text-sm text-muted-foreground tabular-nums">{countLabel}</span>
           )}
         </div>
         {reward.nameKr && <p className="mt-0.5 text-xs text-muted-foreground">{reward.nameKr}</p>}
         {reward.note && (
-          <p className="mt-1 whitespace-pre-line text-xs leading-relaxed text-muted-foreground">{reward.note}</p>
+          <p className="mt-1 whitespace-pre-line text-xs leading-relaxed text-muted-foreground">
+            {x(reward.note)}
+          </p>
         )}
 
         <ul className="mt-2 flex flex-wrap gap-1">
           {reward.label && (
             <li>
               <Badge variant="secondary" className="font-normal">
-                {reward.label}
+                {x(reward.label)}
               </Badge>
             </li>
           )}
@@ -174,7 +173,7 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
         </ul>
 
         <p className="mt-2.5 text-xs text-muted-foreground">
-          {entry.types.map((t) => t.name).join('・')}
+          {entry.types.map((type) => x(type.name)).join(t.common.listSeparator)}
         </p>
 
         <ul className="mt-2 flex flex-wrap gap-1.5">
@@ -184,7 +183,7 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
                 href={`#/floors/${b.area}`}
                 className="inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-[11px] transition-colors hover:bg-secondary"
               >
-                {b.area}区域
+                {t.common.area(b.area)}
               </a>
             </li>
           ))}
@@ -195,14 +194,16 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
 }
 
 function TierBadge({ tier, className }: { tier: string; className?: string }) {
+  const { x } = useI18n()
   const color = TIER_COLORS[tier]
+  const label = TIER_LABELS[tier]
   return (
     <Badge
       variant="outline"
       className={cn('font-normal', className)}
       style={color ? { color, borderColor: color } : undefined}
     >
-      {TIER_LABELS[tier] ?? tier}
+      {label ? x(label) : tier}
     </Badge>
   )
 }

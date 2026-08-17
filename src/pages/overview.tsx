@@ -8,23 +8,27 @@ import { FLOORS, GUIDE_INDEX_URL, MAX_AREA, SEED_COUNT } from '@/data/floors'
 import { NAMU_SOURCE } from '@/data/namu'
 import { AREAS_WITH_NODES, NODE_DATA_SOURCE } from '@/data/node-types'
 import { ENTRY_SPECS, OFFICIAL_SOURCE } from '@/data/official'
+import { useI18n } from '@/lib/i18n'
 
 export function OverviewPage() {
+  const { t, x } = useI18n()
+  const nodeAreas = t.common.areaList(AREAS_WITH_NODES)
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
       <Hero />
 
       <section className="mt-12">
         <SectionHeading
-          eyebrow="入場条件"
-          title="ダンジョン基本情報"
-          description="公式アップデートページに記載された仕様。"
+          eyebrow={t.overview.entryEyebrow}
+          title={t.overview.entryTitle}
+          description={t.overview.entryDescription}
         />
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {ENTRY_SPECS.map((spec) => (
-            <div key={spec.label} className="rounded-xl border bg-card px-4 py-3.5">
-              <div className="text-xs text-muted-foreground">{spec.label}</div>
-              <div className="mt-1 text-[15px] font-semibold tracking-tight">{spec.value}</div>
+            <div key={spec.label.ja} className="rounded-xl border bg-card px-4 py-3.5">
+              <div className="text-xs text-muted-foreground">{x(spec.label)}</div>
+              <div className="mt-1 text-[15px] font-semibold tracking-tight">{x(spec.value)}</div>
             </div>
           ))}
         </div>
@@ -32,72 +36,58 @@ export function OverviewPage() {
 
       <section className="mt-14">
         <SectionHeading
-          eyebrow="攻略の基本"
-          title="シードの見分け方"
-          description="各区域には5種類の配置パターン（シード）があり、どれを引いたかを最初に特定するのが攻略の起点になる。"
+          eyebrow={t.overview.seedEyebrow}
+          title={t.overview.seedTitle}
+          description={t.overview.seedDescription}
         />
 
         <ol className="mt-6 grid gap-4 md:grid-cols-3">
-          <Step
-            n={1}
-            title="右端の列を数える"
-            body="マップの右端の列について、上から順に各行の部屋数を数える。5桁の数字（例：23333）がそのままシードコードになる。"
-          />
-          <Step
-            n={2}
-            title="重複したら青い線を見る"
-            body="4区域以降は配置が同一で数字が重複するシードが出てくる。その場合はマップ上の青い点線2本の位置で区別する。"
-          />
-          <Step
-            n={3}
-            title="1マス開けて確定させる"
-            body="7区域のように青い線まで一致する場合は、どちらのシードでも開ける必要があるマスを1つ開け、中身（調査券か入場券か）で判定する。"
-          />
+          <Step n={1} title={t.overview.seedStep1Title} body={t.overview.seedStep1Body} />
+          <Step n={2} title={t.overview.seedStep2Title} body={t.overview.seedStep2Body} />
+          <Step n={3} title={t.overview.seedStep3Title} body={t.overview.seedStep3Body} />
         </ol>
 
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <Button asChild>
             <a href="#/floors">
-              区域マップを開く
+              {t.overview.seedCta}
               <ArrowRight className="size-4" />
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground">
-            シードコードでの検索にも対応（全 {SEED_COUNT} パターン）。
-          </p>
+          <p className="text-sm text-muted-foreground">{t.overview.seedSearchNote(SEED_COUNT)}</p>
         </div>
       </section>
 
       <section className="mt-14">
-        <SectionHeading eyebrow="収録データ" title="このサイトで見られるもの" />
+        <SectionHeading eyebrow={t.overview.featuresEyebrow} title={t.overview.featuresTitle} />
         <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <FeatureCard
             icon={<Layers className="size-4" />}
-            title={`1〜${MAX_AREA}区域のマップ`}
-            body={`${FLOORS.length} 区域分のシードマップを収録。${AREAS_WITH_NODES.join('・')}区域はマスごとの報酬まで表示できる。`}
+            title={t.overview.featureMapsTitle(MAX_AREA)}
+            body={t.overview.featureMapsBody(FLOORS.length, nodeAreas)}
             href="#/floors"
-            cta="区域一覧へ"
+            cta={t.overview.featureMapsCta}
           />
           <FeatureCard
             icon={<Gift className="size-4" />}
-            title="報酬から逆引き"
-            body="どのマスでどの報酬が手に入るかを一覧・検索できる。報酬名・ノード種別・等級で絞り込める。"
+            title={t.overview.featureRewardsTitle}
+            body={t.overview.featureRewardsBody}
             href="#/rewards"
-            cta="報酬一覧へ"
+            cta={t.overview.featureRewardsCta}
           />
           <FeatureCard
             icon={<KeySquare className="size-4" />}
-            title="調査券・入場券の仕様"
-            body="関門のロック解除に使う迷宮調査券と、メイン／外郭それぞれの入場券の入手方法。"
+            title={t.overview.featureTicketsTitle}
+            body={t.overview.featureTicketsBody}
             href="#/system"
-            cta="システムへ"
+            cta={t.overview.featureSystemCta}
           />
           <FeatureCard
             icon={<ScrollText className="size-4" />}
-            title="討伐券と傭兵団"
-            body="討伐券7種の必要名声・入手条件、傭兵団レベルとバッファー派遣の仕様。"
+            title={t.overview.featureSubjugationTitle}
+            body={t.overview.featureSubjugationBody}
             href="#/system"
-            cta="システムへ"
+            cta={t.overview.featureSystemCta}
           />
         </div>
       </section>
@@ -105,32 +95,31 @@ export function OverviewPage() {
       <Separator className="mt-14" />
 
       <section className="mt-8">
-        <h2 className="text-sm font-semibold">出典</h2>
+        <h2 className="text-sm font-semibold">{t.overview.sourcesTitle}</h2>
         <ul className="mt-3 grid gap-2 text-sm">
           <SourceLink
             href={OFFICIAL_SOURCE}
-            label="ダンジョン&ファイター 公式 — Season12 Act0 2-2 アップデート"
-            note="入場条件・討伐券・傭兵団などの仕様"
+            label={t.overview.sourceOfficialLabel}
+            note={t.overview.sourceOfficialNote}
           />
           <SourceLink
             href={GUIDE_INDEX_URL}
-            label="DCインサイド 던파IP マイナーギャラリー — 미궁 1~31층 모음"
-            note="各区域のシードマップと報酬情報"
+            label={t.overview.sourceGuideLabel}
+            note={t.overview.sourceGuideNote}
           />
           <SourceLink
             href={NODE_DATA_SOURCE.url}
             label={NODE_DATA_SOURCE.label}
-            note={`マスごとのノード配置・報酬データ（${AREAS_WITH_NODES.join('・')}区域）`}
+            note={t.overview.sourceNodeNote(nodeAreas)}
           />
           <SourceLink
             href={NAMU_SOURCE.url}
             label={NAMU_SOURCE.label}
-            note={`関門ごとの報酬内容、区域別の推奨名声とボス体力倍率（${NAMU_SOURCE.license}）`}
+            note={t.overview.sourceNamuNote(NAMU_SOURCE.license)}
           />
         </ul>
         <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-          マップ画像および攻略情報は上記まとめ記事の投稿者によるもの。ゲーム内アップデートにより
-          内容が変わる場合があるため、最新情報は出典元を確認してほしい。
+          {t.overview.sourcesDisclaimer}
         </p>
       </section>
     </div>
@@ -138,6 +127,8 @@ export function OverviewPage() {
 }
 
 function Hero() {
+  const { t } = useI18n()
+
   return (
     <div className="relative overflow-hidden rounded-2xl border bg-card px-6 py-10 sm:px-10 sm:py-14">
       <div
@@ -146,32 +137,33 @@ function Hero() {
       />
       <div className="relative">
         <Badge variant="secondary" className="mb-4">
-          Season12 Act0 2-2 「千海天：新たな跳躍」
+          {t.overview.heroBadge}
         </Badge>
-        <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-5xl">逆説の迷宮 攻略</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-5xl">
+          {t.overview.heroTitle}
+        </h1>
         <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
-          1〜{MAX_AREA}区域のシードマップ、報酬構成、調査券・討伐券まわりの仕様をまとめた
-          非公式データベース。区域ごとに5種類あるマップ配置を、ゲーム内で数えた部屋数から特定できる。
+          {t.overview.heroLead(MAX_AREA)}
         </p>
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <Button asChild size="lg">
             <a href="#/floors">
-              区域マップを見る
+              {t.overview.heroMaps}
               <ArrowRight className="size-4" />
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#/system">システム解説</a>
+            <a href="#/system">{t.overview.heroSystem}</a>
           </Button>
         </div>
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
             <Timer className="size-3.5" />
-            制限時間 4分／区域
+            {t.overview.heroTimeLimit}
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Layers className="size-3.5" />
-            全40区域（マップ収録は {MAX_AREA} 区域まで）
+            {t.overview.heroAreaCount(MAX_AREA)}
           </span>
         </div>
       </div>

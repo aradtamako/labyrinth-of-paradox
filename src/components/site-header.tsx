@@ -1,21 +1,24 @@
-import { Menu, Moon, Sun } from 'lucide-react'
+import { Languages, Menu, Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+import { useI18n } from '@/lib/i18n'
+import type { UiText } from '@/lib/ui-strings'
 import type { Route } from '@/lib/router'
 import { useTheme } from '@/lib/theme'
 
 const NAV = [
-  { href: '#/', label: '概要', match: 'overview' },
-  { href: '#/floors', label: '区域マップ', match: 'floors' },
-  { href: '#/rewards', label: '報酬一覧', match: 'rewards' },
-  { href: '#/system', label: 'システム', match: 'system' },
+  { href: '#/', label: (t: UiText) => t.nav.overview, match: 'overview' },
+  { href: '#/floors', label: (t: UiText) => t.nav.floors, match: 'floors' },
+  { href: '#/rewards', label: (t: UiText) => t.nav.rewards, match: 'rewards' },
+  { href: '#/system', label: (t: UiText) => t.nav.system, match: 'system' },
 ] as const
 
 export function SiteHeader({ route }: { route: Route }) {
   const { theme, toggle } = useTheme()
+  const { t, toggle: toggleLocale } = useI18n()
   const [open, setOpen] = useState(false)
 
   const isActive = (match: string) =>
@@ -27,8 +30,8 @@ export function SiteHeader({ route }: { route: Route }) {
         <a href="#/" className="group flex min-w-0 items-center gap-2.5">
           <LabyrinthMark />
           <span className="flex min-w-0 flex-col leading-none">
-            <span className="truncate text-[15px] font-semibold tracking-tight">逆説の迷宮</span>
-            <span className="truncate text-[11px] text-muted-foreground">攻略データベース</span>
+            <span className="truncate text-[15px] font-semibold tracking-tight">{t.brand.title}</span>
+            <span className="truncate text-[11px] text-muted-foreground">{t.brand.subtitle}</span>
           </span>
         </a>
 
@@ -44,18 +47,29 @@ export function SiteHeader({ route }: { route: Route }) {
                   : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
               )}
             >
-              {item.label}
+              {item.label(t)}
             </a>
           ))}
         </nav>
 
         <div className="ml-auto flex items-center gap-1">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLocale}
+            aria-label={t.nav.switchLanguage}
+            className="px-2 text-xs font-medium"
+          >
+            <Languages className="size-4" />
+            {t.nav.otherLanguage}
+          </Button>
+
           <Button variant="ghost" size="icon" asChild>
             <a
               href="https://github.com/aradtamako/labyrinth-of-paradox"
               target="_blank"
               rel="noreferrer"
-              aria-label="GitHub リポジトリを開く"
+              aria-label={t.nav.github}
             >
               <GithubMark className="size-4" />
             </a>
@@ -65,20 +79,20 @@ export function SiteHeader({ route }: { route: Route }) {
             variant="ghost"
             size="icon"
             onClick={toggle}
-            aria-label={theme === 'dark' ? 'ライトテーマに切り替え' : 'ダークテーマに切り替え'}
+            aria-label={theme === 'dark' ? t.nav.themeToLight : t.nav.themeToDark}
           >
             {theme === 'dark' ? <Sun className="size-4" /> : <Moon className="size-4" />}
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="sm:hidden" aria-label="メニューを開く">
+              <Button variant="ghost" size="icon" className="sm:hidden" aria-label={t.nav.openMenu}>
                 <Menu className="size-4" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-64">
               <SheetHeader>
-                <SheetTitle>メニュー</SheetTitle>
+                <SheetTitle>{t.nav.menu}</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4">
                 {NAV.map((item) => (
@@ -93,7 +107,7 @@ export function SiteHeader({ route }: { route: Route }) {
                         : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
                     )}
                   >
-                    {item.label}
+                    {item.label(t)}
                   </a>
                 ))}
               </nav>
