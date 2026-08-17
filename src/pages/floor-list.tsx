@@ -1,13 +1,17 @@
 import { Search, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
+import { TierBadge } from '@/components/tier-badge'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 import { Input } from '@/components/ui/input'
 import { FLOORS, searchSeed, seedLabel, thumbFor } from '@/data/floors'
 import type { Floor } from '@/data/floors'
+import { AREAS_WITH_NODES, areaHighlights, rewardCountLabel } from '@/data/node-types'
+import type { AreaHighlight } from '@/data/node-types'
 import { useI18n } from '@/lib/i18n'
-import { localizedHash } from '@/lib/locale'
+import { canonical, localizedHash } from '@/lib/locale'
 
 export function FloorListPage() {
   const { t } = useI18n()
@@ -101,10 +105,93 @@ function SeedResults({ digits, hits }: { digits: string; hits: ReturnType<typeof
   )
 }
 
+/**
+ * 報酬アイコン。ポインタを乗せるとアイテムの詳細を出す。
+ * カード全体がリンクなので、中に新しいフォーカス対象は作らない
+ * （アイコン1つずつ Tab で止まると区域の行き来がしにくくなる）。
+ * 読み上げ用の情報は img の alt に入れてある。
+ */
+function RewardIcon({ highlight }: { highlight: AreaHighlight }) {
+  const { t, x, locale } = useI18n()
+  const { reward, types, tiers, areaCount } = highlight
+  const countLabel = rewardCountLabel(reward, locale)
+  const [open, setOpen] = useState(false)
+
+  return (
+    <HoverCard open={open} onOpenChange={setOpen} openDelay={80} closeDelay={40}>
+      <HoverCardTrigger asChild>
+        <span className="block" onPointerLeave={() => setOpen(false)}>
+          {reward.image ? (
+            <img
+              src={reward.image}
+              alt={[x(reward.name), countLabel].filter(Boolean).join(' ')}
+              loading="lazy"
+              className="size-8 object-contain transition-transform hover:scale-110"
+            />
+          ) : (
+            <span aria-hidden className="block size-8 rounded bg-muted" />
+          )}
+        </span>
+      </HoverCardTrigger>
+
+      <HoverCardContent
+        side="top"
+        className="w-72"
+        onPointerEnter={(event) => event.preventDefault()}
+      >
+        <div className="flex items-start gap-3">
+          {reward.image && (
+            <img src={reward.image} alt="" className="size-11 shrink-0 object-contain" />
+          )}
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-baseline gap-x-1.5">
+              <h3 className="leading-tight font-semibold">{x(reward.name)}</h3>
+              {countLabel && (
+                <span className="font-mono text-sm text-muted-foreground tabular-nums">
+                  {countLabel}
+                </span>
+              )}
+            </div>
+            {reward.nameKr && <p className="mt-0.5 text-xs text-muted-foreground">{reward.nameKr}</p>}
+          </div>
+        </div>
+
+        {(reward.label || tiers.length > 0) && (
+          <ul className="mt-2.5 flex flex-wrap gap-1">
+            {reward.label && (
+              <li>
+                <Badge variant="secondary" className="font-normal">
+                  {x(reward.label)}
+                </Badge>
+              </li>
+            )}
+            {tiers.map((tier) => (
+              <li key={tier}>
+                <TierBadge tier={tier} />
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {reward.note && (
+          <p className="mt-2.5 whitespace-pre-line text-[11px] leading-relaxed text-muted-foreground">
+            {x(reward.note)}
+          </p>
+        )}
+
+        <div className="mt-2.5 space-y-0.5 border-t pt-2.5 text-[11px] text-muted-foreground">
+          <p>{t.floors.rewardNodeTypes(types.map((type) => x(type.name)).join(t.common.listSeparator))}</p>
+          <p>{t.floors.rewardAreaCount(areaCount, AREAS_WITH_NODES.length)}</p>
+        </div>
+      </HoverCardContent>
+    </HoverCard>
+  )
+}
+
 function FloorCard({ floor }: { floor: Floor }) {
   const { t, x, locale } = useI18n()
   const thumb = floor.images.find((i) => !i.legend && !i.figure) ?? floor.images[0]
-  const seeds = floor.images.filter((i) => i.seed).length
+  const highlights = areaHighlights(floor.areas)
 
   return (
     <a
@@ -125,11 +212,6 @@ function FloorCard({ floor }: { floor: Floor }) {
       <div className="flex flex-1 flex-col p-4">
         <div className="flex items-center gap-2">
           <h2 className="font-semibold tracking-tight">{x(floor.label)}</h2>
-          {floor.fame && floor.fame.delta > 0 && (
-            <Badge variant="outline" className="ml-auto font-mono text-[11px] tabular-nums">
-              +{floor.fame.delta.toLocaleString()}
-            </Badge>
-          )}
         </div>
 
         {floor.fame && (
@@ -138,16 +220,24 @@ function FloorCard({ floor }: { floor: Floor }) {
           </p>
         )}
 
-        {floor.rewards && floor.rewards.length > 0 && (
-          <p className="mt-2.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
-            {floor.rewards.map(x).join(t.common.listSeparator)}
-          </p>
+        {highlights.length > 0 ? (
+          <div className="mt-2.5">
+            <ul className="flex flex-wrap gap-1" aria-label={t.floors.cardRewardsLabel}>
+              {highlights.map((h) => (
+                <li key={canonical(h.reward.name)}>
+                  <RewardIcon highlight={h} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          floor.rewards &&
+          floor.rewards.length > 0 && (
+            <p className="mt-2.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+              {floor.rewards.map(x).join(t.common.listSeparator)}
+            </p>
+          )
         )}
-
-        <div className="mt-auto pt-3 text-xs text-muted-foreground">
-          {t.floors.cardMapCount(floor.images.length)}
-          {seeds > 0 && <span>{t.floors.cardSeedCount(seeds)}</span>}
-        </div>
       </div>
     </a>
   )
