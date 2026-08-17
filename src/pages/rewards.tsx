@@ -1,6 +1,7 @@
 import { ExternalLink, Search, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
+import { TierBadge } from '@/components/tier-badge'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -10,8 +11,6 @@ import {
   NODE_DATA_SOURCE,
   NODE_TYPE_STATS,
   REWARDS,
-  TIER_COLORS,
-  TIER_LABELS,
   iconSrc,
   rewardCountLabel,
   searchRewards,
@@ -19,7 +18,6 @@ import {
 import type { RewardEntry } from '@/data/node-types'
 import { useI18n } from '@/lib/i18n'
 import { localizedHash } from '@/lib/locale'
-import { cn } from '@/lib/utils'
 
 export function RewardsPage() {
   const { t, x } = useI18n()
@@ -194,17 +192,3 @@ function RewardCard({ entry }: { entry: RewardEntry }) {
   )
 }
 
-function TierBadge({ tier, className }: { tier: string; className?: string }) {
-  const { x } = useI18n()
-  const color = TIER_COLORS[tier]
-  const label = TIER_LABELS[tier]
-  return (
-    <Badge
-      variant="outline"
-      className={cn('font-normal', className)}
-      style={color ? { color, borderColor: color } : undefined}
-    >
-      {label ? x(label) : tier}
-    </Badge>
-  )
-}
