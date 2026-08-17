@@ -74,7 +74,7 @@ export function SystemPage() {
                 <TableHead className="min-w-56">討伐券</TableHead>
                 <TableHead className="min-w-48">効果</TableHead>
                 <TableHead className="min-w-52">入手方法</TableHead>
-                <TableHead className="min-w-28">必要名声</TableHead>
+                <TableHead className="min-w-32">必要名声</TableHead>
                 <TableHead className="min-w-56">使用条件</TableHead>
               </TableRow>
             </TableHeader>
@@ -93,7 +93,21 @@ export function SystemPage() {
                   </TableCell>
                   <TableCell className="whitespace-normal text-muted-foreground">{t.effect}</TableCell>
                   <TableCell className="whitespace-normal text-muted-foreground">{t.acquire}</TableCell>
-                  <TableCell className="font-mono tabular-nums">{t.fame}</TableCell>
+                  <TableCell className="whitespace-normal">
+                    <span className="font-mono tabular-nums">{t.fame}</span>
+                    {t.source && (
+                      <a
+                        href={t.source.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        title={t.source.label}
+                        className="mt-1 flex items-center gap-1 text-xs text-muted-foreground hover:text-primary hover:underline"
+                      >
+                        <ExternalLink className="size-3" />
+                        別ソース
+                      </a>
+                    )}
+                  </TableCell>
                   <TableCell className="whitespace-normal">
                     <ul className="flex flex-wrap gap-1">
                       {t.conditions.map((c) => (

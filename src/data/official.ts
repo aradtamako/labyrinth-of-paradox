@@ -58,6 +58,8 @@ export interface SubjugationTicket {
   acquire: string
   fame: string
   conditions: string[]
+  /** 公式アップデートページに掲載がなく、別ソースから補った項目にのみ設定する。 */
+  source?: { label: string; url: string }
 }
 
 export const SUBJUGATION_TICKETS: SubjugationTicket[] = [
@@ -100,6 +102,20 @@ export const SUBJUGATION_TICKETS: SubjugationTicket[] = [
     acquire: '二重現象関門クリア時。',
     fame: '101,853 以上',
     conditions: ['上級ダンジョン入場／報酬回数 2回が必要'],
+  },
+  {
+    // 「最後の過業」実装後に追加された6番目の討伐券。公式アップデートページ未掲載のため、
+    // 必要名声は「最後の過業」の入場名声から採る。
+    name: '背教者の城 & 最後の任務 討伐券',
+    iconId: TICKET_ICON.apostateFinalTask,
+    effect: '該当ダンジョン2種のクリア報酬を獲得する。',
+    acquire: '二重現象関門クリア時。',
+    fame: '108,921 以上',
+    conditions: ['上級ダンジョン入場／報酬回数 2回が必要'],
+    source: {
+      label: '必要名声は「最後の過業」ガイドの入場名声より（公式アップデートページ未掲載）',
+      url: 'https://df.pure-db.com/guide?no=1537',
+    },
   },
 ]
 
