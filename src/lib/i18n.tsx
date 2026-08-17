@@ -1,10 +1,11 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 
-import { tr } from '@/lib/locale'
+import { localeFromHash, tr } from '@/lib/locale'
 import type { Locale, Localized } from '@/lib/locale'
 import { UI_TEXT } from '@/lib/ui-strings'
 import type { UiText } from '@/lib/ui-strings'
+import { normalizeHash } from '@/lib/router'
 
 /**
  * 表示言語の保持と切り替え。テーマ（theme.ts）と同じく localStorage に覚えさせる。
@@ -14,6 +15,9 @@ import type { UiText } from '@/lib/ui-strings'
 const KEY = 'lop-locale'
 
 function initial(): Locale {
+  const fromHash = localeFromHash(window.location.hash)
+  if (fromHash) return fromHash
+
   const saved = localStorage.getItem(KEY)
   if (saved === 'ja' || saved === 'en') return saved
   return navigator.language.toLowerCase().startsWith('ja') ? 'ja' : 'en'
@@ -37,6 +41,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     localStorage.setItem(KEY, locale)
+    normalizeHash(locale)
 
     // index.html は日本語で書いてあるので、言語に合わせて上書きする。
     document.documentElement.lang = locale
