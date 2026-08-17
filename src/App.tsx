@@ -1,5 +1,5 @@
 import { SiteHeader } from '@/components/site-header'
-import { useRoute, useScrollReset } from '@/lib/router'
+import { useRoute, useScrollRestoration } from '@/lib/router'
 import { FloorDetailPage } from '@/pages/floor-detail'
 import { FloorListPage } from '@/pages/floor-list'
 import { OverviewPage } from '@/pages/overview'
@@ -8,7 +8,7 @@ import { SystemPage } from '@/pages/system'
 
 export default function App() {
   const route = useRoute()
-  useScrollReset(route.name === 'floor' ? route.key : route.name)
+  useScrollRestoration(route)
 
   return (
     <div className="flex min-h-dvh flex-col">
