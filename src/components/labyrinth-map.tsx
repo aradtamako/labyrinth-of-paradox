@@ -149,12 +149,14 @@ function NodeCell({
               selected && 'bg-accent ring-2 ring-primary',
             )}
           >
-            <img
-              src={iconSrc(node.icon)}
-              alt=""
-              loading="lazy"
-              className="size-full max-h-14 max-w-14 object-contain drop-shadow-sm"
-            />
+            <span className="relative grid size-full max-h-14 max-w-14 place-items-center">
+              <img
+                src={iconSrc(node.icon)}
+                alt=""
+                loading="lazy"
+                className="size-full object-contain drop-shadow-sm"
+              />
+            </span>
           </button>
         </HoverCardTrigger>
         <HoverCardContent
