@@ -149,12 +149,15 @@ function NodeCell({
               selected && 'bg-accent ring-2 ring-primary',
             )}
           >
-            <img
-              src={iconSrc(node.icon)}
-              alt=""
-              loading="lazy"
-              className="size-full max-h-14 max-w-14 object-contain drop-shadow-sm"
-            />
+            <span className="relative grid size-full max-h-14 max-w-14 place-items-center">
+              <img
+                src={iconSrc(node.icon)}
+                alt=""
+                loading="lazy"
+                className="size-full object-contain drop-shadow-sm"
+              />
+              <RewardOverlay rewards={node.rewards} />
+            </span>
           </button>
         </HoverCardTrigger>
         <HoverCardContent
@@ -166,6 +169,34 @@ function NodeCell({
         </HoverCardContent>
       </HoverCard>
     </div>
+  )
+}
+
+/** 上限を超えた分は出さない。マス自体が小さいので3つ並べると横幅を使い切る。 */
+const MAX_OVERLAY_REWARDS = 3
+
+/**
+ * マスのアイコンに報酬アイコンを重ねる。
+ * 中央に置くとマスの絵が読めなくなるので、上端に寄せて絵の下半分を残す。
+ */
+function RewardOverlay({ rewards }: { rewards: Reward[] }) {
+  const images = rewards.flatMap((r) => (r.image ? [{ key: r.name.ja, src: r.image }] : []))
+  if (images.length === 0) return null
+
+  return (
+    // 行間は gap-y-6（24px）なので、16px 持ち上げても上のマスにはぶつからない。
+    <span aria-hidden className="pointer-events-none absolute top-10 flex -space-x-2 drop-shadow-sm">
+      {/* ring-border は薄すぎて背後のマス絵に埋もれるので、輪郭は muted-foreground で取る。 */}
+      {images.slice(0, MAX_OVERLAY_REWARDS).map((image) => (
+        <img
+          key={image.key}
+          src={image.src}
+          alt=""
+          loading="lazy"
+          className="size-8 rounded-full bg-card object-contain ring-2 ring-muted-foreground/60"
+        />
+      ))}
+    </span>
   )
 }
 
