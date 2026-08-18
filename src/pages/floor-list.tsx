@@ -1,4 +1,4 @@
-import { Search, X } from 'lucide-react'
+import { Check, EyeOff, Plus, Search, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 import { TierBadge } from '@/components/tier-badge'
@@ -15,22 +15,30 @@ import {
   searchAreaRewards,
 } from '@/data/node-types'
 import type { AreaHighlight } from '@/data/node-types'
+import { useHiddenFloors } from '@/lib/hidden-floors'
+import type { HiddenFloors } from '@/lib/hidden-floors'
 import { useI18n } from '@/lib/i18n'
 import { canonical, localizedHash } from '@/lib/locale'
+import { cn } from '@/lib/utils'
+
+const FLOOR_KEYS = FLOORS.map((floor) => floor.key)
 
 export function FloorListPage() {
   const { t } = useI18n()
   const [query, setQuery] = useState('')
+  const hidden = useHiddenFloors(FLOOR_KEYS)
+  // 非表示にした区域は一覧からも検索結果からも外す。
+  const visible = FLOORS.filter((floor) => !hidden.has(floor.key))
   const q = query.trim()
   // 報酬名で区域を絞り込む。一致した報酬はカード側でそのまま並べる。
   const hits = useMemo(
     () =>
       q
-        ? FLOORS.map((floor) => ({ floor, rewards: searchAreaRewards(floor.areas, q) })).filter(
-            (hit) => hit.rewards.length > 0,
-          )
+        ? visible
+            .map((floor) => ({ floor, rewards: searchAreaRewards(floor.areas, q) }))
+            .filter((hit) => hit.rewards.length > 0)
         : [],
-    [q],
+    [q, visible],
   )
 
   return (
@@ -62,16 +70,127 @@ export function FloorListPage() {
         )}
       </div>
 
+      {/* 一覧の上に置く。下端だと非表示にした区域を戻せることに気づかれない。 */}
+      {hidden.keys.length > 0 && <HiddenFloorsPanel hidden={hidden} />}
+
       {q ? (
-        <RewardResults query={q} hits={hits} />
-      ) : (
+        <RewardResults query={q} hits={hits} hidden={hidden} />
+      ) : visible.length > 0 ? (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {FLOORS.map((floor) => (
-            <FloorCard key={floor.key} floor={floor} />
+          {visible.map((floor) => (
+            <FloorCard key={floor.key} floor={floor} onHide={() => hidden.hide(floor.key)} />
           ))}
+        </div>
+      ) : (
+        <div className="mt-8 rounded-xl border border-dashed px-6 py-14 text-center">
+          <p className="font-medium">{t.floors.allHiddenTitle}</p>
+          <p className="mt-1.5 text-sm text-muted-foreground">{t.floors.allHiddenBody}</p>
         </div>
       )}
     </div>
+  )
+}
+
+/**
+ * 非表示にした区域を並べ、選んだものだけ表示に戻すパネル。
+ * 数十件を非表示にしてもマップ一覧を押し下げないよう、普段は件数だけの1行に畳む。
+ */
+function HiddenFloorsPanel({ hidden }: { hidden: HiddenFloors }) {
+  const { t, x } = useI18n()
+  const [open, setOpen] = useState(false)
+  const [picked, setPicked] = useState<string[]>([])
+  // 表示に戻した区域は選択からも外れる。
+  const selected = picked.filter((key) => hidden.has(key))
+  const floors = FLOORS.filter((floor) => hidden.has(floor.key))
+
+  const toggle = (floorKey: string) =>
+    setPicked((prev) => {
+      const current = prev.filter((key) => hidden.has(key))
+      return current.includes(floorKey)
+        ? current.filter((key) => key !== floorKey)
+        : [...current, floorKey]
+    })
+
+  return (
+    <section className="mt-6 rounded-xl border border-dashed px-4 py-3">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <h2 className="flex items-center gap-2 text-sm font-medium">
+          <EyeOff aria-hidden className="size-4 text-muted-foreground" />
+          {t.floors.hiddenTitle}
+          <span className="font-mono text-xs text-muted-foreground tabular-nums">
+            {t.floors.hiddenCount(floors.length)}
+          </span>
+        </h2>
+
+        <Button
+          size="sm"
+          variant="outline"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="ml-auto"
+        >
+          {open ? t.floors.hiddenClose : t.floors.hiddenOpen}
+        </Button>
+      </div>
+
+      {open && (
+        <div className="mt-3 border-t pt-3">
+          <p className="text-sm text-muted-foreground">{t.floors.hiddenLead}</p>
+
+          {/* 件数が増えてもこの枠の中でスクロールさせ、パネルの高さを抑える。 */}
+          <ul className="mt-2.5 flex max-h-44 flex-wrap gap-2 overflow-y-auto pr-1 pb-1">
+            {floors.map((floor) => {
+              const on = selected.includes(floor.key)
+              return (
+                <li key={floor.key}>
+                  <button
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => toggle(floor.key)}
+                    className={cn(
+                      'flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm transition-colors outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50',
+                      on
+                        ? 'border-primary bg-primary text-primary-foreground'
+                        : 'bg-background hover:bg-accent hover:text-accent-foreground',
+                    )}
+                  >
+                    {on ? (
+                      <Check aria-hidden className="size-3.5" />
+                    ) : (
+                      <Plus aria-hidden className="size-3.5 text-muted-foreground" />
+                    )}
+                    {x(floor.label)}
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Button
+              size="sm"
+              disabled={selected.length === 0}
+              onClick={() => {
+                hidden.show(selected)
+                setPicked([])
+              }}
+            >
+              {t.floors.restoreSelected(selected.length)}
+            </Button>
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={() => {
+                hidden.showAll()
+                setPicked([])
+              }}
+            >
+              {t.floors.restoreAll}
+            </Button>
+          </div>
+        </div>
+      )}
+    </section>
   )
 }
 
@@ -81,7 +200,15 @@ interface FloorHit {
   rewards: AreaHighlight[]
 }
 
-function RewardResults({ query, hits }: { query: string; hits: FloorHit[] }) {
+function RewardResults({
+  query,
+  hits,
+  hidden,
+}: {
+  query: string
+  hits: FloorHit[]
+  hidden: HiddenFloors
+}) {
   const { t } = useI18n()
 
   if (hits.length === 0) {
@@ -98,7 +225,12 @@ function RewardResults({ query, hits }: { query: string; hits: FloorHit[] }) {
       <p className="text-sm text-muted-foreground">{t.floors.hits(query, hits.length)}</p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {hits.map((hit) => (
-          <FloorCard key={hit.floor.key} floor={hit.floor} rewards={hit.rewards} />
+          <FloorCard
+            key={hit.floor.key}
+            floor={hit.floor}
+            rewards={hit.rewards}
+            onHide={() => hidden.hide(hit.floor.key)}
+          />
         ))}
       </div>
     </div>
@@ -188,61 +320,87 @@ function RewardIcon({ highlight }: { highlight: AreaHighlight }) {
   )
 }
 
-/** rewards を渡すと、その区域の目玉報酬の代わりに渡されたものを並べる（検索結果用）。 */
-function FloorCard({ floor, rewards }: { floor: Floor; rewards?: AreaHighlight[] }) {
+/**
+ * rewards を渡すと、その区域の目玉報酬の代わりに渡されたものを並べる（検索結果用）。
+ * 非表示ボタンはリンクの中に置けない（a の中の button は不正）ので、
+ * カード全体を包む div の中でリンクと並べ、右上に重ねる。
+ */
+function FloorCard({
+  floor,
+  rewards,
+  onHide,
+}: {
+  floor: Floor
+  rewards?: AreaHighlight[]
+  onHide: () => void
+}) {
   const { t, x, locale } = useI18n()
   const thumb = floor.images.find((i) => !i.legend && !i.figure) ?? floor.images[0]
   const highlights = rewards ?? areaHighlights(floor.areas)
 
   return (
-    <a
-      href={localizedHash(locale, `#/floors/${floor.key}`)}
-      className="group flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-md"
-    >
-      {thumb && (
-        <div className="aspect-[16/9] overflow-hidden bg-muted/40">
-          <img
-            src={thumbFor(thumb.src)}
-            alt=""
-            loading="lazy"
-            className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-          />
-        </div>
-      )}
+    <div className="group relative">
+      <Button
+        variant="secondary"
+        size="icon-sm"
+        onClick={onHide}
+        aria-label={t.floors.hideCard(x(floor.label))}
+        // タッチ端末でも押せるよう常に出しておき、普段は少し薄くしてサムネイルの邪魔をしない。
+        className="absolute top-2 right-2 z-10 opacity-75 shadow-sm transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
+      >
+        <EyeOff className="size-3.5" />
+      </Button>
 
-      <div className="flex flex-1 flex-col p-4">
-        <div className="flex items-center gap-2">
-          <h2 className="font-semibold tracking-tight">{x(floor.label)}</h2>
-        </div>
-
-        {floor.fame && (
-          <p className="mt-1 font-mono text-xs text-muted-foreground tabular-nums">
-            {t.floors.cardFame} {floor.fame.from.toLocaleString()} → {floor.fame.to.toLocaleString()}
-          </p>
-        )}
-
-        {highlights.length > 0 ? (
-          <div className="mt-2.5">
-            <ul
-              className="flex flex-wrap gap-1"
-              aria-label={rewards ? t.floors.cardMatchedLabel : t.floors.cardRewardsLabel}
-            >
-              {highlights.map((h) => (
-                <li key={canonical(h.reward.name)}>
-                  <RewardIcon highlight={h} />
-                </li>
-              ))}
-            </ul>
+      <a
+        href={localizedHash(locale, `#/floors/${floor.key}`)}
+        className="flex h-full flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-shadow hover:shadow-md"
+      >
+        {thumb && (
+          <div className="aspect-[16/9] overflow-hidden bg-muted/40">
+            <img
+              src={thumbFor(thumb.src)}
+              alt=""
+              loading="lazy"
+              className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            />
           </div>
-        ) : (
-          floor.rewards &&
-          floor.rewards.length > 0 && (
-            <p className="mt-2.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
-              {floor.rewards.map(x).join(t.common.listSeparator)}
-            </p>
-          )
         )}
-      </div>
-    </a>
+
+        <div className="flex flex-1 flex-col p-4">
+          <div className="flex items-center gap-2">
+            <h2 className="font-semibold tracking-tight">{x(floor.label)}</h2>
+          </div>
+
+          {floor.fame && (
+            <p className="mt-1 font-mono text-xs text-muted-foreground tabular-nums">
+              {t.floors.cardFame} {floor.fame.from.toLocaleString()} →{' '}
+              {floor.fame.to.toLocaleString()}
+            </p>
+          )}
+
+          {highlights.length > 0 ? (
+            <div className="mt-2.5">
+              <ul
+                className="flex flex-wrap gap-1"
+                aria-label={rewards ? t.floors.cardMatchedLabel : t.floors.cardRewardsLabel}
+              >
+                {highlights.map((h) => (
+                  <li key={canonical(h.reward.name)}>
+                    <RewardIcon highlight={h} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
+            floor.rewards &&
+            floor.rewards.length > 0 && (
+              <p className="mt-2.5 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                {floor.rewards.map(x).join(t.common.listSeparator)}
+              </p>
+            )
+          )}
+        </div>
+      </a>
+    </div>
   )
 }
