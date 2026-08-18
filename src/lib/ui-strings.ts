@@ -132,6 +132,19 @@ const ja = {
     cardRewardsMore: (n: number) => `ほか ${n} 件`,
     rewardNodeTypes: (types: string) => `出るマス：${types}`,
     rewardAreaCount: (n: number, total: number) => `${total}区域中 ${n} 区域に出現`,
+
+    /** カード右上の非表示ボタン。 */
+    hideCard: (label: string) => `${label} を非表示にする`,
+    hiddenTitle: '非表示にした区域',
+    /** 畳んだ状態からの開閉。区域が増えても一覧が押し下がらないよう普段は畳んでいる。 */
+    hiddenOpen: '詳細',
+    hiddenClose: '閉じる',
+    hiddenLead: '表示する区域を選んでボタンを押す。',
+    hiddenCount: (n: number) => `${n} 件`,
+    restoreSelected: (n: number) => (n === 0 ? '選んだ区域を表示' : `選んだ ${n} 件を表示`),
+    restoreAll: 'すべて表示',
+    allHiddenTitle: 'すべての区域を非表示にしている。',
+    allHiddenBody: '上の一覧から表示に戻せる。',
   },
 
   floorDetail: {
@@ -344,6 +357,18 @@ const en: UiText = {
     cardRewardsMore: (n: number) => (n === 1 ? '1 more' : `${n} more`),
     rewardNodeTypes: (types: string) => `Found in: ${types}`,
     rewardAreaCount: (n: number, total: number) => `Appears in ${n} of ${total} areas`,
+
+    hideCard: (label: string) => `Hide ${label}`,
+    hiddenTitle: 'Hidden areas',
+    hiddenOpen: 'Restore',
+    hiddenClose: 'Close',
+    hiddenLead: 'Select the areas you want back, then press the button.',
+    hiddenCount: (n: number) => (n === 1 ? '1 area' : `${n} areas`),
+    restoreSelected: (n: number) =>
+      n === 0 ? 'Show selected' : n === 1 ? 'Show 1 selected' : `Show ${n} selected`,
+    restoreAll: 'Show all',
+    allHiddenTitle: 'Every area is hidden.',
+    allHiddenBody: 'Bring them back from the list above.',
   },
 
   floorDetail: {
