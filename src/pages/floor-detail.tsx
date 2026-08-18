@@ -1,5 +1,14 @@
-import { ArrowLeft, ArrowRight, ExternalLink, Gift, Image as ImageIcon, Info, Play, TrendingUp } from 'lucide-react'
-import { useState } from 'react'
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookmarkCheck,
+  ExternalLink,
+  Gift,
+  Image as ImageIcon,
+  Info,
+  Play,
+  TrendingUp,
+} from 'lucide-react'
 
 import { LabyrinthMap } from '@/components/labyrinth-map'
 import { MapCard } from '@/components/map-viewer'
@@ -14,6 +23,7 @@ import { AREA_STAT_BY_AREA, GATE_NOTES, HP_NOTE, NAMU_SOURCE } from '@/data/namu
 import type { AreaStat } from '@/data/namu'
 import { useI18n } from '@/lib/i18n'
 import { localizedHash } from '@/lib/locale'
+import { useSeedSelection } from '@/lib/seed-selection'
 import { cn } from '@/lib/utils'
 
 export function FloorDetailPage({ floorKey }: { floorKey: string }) {
@@ -89,7 +99,13 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
       )}
 
       {maps.length > 0 ? (
-        <SeedMapSection maps={maps} images={plainMaps} floorLabel={x(floor.label)} />
+        <SeedMapSection
+          key={floor.key}
+          floorKey={floor.key}
+          maps={maps}
+          images={plainMaps}
+          floorLabel={x(floor.label)}
+        />
       ) : (
         <ImageSection
           title={t.floorDetail.seedMapsTitle}
@@ -179,17 +195,19 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
 
 /** シード切り替え + ノードグリッド。元画像は出典として下に小さく置く。 */
 function SeedMapSection({
+  floorKey,
   maps,
   images,
   floorLabel,
 }: {
+  floorKey: string
   maps: SeedMap[]
   images: FloorImage[]
   floorLabel: string
 }) {
   const { t } = useI18n()
-  const [active, setActive] = useState(0)
-  const map = maps[active]
+  const seed = useSeedSelection(floorKey, maps.map((m) => m.seedCode))
+  const map = maps.find((m) => m.seedCode === seed.active) ?? maps[0]
   const sourceImage = images.find((i) => i.seed && seedDigits(i.seed) === map.seedCode)
 
   return (
@@ -198,23 +216,42 @@ function SeedMapSection({
       <p className="mt-1 text-sm text-muted-foreground">{t.floorDetail.seedMapsLead}</p>
 
       <div className="mt-4 flex flex-wrap gap-2" role="tablist" aria-label={t.floorDetail.seedTablist}>
-        {maps.map((m, i) => (
-          <button
-            key={m.seedCode}
-            role="tab"
-            aria-selected={i === active}
-            onClick={() => setActive(i)}
-            className={cn(
-              'rounded-lg border px-3.5 py-2 font-mono text-sm font-semibold tracking-wider tabular-nums transition',
-              i === active
-                ? 'border-primary bg-primary/10 text-foreground'
-                : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
-            )}
-          >
-            {m.seedCode}
-          </button>
-        ))}
+        {maps.map((m) => {
+          const isActive = m.seedCode === map.seedCode
+          return (
+            <button
+              key={m.seedCode}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => seed.select(m.seedCode)}
+              className={cn(
+                'flex items-center gap-1.5 rounded-lg border px-3.5 py-2 font-mono text-sm font-semibold tracking-wider tabular-nums transition',
+                isActive
+                  ? 'border-primary bg-primary/10 text-foreground'
+                  : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
+              )}
+            >
+              {m.seedCode === seed.saved && (
+                <BookmarkCheck aria-hidden className="size-3.5 text-primary" />
+              )}
+              {m.seedCode}
+            </button>
+          )
+        })}
       </div>
+
+      {seed.saved && (
+        <p className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
+          <BookmarkCheck aria-hidden className="size-3.5 text-primary" />
+          {t.floorDetail.seedSaved(seed.saved)}
+          <button
+            onClick={seed.clear}
+            className="underline underline-offset-2 transition hover:text-foreground"
+          >
+            {t.floorDetail.seedSavedClear}
+          </button>
+        </p>
+      )}
 
       <div className="mt-5">
         <LabyrinthMap key={map.seedCode} map={map} />

@@ -147,6 +147,8 @@ const ja = {
     seedMapsTitle: 'シードマップ',
     seedMapsLead: 'ゲーム内で数えた部屋数と一致するシードを選ぶ。マスにカーソルを乗せると報酬が出る。',
     seedTablist: 'シードの選択',
+    seedSaved: (seed: string) => `シード ${seed} を保存しました。次にこの区域を開いたときは選択状況が復元されます。`,
+    seedSavedClear: '保存を解除',
     originalImageSummary: '元のマップ画像を見る',
     originalImageAlt: (floor: string, seed: string) => `${floor} ${seed} の元画像`,
     originalImageNote: 'クリックで原寸画像を開く。ノードデータの照合用。',
@@ -358,6 +360,9 @@ const en: UiText = {
     seedMapsLead:
       'Pick the seed matching the room counts you read in game. Hover a room to see its reward.',
     seedTablist: 'Select a seed',
+    seedSaved: (seed: string) =>
+      `Seed ${seed} is saved. It stays selected the next time you open this area.`,
+    seedSavedClear: 'Forget it',
     originalImageSummary: 'View the original map image',
     originalImageAlt: (floor: string, seed: string) => `Original image for ${floor} ${seed}`,
     originalImageNote: 'Click to open the full-size image, for cross-checking the node data.',
