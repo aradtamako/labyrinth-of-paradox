@@ -65,6 +65,8 @@ export interface AreaReward {
   name: Localized
   nameKr: string
   note?: Localized
+  /** 元データの等級テンプレート画像と異なるアイコンを使いたい場合に指定する。 */
+  image?: string
 }
 
 /**
@@ -110,6 +112,7 @@ const R = {
   primordialAccessoryJar: {
     name: { ja: '115Lvセット 太初アクセサリー壺', en: 'Lv.115 Set Primordial Accessory Jar' },
     nameKr: '115레벨 세트 태초 악세서리 항아리',
+    image: '/stackable/consumption_2/775.png'
   },
   primordialAccessoryJarBox: {
     name: {
@@ -135,6 +138,8 @@ const R = {
       en: 'Splendid Unique–Primordial Oath Crystal Jar',
     },
     nameKr: '화려한 유니크~태초 서약 결정 항아리',
+    // 「ユニーク誓約結晶 選択箱」と別アイテムなので専用アイコンを使う。
+    image: '/rewards/oath_crystal_random_box_unique.PNG',
   },
   brilliantLegendaryCrystalJar: {
     name: {
@@ -146,6 +151,8 @@ const R = {
   legendaryCrystalJar: {
     name: { ja: 'レジェンダリー誓約結晶壺', en: 'Legendary Oath Crystal Jar' },
     nameKr: '레전더리 서약 결정 항아리',
+    // 「レジェンダリー誓約結晶 選択箱」と別アイテムなので専用アイコンを使う。
+    image: '/rewards/oath_crystal_random_box_legendary.PNG',
   },
   epicCrystalJar: {
     name: { ja: 'エピック誓約結晶壺', en: 'Epic Oath Crystal Jar' },

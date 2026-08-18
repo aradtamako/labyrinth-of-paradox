@@ -380,7 +380,7 @@ function resolveRewards(area: number, raw: RawNode): Reward[] {
     AREA_REWARDS[`${area}:${raw.typeId}`]
   if (override) {
     const template = defaultRewardsFor(raw.typeId, raw.tier)[0]
-    const image = rewardIconForName(canonical(override.name)) ?? template?.image
+    const image = rewardIconForName(canonical(override.name)) ?? override.image ?? template?.image
     return [
       {
         name: override.name,
