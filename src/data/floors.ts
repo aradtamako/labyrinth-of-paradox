@@ -681,6 +681,45 @@ const SEEDS: FloorSeed[] = [
       },
     ],
   },
+  {
+    key: '32',
+    areas: [32],
+    no: 5548824,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初レガシー → デガシー変換書', en: 'Primordial Legacy → Degacy Conversion Scroll' },
+      { ja: 'エピック結晶製作書', en: 'Epic Crystal Crafting Scroll' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+      { ja: '印章 1,000個', en: 'Seal ×1,000' },
+    ],
+    meta: {
+      0: { seed: '23222' },
+      1: { seed: '22232' },
+      2: { seed: '22223' },
+      3: { seed: '32322' },
+      4: { seed: '32122' },
+    },
+  },
+  {
+    key: '33',
+    areas: [33],
+    no: 5571209,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: 'エピック結晶選択箱', en: 'Epic Crystal Selection Box' },
+      { ja: 'エピック装備選択箱', en: 'Epic Equipment Selection Box' },
+      { ja: 'エピック天秤', en: 'Epic Scale' },
+      { ja: '光輝のソウル 100個', en: 'Radiance Soul ×100' },
+      { ja: '黒い災厄 12個', en: 'Black Calamity ×12' },
+    ],
+    meta: {
+      0: { seed: '22223' },
+      1: { seed: '22321' },
+      2: { seed: '32222' },
+      3: { seed: '32212' },
+      4: { seed: '33222' },
+    },
+  },
 ]
 
 export const FLOORS: Floor[] = SEEDS.map((s) => {
@@ -702,12 +741,12 @@ export const FLOORS: Floor[] = SEEDS.map((s) => {
 
 export const FLOOR_BY_KEY = new Map(FLOORS.map((f) => [f.key, f]))
 
-/** 区域番号（1〜31）から、その区域を扱う記事を引く。 */
+/** 区域番号（1〜33）から、その区域を扱う記事を引く。 */
 export const FLOOR_BY_AREA = new Map<number, Floor>(
   FLOORS.flatMap((f) => f.areas.map((a) => [a, f] as const)),
 )
 
-export const MAX_AREA = 31
+export const MAX_AREA = 33
 
 /**
  * 一覧表示用の軽量サムネイル（scripts/make-thumbs.mjs で生成）のパス。
