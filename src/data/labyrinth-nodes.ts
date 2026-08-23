@@ -34021,5 +34021,2325 @@ export const RAW_FLOORS: RawFloor[] = [
         ]
       }
     ]
+  },
+  {
+    "area": 32,
+    "seedCode": "32122",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "솔리드 소울",
+            "count": 100,
+            "image": "/rewards/solid_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 6,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 0,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "에픽 서약 결정 제작서 선택 상자",
+            "image": "/rewards/epic_oath_crystal_recipe_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 0,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 0,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "순례의 인장",
+            "count": 1000,
+            "image": "/rewards/pilgrimage_seal.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자",
+            "image": "/rewards/diregie_legacy_convert_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          1,
+          4
+        ],
+        "to": [
+          2,
+          4
+        ]
+      },
+      {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 32,
+    "seedCode": "22232",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "순례의 인장",
+            "count": 1000,
+            "image": "/rewards/pilgrimage_seal.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자",
+            "image": "/rewards/diregie_legacy_convert_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "에픽 서약 결정 제작서 선택 상자",
+            "image": "/rewards/epic_oath_crystal_recipe_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "솔리드 소울",
+            "count": 100,
+            "image": "/rewards/solid_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 6,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          2
+        ],
+        "to": [
+          1,
+          2
+        ]
+      },
+      {
+        "from": [
+          3,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 32,
+    "seedCode": "23222",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자",
+            "image": "/rewards/diregie_legacy_convert_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "에픽 서약 결정 제작서 선택 상자",
+            "image": "/rewards/epic_oath_crystal_recipe_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 6,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "솔리드 소울",
+            "count": 100,
+            "image": "/rewards/solid_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "순례의 인장",
+            "count": 1000,
+            "image": "/rewards/pilgrimage_seal.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 3,
+        "col": 0,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          4
+        ]
+      },
+      {
+        "from": [
+          3,
+          4
+        ],
+        "to": [
+          4,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "area": 32,
+    "seedCode": "32322",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 6,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 0,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "에픽 서약 결정 제작서 선택 상자",
+            "image": "/rewards/epic_oath_crystal_recipe_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "솔리드 소울",
+            "count": 100,
+            "image": "/rewards/solid_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "순례의 인장",
+            "count": 1000,
+            "image": "/rewards/pilgrimage_seal.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 6,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자",
+            "image": "/rewards/diregie_legacy_convert_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 0,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          2,
+          4
+        ],
+        "to": [
+          3,
+          4
+        ]
+      },
+      {
+        "from": [
+          3,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 32,
+    "seedCode": "22223",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 0,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "에픽 서약 결정 제작서 선택 상자",
+            "image": "/rewards/epic_oath_crystal_recipe_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "순례의 인장",
+            "count": 1000,
+            "image": "/rewards/pilgrimage_seal.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "솔리드 소울",
+            "count": 100,
+            "image": "/rewards/solid_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 0,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자",
+            "image": "/rewards/diregie_legacy_convert_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 6,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          5
+        ],
+        "to": [
+          1,
+          5
+        ]
+      },
+      {
+        "from": [
+          2,
+          1
+        ],
+        "to": [
+          3,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 33,
+    "seedCode": "22321",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "종말의 계시 1개 상자",
+            "count": 1000,
+            "image": "/rewards/doom_oracle.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "tuner_trace",
+        "tier": "epic",
+        "icon": 56
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "tuner_left_trace",
+        "tier": "legendary",
+        "icon": 92
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "armament_warehouse",
+        "tier": "epic",
+        "icon": 36
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 6,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 3,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "광휘의 소울",
+            "count": 100,
+            "image": "/rewards/radiance_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 0,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 재앙 1개 상자",
+            "count": 12,
+            "image": "/rewards/black_calamity_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "은하를 초월한 조율자의 저울",
+            "image": "/rewards/tuner_scale_galaxy.PNG"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          4
+        ]
+      },
+      {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 33,
+    "seedCode": "33222",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "광휘의 소울",
+            "count": 100,
+            "image": "/rewards/radiance_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "은하를 초월한 조율자의 저울",
+            "image": "/rewards/tuner_scale_galaxy.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 6,
+        "typeId": "tuner_trace",
+        "tier": "epic",
+        "icon": 56
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "tuner_left_trace",
+        "tier": "legendary",
+        "icon": 92
+      },
+      {
+        "row": 1,
+        "col": 6,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "armament_warehouse",
+        "tier": "epic",
+        "icon": 36
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 재앙 1개 상자",
+            "count": 12,
+            "image": "/rewards/black_calamity_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "종말의 계시 1개 상자",
+            "count": 1000,
+            "image": "/rewards/doom_oracle.PNG"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          4
+        ],
+        "to": [
+          1,
+          4
+        ]
+      },
+      {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          3,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "area": 33,
+    "seedCode": "32222",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 0,
+        "typeId": "tuner_trace",
+        "tier": "epic",
+        "icon": 56
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 6,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "광휘의 소울",
+            "count": 100,
+            "image": "/rewards/radiance_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 재앙 1개 상자",
+            "count": 12,
+            "image": "/rewards/black_calamity_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "은하를 초월한 조율자의 저울",
+            "image": "/rewards/tuner_scale_galaxy.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "종말의 계시 1개 상자",
+            "count": 1000,
+            "image": "/rewards/doom_oracle.PNG"
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "armament_warehouse",
+        "tier": "epic",
+        "icon": 36
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "tuner_left_trace",
+        "tier": "legendary",
+        "icon": 92
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          2,
+          4
+        ],
+        "to": [
+          3,
+          4
+        ]
+      },
+      {
+        "from": [
+          3,
+          1
+        ],
+        "to": [
+          4,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "area": 33,
+    "seedCode": "22223",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 0,
+        "typeId": "tuner_trace",
+        "tier": "epic",
+        "icon": 56
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "은하를 초월한 조율자의 저울",
+            "image": "/rewards/tuner_scale_galaxy.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "tuner_left_trace",
+        "tier": "legendary",
+        "icon": 92
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 재앙 1개 상자",
+            "count": 12,
+            "image": "/rewards/black_calamity_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "armament_warehouse",
+        "tier": "epic",
+        "icon": 36
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "종말의 계시 1개 상자",
+            "count": 1000,
+            "image": "/rewards/doom_oracle.PNG"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 4,
+        "col": 6,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "광휘의 소울",
+            "count": 100,
+            "image": "/rewards/radiance_soul.PNG"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          0,
+          5
+        ],
+        "to": [
+          1,
+          5
+        ]
+      },
+      {
+        "from": [
+          3,
+          2
+        ],
+        "to": [
+          4,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "area": 33,
+    "seedCode": "32212",
+    "cols": 7,
+    "rows": 5,
+    "nodes": [
+      {
+        "row": 0,
+        "col": 0,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "광휘의 소울",
+            "count": 100,
+            "image": "/rewards/radiance_soul.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "종말의 계시 1개 상자",
+            "count": 1000,
+            "image": "/rewards/doom_oracle.PNG"
+          }
+        ]
+      },
+      {
+        "row": 0,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 0,
+        "col": 3,
+        "typeId": "central_checkpoint_start",
+        "icon": 0
+      },
+      {
+        "row": 0,
+        "col": 4,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 0,
+        "col": 5,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 0,
+        "col": 6,
+        "typeId": "tuner_trace",
+        "tier": "epic",
+        "icon": 56
+      },
+      {
+        "row": 1,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 1,
+        "col": 2,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 1,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 1,
+        "col": 4,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "은하를 초월한 조율자의 저울",
+            "image": "/rewards/tuner_scale_galaxy.PNG"
+          }
+        ]
+      },
+      {
+        "row": 1,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 1,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 2,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 2,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 2,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 2,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      },
+      {
+        "row": 3,
+        "col": 0,
+        "typeId": "tuner_left_trace",
+        "tier": "legendary",
+        "icon": 92
+      },
+      {
+        "row": 3,
+        "col": 1,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 3,
+        "col": 2,
+        "typeId": "labyrinth_supply_base",
+        "tier": "key",
+        "icon": 124
+      },
+      {
+        "row": 3,
+        "col": 3,
+        "typeId": "central_checkpoint",
+        "icon": 4
+      },
+      {
+        "row": 3,
+        "col": 4,
+        "typeId": "chaotic_radiance_pilgrimage",
+        "icon": 112
+      },
+      {
+        "row": 4,
+        "col": 1,
+        "typeId": "chaotic_life_pilgrimage",
+        "icon": 108,
+        "rewards": [
+          {
+            "nameKr": "검은 재앙 1개 상자",
+            "count": 12,
+            "image": "/rewards/black_calamity_box.PNG"
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "col": 2,
+        "typeId": "relic_excavation_zone",
+        "icon": 12
+      },
+      {
+        "row": 4,
+        "col": 3,
+        "typeId": "central_checkpoint_last",
+        "icon": 8
+      },
+      {
+        "row": 4,
+        "col": 4,
+        "typeId": "armament_warehouse",
+        "tier": "epic",
+        "icon": 36
+      },
+      {
+        "row": 4,
+        "col": 5,
+        "typeId": "labyrinth_supply_base",
+        "tier": "ticket",
+        "icon": 104
+      }
+    ],
+    "edges": [
+      {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          1
+        ]
+      },
+      {
+        "from": [
+          2,
+          4
+        ],
+        "to": [
+          3,
+          4
+        ]
+      }
+    ]
   }
 ]

@@ -234,4 +234,18 @@ export const FLOOR_IMAGES: Record<string, readonly string[]> = {
     '/maps/f31-04.png',
     '/maps/f31-05.png',
   ],
+  '32': [
+    '/maps/f32-01.png',
+    '/maps/f32-02.png',
+    '/maps/f32-03.png',
+    '/maps/f32-04.png',
+    '/maps/f32-05.png',
+  ],
+  '33': [
+    '/maps/f33-01.png',
+    '/maps/f33-02.png',
+    '/maps/f33-03.png',
+    '/maps/f33-04.png',
+    '/maps/f33-05.png',
+  ],
 }

@@ -1,6 +1,4 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+# AGENTS.md
 
 ## 概要
 
@@ -14,7 +12,7 @@ Vite + React 19 + TypeScript + Tailwind CSS v4 + shadcn/ui の SPA を Cloudflar
 
 ```sh
 npm run dev      # Vite 開発サーバー（:5173）
-npm run build    # tsc -b + vite build
+npm run build    # tsc -b + vite build（型チェック兼）
 npm run lint     # oxlint（ESLint ではない）
 npm run preview  # build + wrangler dev（Workers 上での確認）
 npm run deploy   # build + wrangler deploy
@@ -22,7 +20,6 @@ npm run thumbs   # public/maps/thumbs/*.webp を再生成（sharp）
 ```
 
 テストは存在しない。型チェックは `npm run build`（`tsc -b`）が兼ねる。
-開発サーバーは Browser pane から `preview_start {name: "labyrinth-of-paradox"}` で起動できる（`.claude/launch.json` 済み）。
 
 ## アーキテクチャ
 
@@ -57,8 +54,8 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 | `labyrinth-nodes.ts` (34k行) | **自動生成** | マスごとのノード配置・報酬。韓国語のまま。`scripts/gen-nodes.mjs` が出力。直接編集しない |
 | `floor-images.ts` | **自動生成** | マップ画像パス一覧。`scripts/gen-image-index.mjs` が出力 |
 | `node-types.ts` | 手書き | 訳と変換ロジック（後述）。実質のデータ層エントリポイント |
-| `namu.ts` | 手書き | 나무위키由来の区域別報酬。CC BY-NC-SA 2.0 KR |
-| `floors.ts` | 手書き | 区域ごとの攻略メタ・シードコード。`searchSeed()` もここ |
+| `namu.ts` | 手書き | 나무위키由来の区域別報酬・推奨名声。CC BY-NC-SA 2.0 KR |
+| `floors.ts` | 手書き | 区域ごとの攻略メタ・シードコード |
 | `official.ts` | 手書き | 公式ページ由来の仕様 |
 | `item-icons.ts` | 手書き | 報酬名 → ゲーム内アイコンパスの対応 |
 
@@ -67,12 +64,25 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 報酬解決の優先順位（`resolveRewards()`）は固定で、上から順に:
 1. 等級で決まるもの（迷宮開拓拠点＝調査券/入場券、歪んだ光輝の巡礼＝終末の啓示 100〜150）
 2. `namu.ts` の `AREA_REWARDS`（キー `区域:種別ID` または `区域:種別ID:等級`）
-3. 元データのマス単位報酬（`REWARD_JA` で訳す）
+3. 元データのマス単位報酬（`node-types.ts` の `REWARD_TEXT` で訳す）
 4. 等級テンプレート（`equipment_set_box_{tier}` など）
 
 訳が無い項目は韓国語原文にフォールバックする（`fallback()` が両言語に原文を入れる）。新しいノード種別・報酬が出てきたら `node-types.ts` の `TYPE_TEXT` / `REWARD_TEXT` に足すだけでよく、生成ファイル側は触らない。
 
 `REWARDS` は全シードマップを走査して作る逆引きインデックス（報酬名+個数で1エントリ、区域ごとに畳んだ `byArea` 付き）。報酬ページの検索はこれを引く。
+
+### 区域を追加するとき
+
+新しい区域を足すときは、次のすべてを揃えないと表示が壊れる:
+
+- `scripts/scrape-posts.mjs` の `POSTS` に元記事（DCインサイド）を追加
+- `src/data/floors.ts` の `SEEDS` に区域エントリ（`meta` でシードコード）を追加し、`MAX_AREA` を更新
+- `src/lib/ui-strings.ts` の **ja / en 両方** の `meta.description` と `overview.sourceGuideLabel` の区域範囲を更新
+- `index.html` の `<meta name="description">` も同じ文言なので更新
+- `src/data/namu.ts` の `AREA_STATS` に区域を追加しないと、`floors/[id]` ページで31区域以前と表示が変わる（`floor-detail.tsx:52` が `AREA_STAT_BY_AREA` から引いており、無い区域は `FamePanel` にフォールバックする）
+- `README.md` の収録範囲の記述も更新
+
+**シードコードの割り当ては、元記事の「원본 첨부파일」リストの並び順をそのまま使ってはならない。** `download-images.mjs` は本文の画像出現順（トークン順）で `fNN-0X` を保存するので、`floors.ts` の `meta` の index は本文の画像順に対応する。添付リストの順序と本文の順序は一致しないことがある（32/33区域で実際にズレた）。追加時は、ダウンロードした画像と元記事の添付画像を内容で照合（dHash / aHash など）して確定すること。
 
 ### データ取得パイプライン
 
@@ -80,8 +90,12 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 
 - マップ画像系: `scrape-posts.mjs` → `download-images.mjs` → `gen-image-index.mjs` → `npm run thumbs`
 - ノード系: `node scripts/scrape-nodes.mjs <区域番号...>` → `node scripts/gen-nodes.mjs`
+- `scrape-nodes.mjs` は `scripts/nodes-raw.json` を**上書き**する。部分追加のときは、出力前に既存の `nodes-raw.json` とマージしてから `gen-nodes.mjs` を回す
+- `scrape-nodes.mjs` の既定対象は 1〜3区域のみ。区域を指定しないと既存分を消して1〜3に戻るので注意
 - `gen-nodes.mjs` は `curl.exe` を呼ぶ Windows 前提のスクリプト
-- `scripts/*-cache/` はスクレイプ結果のキャッシュ（`umi-cache/` は gitignore 済み）
+- `scripts/*-cache/` はスクレイプ結果のキャッシュ（`html-cache/`・`umi-cache/` は gitignore 済み）
+
+**ノードデータの有無で `floors/[id]` の表示が切り替わる**: `floor-detail.tsx` は `MAPS_BY_AREA` にデータがある区域だけインタラクティブマップ（`SeedMapSection`）、無い区域は画像のみ（`ImageSection`）+「ノードデータを取り込んでいない」メッセージを出す。このメッセージを消すには、その区域を `scrape-nodes.mjs` で取り込んで `gen-nodes.mjs` を回す。
 
 ### UI
 

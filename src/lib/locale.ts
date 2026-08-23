@@ -40,7 +40,7 @@ export function canonical(text: Localized): string {
 
 /**
  * 連続する番号を [開始, 終了] の区間にまとめる。[1,2,3,5] → [[1,3],[5,5]]
- * 区域番号を「1〜31区域」と畳んで見せるために使う。
+ * 区域番号を「1〜33区域」と畳んで見せるために使う。
  */
 export function numberRuns(numbers: number[]): [number, number][] {
   const runs: [number, number][] = []

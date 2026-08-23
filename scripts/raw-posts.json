@@ -1302,5 +1302,69 @@
         "value": "명성 상승치 : 127,000 (+0)31층부턴 명성(체력) 상승이 없습니다\n\n[주요 보상]태초 광휘의 의지서약 경험치 143,500검은 재앙 12개계시 1,000개에픽 세트 장비 선택 상자\n32구역 개방 날짜 : 8/17 (월)\n33구역 개방 날짜 : 8/22 (토)\n\n오류 있으면 얘기 해주세요"
       }
     ]
+  },
+  {
+    "key": "32",
+    "no": 5548824,
+    "title": "미궁 32층 5종 모음",
+    "url": "https://gall.dcinside.com/mgallery/board/view/?id=dfip&no=5548824",
+    "tokens": [
+      {
+        "type": "img",
+        "value": "https://dcimg3.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f11ffcf12bf6040e5c47ad35fbeea84328843e31a143e272f7be5d3ba943365ba390e30de"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg3.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f11ffcf12bf6040e5c47ad35fbeef8e3f8641e57c34351a15c837df19ff044bb141b5c903"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg3.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f11ffcf12bf6040e5c47ad35fbeed873f8949e8274e9945399c3283e77ccde78cbbb5eb73"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg3.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f11ffcf12bf6040e5c47ad35fbee8873e8746e5154ec67f7cb842f959daa7b6ff43f3afde"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg3.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f11ffcf12bf6040e5c47ad35fbee9843a8543e38c8f66d0b8e31913cf4e91463615c539ec"
+      },
+      {
+        "type": "text",
+        "value": "[주요 보상]태거시 > 디거시 변환서\n에픽 결정 제작서\n솔리드소울100개순례의 인장 1,000개\n\n33구역 개방 날짜 : 8/22 (토)34구역 개방 날짜 : 8/27 (목)\n\n오류 있으면 얘기 해주세요"
+      }
+    ]
+  },
+  {
+    "key": "33",
+    "no": 5571209,
+    "title": "미궁 33층 5종 모음",
+    "url": "https://gall.dcinside.com/mgallery/board/view/?id=dfip&no=5571209",
+    "tokens": [
+      {
+        "type": "img",
+        "value": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f12facfc981dfee388e967dd36d0f32a7be501196c18fd5c2d706e7bb58100cac4fc40985"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f12facfc981dfee388e967dd36d0c30acb9501289b4ec57fd3a321d395e3f98e9043d2d28"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f12facfc981dfee388e967dd36d0a35a7b55612fa074419e52edd4fabcc22dbedba7b10d2"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f12facfc981dfee388e967dd36d0c3eaabc54107dd39d613a8790570e0df0f5962f6a0f99"
+      },
+      {
+        "type": "img",
+        "value": "https://dcimg6.dcinside.co.kr/viewimage.php?id=29bbd936&no=24b0d769e1d32ca73fe785fa1bd6253181cc839ddd597aa6642ca0749f12facfc981dfee388e967dd36d083eaeb5561057994ab3c281d15a1cc24202668576fb01"
+      },
+      {
+        "type": "text",
+        "value": "[주요 보상]에픽 결정 선택 상자\n에픽 장비 선택 상자\n에픽 저울광휘의 소울 100개검은 재앙 12개\n\n34구역 개방 날짜 : 8/27 (목)35구역 개방 날짜 : 9/1 (화)\n오류 있으면 얘기 해주세요"
+      }
+    ]
   }
 ]
