@@ -1,0 +1,114 @@
+# AGENTS.md
+
+## 概要
+
+ダンジョン&ファイター（アラド戦記）の特殊ダンジョン「逆説の迷宮」の非公式攻略サイト。
+Vite + React 19 + TypeScript + Tailwind CSS v4 + shadcn/ui の SPA を Cloudflare Workers に静的配信する。
+
+**コード内コメントは日本語で書く。** データ由来の韓国語原文は訳を付けず残す設計になっている箇所があるので、既存の書き分けに従う。
+**表示テキストは日本語と英語の2言語**（後述の i18n 層）。片方だけ足すと `tsc` が落ちる。
+
+## コマンド
+
+```sh
+npm run dev      # Vite 開発サーバー（:5173）
+npm run build    # tsc -b + vite build（型チェック兼）
+npm run lint     # oxlint（ESLint ではない）
+npm run preview  # build + wrangler dev（Workers 上での確認）
+npm run deploy   # build + wrangler deploy
+npm run thumbs   # public/maps/thumbs/*.webp を再生成（sharp）
+```
+
+テストは存在しない。型チェックは `npm run build`（`tsc -b`）が兼ねる。
+
+## アーキテクチャ
+
+### ルーティング
+
+React Router は使わない。`src/lib/router.ts` の自前ハッシュルーター（`#/`, `#/floors`, `#/floors/:key`, `#/rewards`, `#/system`）を `App.tsx` が直接分岐する。ページを足すときは `Route` 型・`parse()`・`hrefFor()`・`App.tsx` の4箇所を揃える。
+
+### i18n（日本語 / 英語）
+
+表示言語は `ja` / `en` の2つ。ライブラリは使わず自前で持っている。
+
+| ファイル | 役割 |
+| --- | --- |
+| `src/lib/locale.ts` | `Locale` / `Localized`（`{ ja, en }`）型と `tr()` / `canonical()` / `numberRuns()`。React 非依存なのでデータ層からも読める |
+| `src/lib/ui-strings.ts` | UI 文言の辞書。日本語版 `ja` を `UiText` 型の基準にして `en` をそれに合わせるので、**英語の訳漏れは `tsc` で落ちる** |
+| `src/lib/i18n.tsx` | `I18nProvider`（`main.tsx` で App を包む）と `useI18n()`。localStorage `lop-locale` に保存し、無ければ `navigator.language` で判定 |
+
+コンポーネント側は `const { t, x, locale } = useI18n()` の3つを使い分ける:
+
+- `t` … UI 文言の辞書（`t.rewards.title`）。値を埋めるものは関数（`t.common.area(3)`）
+- `x` … データ層の `Localized` を現在の言語の文字列にする（`x(floor.label)`）
+- `locale` … `rewardCountLabel(r, locale)` や `seedLabel(image, locale)` のように言語で組み立てが変わる関数に渡す
+
+**データ層の表示テキストは文字列ではなく `Localized`。** 内部キー（`item-icons.ts` の対応表、報酬インデックスの ID、React の `key`）は言語を切り替えても変わらないよう、必ず日本語表記（`canonical()` または `.ja`）を使う。報酬検索（`searchRewards()`）は表示中の言語にかかわらず日本語・英語・韓国語すべてを対象にする。
+
+### データ層が本体
+
+`src/data/` が実質このリポジトリの中身で、UI は薄い。**生成ファイルと手書きファイルが混在しているので編集前に必ず区別すること。**
+
+| ファイル | 種別 | 内容 |
+| --- | --- | --- |
+| `labyrinth-nodes.ts` (34k行) | **自動生成** | マスごとのノード配置・報酬。韓国語のまま。`scripts/gen-nodes.mjs` が出力。直接編集しない |
+| `floor-images.ts` | **自動生成** | マップ画像パス一覧。`scripts/gen-image-index.mjs` が出力 |
+| `node-types.ts` | 手書き | 訳と変換ロジック（後述）。実質のデータ層エントリポイント |
+| `namu.ts` | 手書き | 나무위키由来の区域別報酬・推奨名声。CC BY-NC-SA 2.0 KR |
+| `floors.ts` | 手書き | 区域ごとの攻略メタ・シードコード |
+| `official.ts` | 手書き | 公式ページ由来の仕様 |
+| `item-icons.ts` | 手書き | 報酬名 → ゲーム内アイコンパスの対応 |
+
+`node-types.ts` が生の `labyrinth-nodes.ts` を読み、`namu.ts` の訳・区域別上書き・`item-icons.ts` のアイコンを重ねて、UI が使う `SEED_MAPS` / `REWARDS` / `NODE_TYPE_STATS` をモジュール初期化時に組み立てる。**UI コンポーネントは `labyrinth-nodes.ts` を直接 import しない。**
+
+報酬解決の優先順位（`resolveRewards()`）は固定で、上から順に:
+1. 等級で決まるもの（迷宮開拓拠点＝調査券/入場券、歪んだ光輝の巡礼＝終末の啓示 100〜150）
+2. `namu.ts` の `AREA_REWARDS`（キー `区域:種別ID` または `区域:種別ID:等級`）
+3. 元データのマス単位報酬（`node-types.ts` の `REWARD_TEXT` で訳す）
+4. 等級テンプレート（`equipment_set_box_{tier}` など）
+
+訳が無い項目は韓国語原文にフォールバックする（`fallback()` が両言語に原文を入れる）。新しいノード種別・報酬が出てきたら `node-types.ts` の `TYPE_TEXT` / `REWARD_TEXT` に足すだけでよく、生成ファイル側は触らない。
+
+`REWARDS` は全シードマップを走査して作る逆引きインデックス（報酬名+個数で1エントリ、区域ごとに畳んだ `byArea` 付き）。報酬ページの検索はこれを引く。
+
+### 区域を追加するとき
+
+新しい区域を足すときは、次のすべてを揃えないと表示が壊れる:
+
+- `scripts/scrape-posts.mjs` の `POSTS` に元記事（DCインサイド）を追加
+- `src/data/floors.ts` の `SEEDS` に区域エントリ（`meta` でシードコード）を追加し、`MAX_AREA` を更新
+- `src/lib/ui-strings.ts` の **ja / en 両方** の `meta.description` と `overview.sourceGuideLabel` の区域範囲を更新
+- `index.html` の `<meta name="description">` も同じ文言なので更新
+- `src/data/namu.ts` の `AREA_STATS` に区域を追加しないと、`floors/[id]` ページで31区域以前と表示が変わる（`floor-detail.tsx:52` が `AREA_STAT_BY_AREA` から引いており、無い区域は `FamePanel` にフォールバックする）
+- `README.md` の収録範囲の記述も更新
+
+**シードコードの割り当ては、元記事の「원본 첨부파일」リストの並び順をそのまま使ってはならない。** `download-images.mjs` は本文の画像出現順（トークン順）で `fNN-0X` を保存するので、`floors.ts` の `meta` の index は本文の画像順に対応する。添付リストの順序と本文の順序は一致しないことがある（32/33区域で実際にズレた）。追加時は、ダウンロードした画像と元記事の添付画像を内容で照合（dHash / aHash など）して確定すること。
+
+### データ取得パイプライン
+
+画像・生成物はコミット済みなので通常は実行不要。区域を追加するときのみ回す。実行順は README の「データ取得パイプライン」「ノードデータのパイプライン」節を参照。要点:
+
+- マップ画像系: `scrape-posts.mjs` → `download-images.mjs` → `gen-image-index.mjs` → `npm run thumbs`
+- ノード系: `node scripts/scrape-nodes.mjs <区域番号...>` → `node scripts/gen-nodes.mjs`
+- `scrape-nodes.mjs` は `scripts/nodes-raw.json` を**上書き**する。部分追加のときは、出力前に既存の `nodes-raw.json` とマージしてから `gen-nodes.mjs` を回す
+- `scrape-nodes.mjs` の既定対象は 1〜3区域のみ。区域を指定しないと既存分を消して1〜3に戻るので注意
+- `gen-nodes.mjs` は `curl.exe` を呼ぶ Windows 前提のスクリプト
+- `scripts/*-cache/` はスクレイプ結果のキャッシュ（`html-cache/`・`umi-cache/` は gitignore 済み）
+
+**ノードデータの有無で `floors/[id]` の表示が切り替わる**: `floor-detail.tsx` は `MAPS_BY_AREA` にデータがある区域だけインタラクティブマップ（`SeedMapSection`）、無い区域は画像のみ（`ImageSection`）+「ノードデータを取り込んでいない」メッセージを出す。このメッセージを消すには、その区域を `scrape-nodes.mjs` で取り込んで `gen-nodes.mjs` を回す。
+
+### UI
+
+- shadcn/ui (new-york, neutral, CSS 変数) — `src/components/ui/` は生成物なので基本触らない。`components.json` 経由で追加する
+- Tailwind v4（設定ファイルなし、`src/index.css` にトークン）
+- ダークモードは `src/lib/theme.ts` が `documentElement` に `.dark` を付ける（localStorage `lop-theme`）
+- React Compiler が babel plugin として有効（`vite.config.ts`）。手動 memo 化は基本不要
+- パスエイリアスは `@/` → `src/`
+
+### デプロイ
+
+Cloudflare Workers の静的アセット配信。`wrangler.jsonc` の `not_found_handling: "single-page-application"` で SPA フォールバック。`@cloudflare/vite-plugin` が dev/build 双方に噛んでいる。
+
+## ライセンス上の注意
+
+나무위키由来の記述（`src/data/namu.ts` と、そこから表示される内容）は **CC BY-NC-SA 2.0 KR**。出典表示とライセンス継承が必要で、サイト下部に表示している。この表示を削らないこと。
