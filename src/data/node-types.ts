@@ -426,14 +426,30 @@ function buildNode(area: number, raw: RawNode): MapNode {
   }
 }
 
-export const SEED_MAPS: SeedMap[] = RAW_FLOORS.map((f) => ({
-  area: f.area,
-  seedCode: f.seedCode,
-  cols: f.cols,
-  rows: f.rows,
-  nodes: f.nodes.map((n) => buildNode(f.area, n)),
-  edges: f.edges,
-}))
+/**
+ * 一部区域は dnf.umi.cat 側の識別子（floor_id）がシードコードを持たない。
+ * 34区域は route1..5 のように返すため、ここで区域ごとに seedIndex 順の正しいシードコードへ上書きする。
+ * 34区域は3種が同じ「22222」を持つ（A/B/C で区別）ため、末尾に注記を添えてタブや保存キーを一意にする。
+ * 32221・32222 は元データ側が明示している；route の3枚は順に 22222-A..C へ振る。
+ */
+const SEED_CODE_OVERRIDES: Record<number, string[]> = {
+  34: ['22222-A', '32222', '22222-B', '32221', '22222-C'],
+}
+
+const perAreaCount = new Map<number, number>()
+export const SEED_MAPS: SeedMap[] = RAW_FLOORS.map((f) => {
+  const idx = perAreaCount.get(f.area) ?? 0
+  perAreaCount.set(f.area, idx + 1)
+  const override = SEED_CODE_OVERRIDES[f.area]
+  return {
+    area: f.area,
+    seedCode: override ? override[idx] : f.seedCode,
+    cols: f.cols,
+    rows: f.rows,
+    nodes: f.nodes.map((n) => buildNode(f.area, n)),
+    edges: f.edges,
+  }
+})
 
 /** 区域番号 → その区域のシードマップ一覧。 */
 export const MAPS_BY_AREA = new Map<number, SeedMap[]>()
