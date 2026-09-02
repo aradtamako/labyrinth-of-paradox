@@ -436,6 +436,8 @@ export const AREA_STATS: AreaStat[] = [
   { area: 31, fame: 130000, delta: 500, hpMultiplier: 17.996, estimated: true },
   { area: 32, fame: 130000, delta: 0, hpMultiplier: 17.996, estimated: true },
   { area: 33, fame: 130000, delta: 0, hpMultiplier: 17.996, estimated: true },
+  { area: 34, fame: 130000, delta: 0, hpMultiplier: 17.996, estimated: true },
+  { area: 35, fame: 130000, delta: 0, hpMultiplier: 17.996, estimated: true },
 ]
 
 export const AREA_STAT_BY_AREA = new Map(AREA_STATS.map((s) => [s.area, s]))

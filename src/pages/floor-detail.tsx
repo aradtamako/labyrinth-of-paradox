@@ -193,6 +193,21 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
   )
 }
 
+/** ノードデータのシードコードに対応する元画像を引く。「22222-A」など注記付きコードは注記も照合する。 */
+function matchSourceImage(images: FloorImage[], seedCode: string): FloorImage | undefined {
+  const digits = seedDigits(seedCode)
+  const note = /-([A-Za-z]+)$/.exec(seedCode)?.[1]
+  return images.find((i) => {
+    if (!i.seed || seedDigits(i.seed) !== digits) return false
+    if (note) {
+      if (!i.seedNote) return false
+      const n = i.seedNote.ja || i.seedNote.en
+      return n.toLowerCase() === note.toLowerCase()
+    }
+    return true
+  })
+}
+
 /** シード切り替え + ノードグリッド。元画像は出典として下に小さく置く。 */
 function SeedMapSection({
   floorKey,
@@ -208,7 +223,7 @@ function SeedMapSection({
   const { t } = useI18n()
   const seed = useSeedSelection(floorKey, maps.map((m) => m.seedCode))
   const map = maps.find((m) => m.seedCode === seed.active) ?? maps[0]
-  const sourceImage = images.find((i) => i.seed && seedDigits(i.seed) === map.seedCode)
+  const sourceImage = matchSourceImage(images, map.seedCode)
 
   return (
     <section className="mt-12">
