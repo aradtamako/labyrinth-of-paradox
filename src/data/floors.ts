@@ -720,6 +720,57 @@ const SEEDS: FloorSeed[] = [
       4: { seed: '33222' },
     },
   },
+  {
+    key: '34',
+    areas: [34],
+    no: 5594349,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶レシピ選択箱', en: 'Primordial Oath Crystal Recipe Selection Box' },
+      { ja: '太初アクセサリー「壺」選択箱', en: 'Primordial Accessory "Jar" Selection Box' },
+      { ja: 'エピック誓約結晶壺', en: 'Epic Oath Crystal Jar' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+      { ja: '誓約経験値 143,500', en: 'Oath EXP 143,500' },
+    ],
+    notes: [
+      {
+        ja: '34区域はマップが 7×5 配置に拡大し、22222 が3種類（A・B・C）ある。シードは外周のルートで区別する。',
+        en: 'Area 34 enlarges the map to a 7×5 layout, and 22222 comes in three variants (A, B, C). The seeds differ by the outer gate route.',
+      },
+    ],
+    meta: {
+      0: { seed: '22222', seedNote: { ja: 'A', en: 'A' } },
+      1: { seed: '22222', seedNote: { ja: 'B', en: 'B' } },
+      2: { seed: '22222', seedNote: { ja: 'C', en: 'C' } },
+      3: { seed: '32221' },
+      4: { seed: '32222' },
+    },
+  },
+  {
+    key: '35',
+    areas: [35],
+    no: 5613558,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶壺', en: 'Primordial Oath Crystal Jar' },
+      { ja: '太初アクセサリー選択箱', en: 'Primordial Accessory Selection Box' },
+      { ja: 'エピック誓約選択書', en: 'Epic Oath Selection Scroll' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '35区域は34区域と同じ 7×5 配置を引き継いでいる。',
+        en: 'Area 35 keeps the same 7×5 layout introduced in area 34.',
+      },
+    ],
+    meta: {
+      0: { seed: '22232' },
+      1: { seed: '22323' },
+      2: { seed: '22333' },
+      3: { seed: '23223' },
+      4: { seed: '31323' },
+    },
+  },
 ]
 
 export const FLOORS: Floor[] = SEEDS.map((s) => {
@@ -746,7 +797,7 @@ export const FLOOR_BY_AREA = new Map<number, Floor>(
   FLOORS.flatMap((f) => f.areas.map((a) => [a, f] as const)),
 )
 
-export const MAX_AREA = 33
+export const MAX_AREA = 35
 
 /**
  * 一覧表示用の軽量サムネイル（scripts/make-thumbs.mjs で生成）のパス。
