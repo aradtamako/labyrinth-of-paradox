@@ -34909,6 +34909,4061 @@
           ]
         }
       ]
+    },
+    {
+      "area": 36,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f36_22232",
+      "name": "悖论迷宫: 第36区域 22232",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 1000,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "tuner_left_trace",
+          "tier": "epic",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_epic.PNG",
+              "name": "史诗星蕴石袖珍罐",
+              "name_kr": "에픽 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_epic.PNG",
+                "name": "史诗星蕴石袖珍罐",
+                "name_kr": "에픽 서약 결정 항아리",
+                "explain": "开启后， 可以从史诗星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 에픽 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Epic Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuning_weight_special_box.PNG",
+              "name": "玲珑的调律砝码特别礼盒",
+              "name_kr": "영롱한 조율의 추 스페셜 상자",
+              "tooltip": {
+                "image": "/rewards/tuning_weight_special_box.PNG",
+                "name": "史诗调律砝码特别礼盒",
+                "name_kr": "영롱한 조율의 추 스페셜 상자",
+                "explain": "使用后， 可以获得以下道具。\\n\\n<内置物品>\\n- 史诗调律砝码 3个\\n- 深渊入场 : 终末之启示 750个",
+                "explain_kr": "사용 시 아래 아이템을 획득할 수 있습니다.\\n\\n<구성품>\\n- 영롱한 조율의 추 3개\\n- 종말의 계시 1개 상자 750개",
+                "explain_en": "Grants the items below when used.\\n\\n<Contents>\\n- Lustrous Weight of Order x3\\n- Doom Oracle Box (1) x750",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/radiance_trace_box.PNG",
+              "name": "光辉启示礼盒 (1个)",
+              "name_kr": "광휘의 흔적 1개 상자",
+              "tooltip": {
+                "image": "/rewards/radiance_trace_box.PNG",
+                "name": "光辉启示礼盒 (1个)",
+                "name_kr": "광휘의 흔적 1개 상자",
+                "explain": "开启后， 可以获得1个[光辉启示]。",
+                "explain_kr": "사용 시 광휘의 흔적 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Trace of Splendor when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_select_box.PNG",
+              "name": "115级套装太初黑牙首饰自选礼盒",
+              "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_blackfang_accessory_box.PNG",
+                "name": "115级套装太初黑牙首饰自选礼盒",
+                "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+                "explain": "开启后， 可以选择套装及部位获得1件太初品级的黑牙首饰。",
+                "explain_kr": "사용 시 태초 등급의 흑아 악세서리를 세트 및 부위를 선택하여 획득할 수 있습니다.",
+                "explain_en": "When used, lets you choose the set and the slot to obtain a Primeval-grade Black Fang accessory.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            4
+          ],
+          "to": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "area": 36,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f36_23322",
+      "name": "悖论迷宫: 第36区域 23322",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 1000,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "tuner_left_trace",
+          "tier": "epic",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_epic.PNG",
+              "name": "史诗星蕴石袖珍罐",
+              "name_kr": "에픽 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_epic.PNG",
+                "name": "史诗星蕴石袖珍罐",
+                "name_kr": "에픽 서약 결정 항아리",
+                "explain": "开启后， 可以从史诗星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 에픽 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Epic Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/radiance_trace_box.PNG",
+              "name": "光辉启示礼盒 (1个)",
+              "name_kr": "광휘의 흔적 1개 상자",
+              "tooltip": {
+                "image": "/rewards/radiance_trace_box.PNG",
+                "name": "光辉启示礼盒 (1个)",
+                "name_kr": "광휘의 흔적 1개 상자",
+                "explain": "开启后， 可以获得1个[光辉启示]。",
+                "explain_kr": "사용 시 광휘의 흔적 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Trace of Splendor when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuning_weight_special_box.PNG",
+              "name": "玲珑的调律砝码特别礼盒",
+              "name_kr": "영롱한 조율의 추 스페셜 상자",
+              "tooltip": {
+                "image": "/rewards/tuning_weight_special_box.PNG",
+                "name": "史诗调律砝码特别礼盒",
+                "name_kr": "영롱한 조율의 추 스페셜 상자",
+                "explain": "使用后， 可以获得以下道具。\\n\\n<内置物品>\\n- 史诗调律砝码 3个\\n- 深渊入场 : 终末之启示 750个",
+                "explain_kr": "사용 시 아래 아이템을 획득할 수 있습니다.\\n\\n<구성품>\\n- 영롱한 조율의 추 3개\\n- 종말의 계시 1개 상자 750개",
+                "explain_en": "Grants the items below when used.\\n\\n<Contents>\\n- Lustrous Weight of Order x3\\n- Doom Oracle Box (1) x750",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_select_box.PNG",
+              "name": "115级套装太初黑牙首饰自选礼盒",
+              "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_blackfang_accessory_box.PNG",
+                "name": "115级套装太初黑牙首饰自选礼盒",
+                "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+                "explain": "开启后， 可以选择套装及部位获得1件太初品级的黑牙首饰。",
+                "explain_kr": "사용 시 태초 등급의 흑아 악세서리를 세트 및 부위를 선택하여 획득할 수 있습니다.",
+                "explain_en": "When used, lets you choose the set and the slot to obtain a Primeval-grade Black Fang accessory.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:6:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            5
+          ],
+          "to": [
+            1,
+            5
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 36,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f36_22222",
+      "name": "悖论迷宫: 第36区域 22222",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuning_weight_special_box.PNG",
+              "name": "玲珑的调律砝码特别礼盒",
+              "name_kr": "영롱한 조율의 추 스페셜 상자",
+              "tooltip": {
+                "image": "/rewards/tuning_weight_special_box.PNG",
+                "name": "史诗调律砝码特别礼盒",
+                "name_kr": "영롱한 조율의 추 스페셜 상자",
+                "explain": "使用后， 可以获得以下道具。\\n\\n<内置物品>\\n- 史诗调律砝码 3个\\n- 深渊入场 : 终末之启示 750个",
+                "explain_kr": "사용 시 아래 아이템을 획득할 수 있습니다.\\n\\n<구성품>\\n- 영롱한 조율의 추 3개\\n- 종말의 계시 1개 상자 750개",
+                "explain_en": "Grants the items below when used.\\n\\n<Contents>\\n- Lustrous Weight of Order x3\\n- Doom Oracle Box (1) x750",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "tuner_left_trace",
+          "tier": "epic",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_epic.PNG",
+              "name": "史诗星蕴石袖珍罐",
+              "name_kr": "에픽 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_epic.PNG",
+                "name": "史诗星蕴石袖珍罐",
+                "name_kr": "에픽 서약 결정 항아리",
+                "explain": "开启后， 可以从史诗星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 에픽 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Epic Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_select_box.PNG",
+              "name": "115级套装太初黑牙首饰自选礼盒",
+              "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_blackfang_accessory_box.PNG",
+                "name": "115级套装太初黑牙首饰自选礼盒",
+                "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+                "explain": "开启后， 可以选择套装及部位获得1件太初品级的黑牙首饰。",
+                "explain_kr": "사용 시 태초 등급의 흑아 악세서리를 세트 및 부위를 선택하여 획득할 수 있습니다.",
+                "explain_en": "When used, lets you choose the set and the slot to obtain a Primeval-grade Black Fang accessory.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 1000,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/radiance_trace_box.PNG",
+              "name": "光辉启示礼盒 (1个)",
+              "name_kr": "광휘의 흔적 1개 상자",
+              "tooltip": {
+                "image": "/rewards/radiance_trace_box.PNG",
+                "name": "光辉启示礼盒 (1个)",
+                "name_kr": "광휘의 흔적 1개 상자",
+                "explain": "开启后， 可以获得1个[光辉启示]。",
+                "explain_kr": "사용 시 광휘의 흔적 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Trace of Splendor when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            4
+          ],
+          "to": [
+            1,
+            4
+          ]
+        },
+        {
+          "from": [
+            1,
+            5
+          ],
+          "to": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 36,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f36_32223",
+      "name": "悖论迷宫: 第36区域 32223",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/radiance_trace_box.PNG",
+              "name": "光辉启示礼盒 (1个)",
+              "name_kr": "광휘의 흔적 1개 상자",
+              "tooltip": {
+                "image": "/rewards/radiance_trace_box.PNG",
+                "name": "光辉启示礼盒 (1个)",
+                "name_kr": "광휘의 흔적 1개 상자",
+                "explain": "开启后， 可以获得1个[光辉启示]。",
+                "explain_kr": "사용 시 광휘의 흔적 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Trace of Splendor when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "icon_id": "tuner_left_trace",
+          "tier": "epic",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_epic.PNG",
+              "name": "史诗星蕴石袖珍罐",
+              "name_kr": "에픽 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_epic.PNG",
+                "name": "史诗星蕴石袖珍罐",
+                "name_kr": "에픽 서약 결정 항아리",
+                "explain": "开启后， 可以从史诗星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 에픽 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Epic Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuning_weight_special_box.PNG",
+              "name": "玲珑的调律砝码特别礼盒",
+              "name_kr": "영롱한 조율의 추 스페셜 상자",
+              "tooltip": {
+                "image": "/rewards/tuning_weight_special_box.PNG",
+                "name": "史诗调律砝码特别礼盒",
+                "name_kr": "영롱한 조율의 추 스페셜 상자",
+                "explain": "使用后， 可以获得以下道具。\\n\\n<内置物品>\\n- 史诗调律砝码 3个\\n- 深渊入场 : 终末之启示 750个",
+                "explain_kr": "사용 시 아래 아이템을 획득할 수 있습니다.\\n\\n<구성품>\\n- 영롱한 조율의 추 3개\\n- 종말의 계시 1개 상자 750개",
+                "explain_en": "Grants the items below when used.\\n\\n<Contents>\\n- Lustrous Weight of Order x3\\n- Doom Oracle Box (1) x750",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 1000,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_select_box.PNG",
+              "name": "115级套装太初黑牙首饰自选礼盒",
+              "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_blackfang_accessory_box.PNG",
+                "name": "115级套装太初黑牙首饰自选礼盒",
+                "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+                "explain": "开启后， 可以选择套装及部位获得1件太初品级的黑牙首饰。",
+                "explain_kr": "사용 시 태초 등급의 흑아 악세서리를 세트 및 부위를 선택하여 획득할 수 있습니다.",
+                "explain_en": "When used, lets you choose the set and the slot to obtain a Primeval-grade Black Fang accessory.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            2,
+            2
+          ],
+          "to": [
+            3,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 36,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f36_23122",
+      "name": "悖论迷宫: 第36区域 23122",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 0,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "icon_id": "tuner_left_trace",
+          "tier": "epic",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_epic.PNG",
+              "name": "史诗星蕴石袖珍罐",
+              "name_kr": "에픽 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_epic.PNG",
+                "name": "史诗星蕴石袖珍罐",
+                "name_kr": "에픽 서약 결정 항아리",
+                "explain": "开启后， 可以从史诗星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 에픽 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Epic Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 1000,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/radiance_trace_box.PNG",
+              "name": "光辉启示礼盒 (1个)",
+              "name_kr": "광휘의 흔적 1개 상자",
+              "tooltip": {
+                "image": "/rewards/radiance_trace_box.PNG",
+                "name": "光辉启示礼盒 (1个)",
+                "name_kr": "광휘의 흔적 1개 상자",
+                "explain": "开启后， 可以获得1个[光辉启示]。",
+                "explain_kr": "사용 시 광휘의 흔적 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Trace of Splendor when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_select_box.PNG",
+              "name": "115级套装太初黑牙首饰自选礼盒",
+              "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_blackfang_accessory_box.PNG",
+                "name": "115级套装太初黑牙首饰自选礼盒",
+                "name_kr": "115레벨 세트 태초 흑아 악세서리 선택 상자",
+                "explain": "开启后， 可以选择套装及部位获得1件太初品级的黑牙首饰。",
+                "explain_kr": "사용 시 태초 등급의 흑아 악세서리를 세트 및 부위를 선택하여 획득할 수 있습니다.",
+                "explain_en": "When used, lets you choose the set and the slot to obtain a Primeval-grade Black Fang accessory.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:item_type",
+                "attach": "$17:props:children:0:props:floor:nodes:0:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/tuning_weight_special_box.PNG",
+              "name": "玲珑的调律砝码特别礼盒",
+              "name_kr": "영롱한 조율의 추 스페셜 상자",
+              "tooltip": {
+                "image": "/rewards/tuning_weight_special_box.PNG",
+                "name": "史诗调律砝码特别礼盒",
+                "name_kr": "영롱한 조율의 추 스페셜 상자",
+                "explain": "使用后， 可以获得以下道具。\\n\\n<内置物品>\\n- 史诗调律砝码 3个\\n- 深渊入场 : 终末之启示 750个",
+                "explain_kr": "사용 시 아래 아이템을 획득할 수 있습니다.\\n\\n<구성품>\\n- 영롱한 조율의 추 3개\\n- 종말의 계시 1개 상자 750개",
+                "explain_en": "Grants the items below when used.\\n\\n<Contents>\\n- Lustrous Weight of Order x3\\n- Doom Oracle Box (1) x750",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 37,
+      "seedIndex": 1,
+      "schema_version": 1,
+      "floor_id": "lab1_f37_route1",
+      "name": "悖论迷宫: 第37区域 route1",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_primeval.PNG",
+              "name": "太初星蕴石袖珍罐",
+              "name_kr": "태초 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_primeval.PNG",
+                "name": "太初星蕴石袖珍罐",
+                "name_kr": "태초 서약 결정 항아리",
+                "explain": "开启后， 可以从太初星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 태초 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Primeval Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+              "name": "史诗星蕴石设计图自选礼盒",
+              "name_kr": "에픽 서약 결정 제작서 선택 상자",
+              "tooltip": {
+                "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+                "name": "史诗星蕴石设计图自选礼盒",
+                "name_kr": "에픽 서약 결정 제작서 선택 상자",
+                "explain": "开启后， 可以选择套装， 获得1个史诗星蕴石设计图。\\n\\n<获得道具信息>\\n- 潜影史诗星蕴石设计图\\n- 精灵史诗星蕴石设计图\\n- 黄金乡史诗星蕴石设计图\\n- 龙战史诗星蕴石设计图\\n- 净化史诗星蕴石设计图\\n- 天命史诗星蕴石设计图\\n- 能量史诗星蕴石设计图\\n- 自然史诗星蕴石设计图\\n- 女武神史诗星蕴石设计图\\n- 青丘史诗星蕴石设计图\\n- 群猎史诗星蕴石设计图\\n- 领域史诗星蕴石设计图",
+                "explain_kr": "사용 시 각 세트별 에픽 서약 결정 제작서를 선택하여 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자 에픽 서약 결정 제작서\\n- 페어리 에픽 서약 결정 제작서\\n- 황금 에픽 서약 결정 제작서\\n- 용투 에픽 서약 결정 제작서\\n- 정화 에픽 서약 결정 제작서\\n- 행운 에픽 서약 결정 제작서\\n- 한계 에픽 서약 결정 제작서\\n- 자연 에픽 서약 결정 제작서\\n- 발키리 에픽 서약 결정 제작서\\n- 여우 에픽 서약 결정 제작서\\n- 무리 에픽 서약 결정 제작서\\n- 마력 에픽 서약 결정 제작서",
+                "explain_en": "Lets you choose and obtain an Epic Oath Crystal Recipe for each set when used.\\n\\n<Obtainable Items>\\n- Shadow Epic Oath Crystal Recipe\\n- Fairy Epic Oath Crystal Recipe\\n- Gold Epic Oath Crystal Recipe\\n- Dragon Duel Epic Oath Crystal Recipe\\n- Purification Epic Oath Crystal Recipe\\n- Fortune Epic Oath Crystal Recipe\\n- Limit Epic Oath Crystal Recipe\\n- Nature Epic Oath Crystal Recipe\\n- Valkyrie Epic Oath Crystal Recipe\\n- Fox Epic Oath Crystal Recipe\\n- Pack Epic Oath Crystal Recipe\\n- Magic Epic Oath Crystal Recipe",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_select_box.PNG",
+              "name": "太初传世武器自选礼盒",
+              "name_kr": "태초 레거시 무기 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_legacy_select_box.PNG",
+                "name": "太初传世武器自选礼盒",
+                "name_kr": "태초 레거시 무기 선택 상자",
+                "explain": "开启后， 可以选择获得太初传世武器。",
+                "explain_kr": "사용 시 태초 레거시 무기를 선택하여 획득할 수 있습니다.",
+                "explain_en": "Lets you choose and obtain a Primeval Legacy weapon when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/solid_soul.PNG",
+              "count": 100,
+              "name": "坚实之魂",
+              "name_kr": "솔리드 소울",
+              "tooltip": {
+                "image": "/rewards/solid_soul.PNG",
+                "name": "坚实之魂",
+                "name_kr": "솔리드 소울",
+                "explain": "<主要用途>\\n- 星蕴石升品\\n- 星蕴石跨界\\n- 兑换太初星蕴石袖珍罐\\n\\n<主要获得途径>\\n- 装备之力魔法书商店\\n- 契约之塔",
+                "explain_kr": "<주요 사용처>\\n- 서약 결정 승급\\n- 서약 결정 초월\\n- 태초 서약 결정 항아리 구매\\n\\n<주요 획득처>\\n- 신비한 힘의 마법서 NPC 상점 구매\\n - 기원의 탑",
+                "explain_en": "<Main Uses>\\n- Oath Crystal Promotion\\n- Oath Crystal Transcendence\\n- Purchase Primeval Oath Crystal Pot\\n\\n<Main Sources>\\n- Mystical Grimoire NPC shop purchase\\n- Tower of Origin",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            2
+          ],
+          "to": [
+            1,
+            2
+          ]
+        },
+        {
+          "from": [
+            1,
+            1
+          ],
+          "to": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "area": 37,
+      "seedIndex": 2,
+      "schema_version": 1,
+      "floor_id": "lab1_f37_route2",
+      "name": "悖论迷宫: 第37区域 route2",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_primeval.PNG",
+              "name": "太初星蕴石袖珍罐",
+              "name_kr": "태초 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_primeval.PNG",
+                "name": "太初星蕴石袖珍罐",
+                "name_kr": "태초 서약 결정 항아리",
+                "explain": "开启后， 可以从太初星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 태초 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Primeval Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/solid_soul.PNG",
+              "count": 100,
+              "name": "坚实之魂",
+              "name_kr": "솔리드 소울",
+              "tooltip": {
+                "image": "/rewards/solid_soul.PNG",
+                "name": "坚实之魂",
+                "name_kr": "솔리드 소울",
+                "explain": "<主要用途>\\n- 星蕴石升品\\n- 星蕴石跨界\\n- 兑换太初星蕴石袖珍罐\\n\\n<主要获得途径>\\n- 装备之力魔法书商店\\n- 契约之塔",
+                "explain_kr": "<주요 사용처>\\n- 서약 결정 승급\\n- 서약 결정 초월\\n- 태초 서약 결정 항아리 구매\\n\\n<주요 획득처>\\n- 신비한 힘의 마법서 NPC 상점 구매\\n - 기원의 탑",
+                "explain_en": "<Main Uses>\\n- Oath Crystal Promotion\\n- Oath Crystal Transcendence\\n- Purchase Primeval Oath Crystal Pot\\n\\n<Main Sources>\\n- Mystical Grimoire NPC shop purchase\\n- Tower of Origin",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+              "name": "史诗星蕴石设计图自选礼盒",
+              "name_kr": "에픽 서약 결정 제작서 선택 상자",
+              "tooltip": {
+                "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+                "name": "史诗星蕴石设计图自选礼盒",
+                "name_kr": "에픽 서약 결정 제작서 선택 상자",
+                "explain": "开启后， 可以选择套装， 获得1个史诗星蕴石设计图。\\n\\n<获得道具信息>\\n- 潜影史诗星蕴石设计图\\n- 精灵史诗星蕴石设计图\\n- 黄金乡史诗星蕴石设计图\\n- 龙战史诗星蕴石设计图\\n- 净化史诗星蕴石设计图\\n- 天命史诗星蕴石设计图\\n- 能量史诗星蕴石设计图\\n- 自然史诗星蕴石设计图\\n- 女武神史诗星蕴石设计图\\n- 青丘史诗星蕴石设计图\\n- 群猎史诗星蕴石设计图\\n- 领域史诗星蕴石设计图",
+                "explain_kr": "사용 시 각 세트별 에픽 서약 결정 제작서를 선택하여 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자 에픽 서약 결정 제작서\\n- 페어리 에픽 서약 결정 제작서\\n- 황금 에픽 서약 결정 제작서\\n- 용투 에픽 서약 결정 제작서\\n- 정화 에픽 서약 결정 제작서\\n- 행운 에픽 서약 결정 제작서\\n- 한계 에픽 서약 결정 제작서\\n- 자연 에픽 서약 결정 제작서\\n- 발키리 에픽 서약 결정 제작서\\n- 여우 에픽 서약 결정 제작서\\n- 무리 에픽 서약 결정 제작서\\n- 마력 에픽 서약 결정 제작서",
+                "explain_en": "Lets you choose and obtain an Epic Oath Crystal Recipe for each set when used.\\n\\n<Obtainable Items>\\n- Shadow Epic Oath Crystal Recipe\\n- Fairy Epic Oath Crystal Recipe\\n- Gold Epic Oath Crystal Recipe\\n- Dragon Duel Epic Oath Crystal Recipe\\n- Purification Epic Oath Crystal Recipe\\n- Fortune Epic Oath Crystal Recipe\\n- Limit Epic Oath Crystal Recipe\\n- Nature Epic Oath Crystal Recipe\\n- Valkyrie Epic Oath Crystal Recipe\\n- Fox Epic Oath Crystal Recipe\\n- Pack Epic Oath Crystal Recipe\\n- Magic Epic Oath Crystal Recipe",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_select_box.PNG",
+              "name": "太初传世武器自选礼盒",
+              "name_kr": "태초 레거시 무기 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_legacy_select_box.PNG",
+                "name": "太初传世武器自选礼盒",
+                "name_kr": "태초 레거시 무기 선택 상자",
+                "explain": "开启后， 可以选择获得太初传世武器。",
+                "explain_kr": "사용 시 태초 레거시 무기를 선택하여 획득할 수 있습니다.",
+                "explain_en": "Lets you choose and obtain a Primeval Legacy weapon when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:5:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            3,
+            2
+          ],
+          "to": [
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "area": 37,
+      "seedIndex": 3,
+      "schema_version": 1,
+      "floor_id": "lab1_f37_22322",
+      "name": "悖论迷宫: 第37区域 22322",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "tuner_left_trace",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_primeval.PNG",
+              "name": "太初星蕴石袖珍罐",
+              "name_kr": "태초 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_primeval.PNG",
+                "name": "太初星蕴石袖珍罐",
+                "name_kr": "태초 서약 결정 항아리",
+                "explain": "开启后， 可以从太初星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 태초 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Primeval Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_select_box.PNG",
+              "name": "太初传世武器自选礼盒",
+              "name_kr": "태초 레거시 무기 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_legacy_select_box.PNG",
+                "name": "太初传世武器自选礼盒",
+                "name_kr": "태초 레거시 무기 선택 상자",
+                "explain": "开启后， 可以选择获得太初传世武器。",
+                "explain_kr": "사용 시 태초 레거시 무기를 선택하여 획득할 수 있습니다.",
+                "explain_en": "Lets you choose and obtain a Primeval Legacy weapon when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/solid_soul.PNG",
+              "count": 100,
+              "name": "坚实之魂",
+              "name_kr": "솔리드 소울",
+              "tooltip": {
+                "image": "/rewards/solid_soul.PNG",
+                "name": "坚实之魂",
+                "name_kr": "솔리드 소울",
+                "explain": "<主要用途>\\n- 星蕴石升品\\n- 星蕴石跨界\\n- 兑换太初星蕴石袖珍罐\\n\\n<主要获得途径>\\n- 装备之力魔法书商店\\n- 契约之塔",
+                "explain_kr": "<주요 사용처>\\n- 서약 결정 승급\\n- 서약 결정 초월\\n- 태초 서약 결정 항아리 구매\\n\\n<주요 획득처>\\n- 신비한 힘의 마법서 NPC 상점 구매\\n - 기원의 탑",
+                "explain_en": "<Main Uses>\\n- Oath Crystal Promotion\\n- Oath Crystal Transcendence\\n- Purchase Primeval Oath Crystal Pot\\n\\n<Main Sources>\\n- Mystical Grimoire NPC shop purchase\\n- Tower of Origin",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+              "name": "史诗星蕴石设计图自选礼盒",
+              "name_kr": "에픽 서약 결정 제작서 선택 상자",
+              "tooltip": {
+                "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+                "name": "史诗星蕴石设计图自选礼盒",
+                "name_kr": "에픽 서약 결정 제작서 선택 상자",
+                "explain": "开启后， 可以选择套装， 获得1个史诗星蕴石设计图。\\n\\n<获得道具信息>\\n- 潜影史诗星蕴石设计图\\n- 精灵史诗星蕴石设计图\\n- 黄金乡史诗星蕴石设计图\\n- 龙战史诗星蕴石设计图\\n- 净化史诗星蕴石设计图\\n- 天命史诗星蕴石设计图\\n- 能量史诗星蕴石设计图\\n- 自然史诗星蕴石设计图\\n- 女武神史诗星蕴石设计图\\n- 青丘史诗星蕴石设计图\\n- 群猎史诗星蕴石设计图\\n- 领域史诗星蕴石设计图",
+                "explain_kr": "사용 시 각 세트별 에픽 서약 결정 제작서를 선택하여 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자 에픽 서약 결정 제작서\\n- 페어리 에픽 서약 결정 제작서\\n- 황금 에픽 서약 결정 제작서\\n- 용투 에픽 서약 결정 제작서\\n- 정화 에픽 서약 결정 제작서\\n- 행운 에픽 서약 결정 제작서\\n- 한계 에픽 서약 결정 제작서\\n- 자연 에픽 서약 결정 제작서\\n- 발키리 에픽 서약 결정 제작서\\n- 여우 에픽 서약 결정 제작서\\n- 무리 에픽 서약 결정 제작서\\n- 마력 에픽 서약 결정 제작서",
+                "explain_en": "Lets you choose and obtain an Epic Oath Crystal Recipe for each set when used.\\n\\n<Obtainable Items>\\n- Shadow Epic Oath Crystal Recipe\\n- Fairy Epic Oath Crystal Recipe\\n- Gold Epic Oath Crystal Recipe\\n- Dragon Duel Epic Oath Crystal Recipe\\n- Purification Epic Oath Crystal Recipe\\n- Fortune Epic Oath Crystal Recipe\\n- Limit Epic Oath Crystal Recipe\\n- Nature Epic Oath Crystal Recipe\\n- Valkyrie Epic Oath Crystal Recipe\\n- Fox Epic Oath Crystal Recipe\\n- Pack Epic Oath Crystal Recipe\\n- Magic Epic Oath Crystal Recipe",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:3:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "relic_excavation_zone"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            1
+          ],
+          "to": [
+            1,
+            1
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 37,
+      "seedIndex": 4,
+      "schema_version": 1,
+      "floor_id": "lab1_f37_route3",
+      "name": "悖论迷宫: 第37区域 route3",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_select_box.PNG",
+              "name": "太初传世武器自选礼盒",
+              "name_kr": "태초 레거시 무기 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_legacy_select_box.PNG",
+                "name": "太初传世武器自选礼盒",
+                "name_kr": "태초 레거시 무기 선택 상자",
+                "explain": "开启后， 可以选择获得太初传世武器。",
+                "explain_kr": "사용 시 태초 레거시 무기를 선택하여 획득할 수 있습니다.",
+                "explain_en": "Lets you choose and obtain a Primeval Legacy weapon when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "tuner_left_trace",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_primeval.PNG",
+              "name": "太初星蕴石袖珍罐",
+              "name_kr": "태초 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_primeval.PNG",
+                "name": "太初星蕴石袖珍罐",
+                "name_kr": "태초 서약 결정 항아리",
+                "explain": "开启后， 可以从太初星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 태초 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Primeval Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/solid_soul.PNG",
+              "count": 100,
+              "name": "坚实之魂",
+              "name_kr": "솔리드 소울",
+              "tooltip": {
+                "image": "/rewards/solid_soul.PNG",
+                "name": "坚实之魂",
+                "name_kr": "솔리드 소울",
+                "explain": "<主要用途>\\n- 星蕴石升品\\n- 星蕴石跨界\\n- 兑换太初星蕴石袖珍罐\\n\\n<主要获得途径>\\n- 装备之力魔法书商店\\n- 契约之塔",
+                "explain_kr": "<주요 사용처>\\n- 서약 결정 승급\\n- 서약 결정 초월\\n- 태초 서약 결정 항아리 구매\\n\\n<주요 획득처>\\n- 신비한 힘의 마법서 NPC 상점 구매\\n - 기원의 탑",
+                "explain_en": "<Main Uses>\\n- Oath Crystal Promotion\\n- Oath Crystal Transcendence\\n- Purchase Primeval Oath Crystal Pot\\n\\n<Main Sources>\\n- Mystical Grimoire NPC shop purchase\\n- Tower of Origin",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+              "name": "史诗星蕴石设计图自选礼盒",
+              "name_kr": "에픽 서약 결정 제작서 선택 상자",
+              "tooltip": {
+                "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+                "name": "史诗星蕴石设计图自选礼盒",
+                "name_kr": "에픽 서약 결정 제작서 선택 상자",
+                "explain": "开启后， 可以选择套装， 获得1个史诗星蕴石设计图。\\n\\n<获得道具信息>\\n- 潜影史诗星蕴石设计图\\n- 精灵史诗星蕴石设计图\\n- 黄金乡史诗星蕴石设计图\\n- 龙战史诗星蕴石设计图\\n- 净化史诗星蕴石设计图\\n- 天命史诗星蕴石设计图\\n- 能量史诗星蕴石设计图\\n- 自然史诗星蕴石设计图\\n- 女武神史诗星蕴石设计图\\n- 青丘史诗星蕴石设计图\\n- 群猎史诗星蕴石设计图\\n- 领域史诗星蕴石设计图",
+                "explain_kr": "사용 시 각 세트별 에픽 서약 결정 제작서를 선택하여 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자 에픽 서약 결정 제작서\\n- 페어리 에픽 서약 결정 제작서\\n- 황금 에픽 서약 결정 제작서\\n- 용투 에픽 서약 결정 제작서\\n- 정화 에픽 서약 결정 제작서\\n- 행운 에픽 서약 결정 제작서\\n- 한계 에픽 서약 결정 제작서\\n- 자연 에픽 서약 결정 제작서\\n- 발키리 에픽 서약 결정 제작서\\n- 여우 에픽 서약 결정 제작서\\n- 무리 에픽 서약 결정 제작서\\n- 마력 에픽 서약 결정 제작서",
+                "explain_en": "Lets you choose and obtain an Epic Oath Crystal Recipe for each set when used.\\n\\n<Obtainable Items>\\n- Shadow Epic Oath Crystal Recipe\\n- Fairy Epic Oath Crystal Recipe\\n- Gold Epic Oath Crystal Recipe\\n- Dragon Duel Epic Oath Crystal Recipe\\n- Purification Epic Oath Crystal Recipe\\n- Fortune Epic Oath Crystal Recipe\\n- Limit Epic Oath Crystal Recipe\\n- Nature Epic Oath Crystal Recipe\\n- Valkyrie Epic Oath Crystal Recipe\\n- Fox Epic Oath Crystal Recipe\\n- Pack Epic Oath Crystal Recipe\\n- Magic Epic Oath Crystal Recipe",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:4:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            0,
+            5
+          ],
+          "to": [
+            1,
+            5
+          ]
+        },
+        {
+          "from": [
+            3,
+            5
+          ],
+          "to": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "area": 37,
+      "seedIndex": 5,
+      "schema_version": 1,
+      "floor_id": "lab1_f37_route4",
+      "name": "悖论迷宫: 第37区域 route4",
+      "grid": {
+        "cols": 7,
+        "rows": 5
+      },
+      "nodes": [
+        {
+          "row": 0,
+          "col": 1,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+              "name": "史诗星蕴石设计图自选礼盒",
+              "name_kr": "에픽 서약 결정 제작서 선택 상자",
+              "tooltip": {
+                "image": "/rewards/epic_oath_crystal_recipe_box.PNG",
+                "name": "史诗星蕴石设计图自选礼盒",
+                "name_kr": "에픽 서약 결정 제작서 선택 상자",
+                "explain": "开启后， 可以选择套装， 获得1个史诗星蕴石设计图。\\n\\n<获得道具信息>\\n- 潜影史诗星蕴石设计图\\n- 精灵史诗星蕴石设计图\\n- 黄金乡史诗星蕴石设计图\\n- 龙战史诗星蕴石设计图\\n- 净化史诗星蕴石设计图\\n- 天命史诗星蕴石设计图\\n- 能量史诗星蕴石设计图\\n- 自然史诗星蕴石设计图\\n- 女武神史诗星蕴石设计图\\n- 青丘史诗星蕴石设计图\\n- 群猎史诗星蕴石设计图\\n- 领域史诗星蕴石设计图",
+                "explain_kr": "사용 시 각 세트별 에픽 서약 결정 제작서를 선택하여 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자 에픽 서약 결정 제작서\\n- 페어리 에픽 서약 결정 제작서\\n- 황금 에픽 서약 결정 제작서\\n- 용투 에픽 서약 결정 제작서\\n- 정화 에픽 서약 결정 제작서\\n- 행운 에픽 서약 결정 제작서\\n- 한계 에픽 서약 결정 제작서\\n- 자연 에픽 서약 결정 제작서\\n- 발키리 에픽 서약 결정 제작서\\n- 여우 에픽 서약 결정 제작서\\n- 무리 에픽 서약 결정 제작서\\n- 마력 에픽 서약 결정 제작서",
+                "explain_en": "Lets you choose and obtain an Epic Oath Crystal Recipe for each set when used.\\n\\n<Obtainable Items>\\n- Shadow Epic Oath Crystal Recipe\\n- Fairy Epic Oath Crystal Recipe\\n- Gold Epic Oath Crystal Recipe\\n- Dragon Duel Epic Oath Crystal Recipe\\n- Purification Epic Oath Crystal Recipe\\n- Fortune Epic Oath Crystal Recipe\\n- Limit Epic Oath Crystal Recipe\\n- Nature Epic Oath Crystal Recipe\\n- Valkyrie Epic Oath Crystal Recipe\\n- Fox Epic Oath Crystal Recipe\\n- Pack Epic Oath Crystal Recipe\\n- Magic Epic Oath Crystal Recipe",
+                "rarity_slug": "epic",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "icon_id": "central_checkpoint_start"
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "icon_id": "tuner_left_trace",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/oath_pot_primeval.PNG",
+              "name": "太初星蕴石袖珍罐",
+              "name_kr": "태초 서약 결정 항아리",
+              "tooltip": {
+                "image": "/rewards/oath_pot_primeval.PNG",
+                "name": "太初星蕴石袖珍罐",
+                "name_kr": "태초 서약 결정 항아리",
+                "explain": "开启后， 可以从太初星蕴石中以相同几率获得1件。\\n\\n<获得道具信息>\\n- 潜影暗袭  套装\\n- 精灵国度  套装\\n- 理想之黄金乡  套装\\n- 龙战八荒  套装\\n- 混沌净化  套装\\n- 天命者的气运  套装\\n- 究极能量  套装\\n- 造化自然  套装\\n- 诸神黄昏之女武神  套装\\n- 青丘灵珠  套装\\n- 群猎美学  套装\\n- 冥思者的魔力领域  套装",
+                "explain_kr": "사용 시 태초 서약 결정 중 1종을 균등한 확률로 획득할 수 있습니다.\\n\\n<획득 아이템 정보>\\n- 그림자에 숨은 죽음 세트\\n- 소울 페어리 세트\\n- 영원히 이어지는 황금향 세트\\n- 용투장의 난 세트\\n- 칠흑의 정화 세트\\n- 세렌디피티 세트\\n- 한계를 넘어선 에너지 세트\\n- 압도적인 자연 세트\\n- 고대 전장의 발키리 세트\\n- 에테리얼 오브 아츠 세트\\n- 무리 사냥의 길잡이 세트\\n- 마력의 영역 세트",
+                "explain_en": "When used, grants 1 of the Primeval Oath Crystals at an equal chance.\\n\\n<Obtainable Items>\\n- Death in the Shadows Set\\n- Soul Fairy Set\\n- Hideout's Endless Gold Set\\n- Dragon Arena Set\\n- Cleansing Darkness Set\\n- Serendipity Set\\n- Beyond Energy Limit Set\\n- Overwhelming Nature Set\\n- Ancient Battlefield Valkyrie Set\\n- Ethereal Orb Arts Set\\n- Alpha of the Pack Hunt Set\\n- Magic Domain Set",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/solid_soul.PNG",
+              "count": 100,
+              "name": "坚实之魂",
+              "name_kr": "솔리드 소울",
+              "tooltip": {
+                "image": "/rewards/solid_soul.PNG",
+                "name": "坚实之魂",
+                "name_kr": "솔리드 소울",
+                "explain": "<主要用途>\\n- 星蕴石升品\\n- 星蕴石跨界\\n- 兑换太初星蕴石袖珍罐\\n\\n<主要获得途径>\\n- 装备之力魔法书商店\\n- 契约之塔",
+                "explain_kr": "<주요 사용처>\\n- 서약 결정 승급\\n- 서약 결정 초월\\n- 태초 서약 결정 항아리 구매\\n\\n<주요 획득처>\\n- 신비한 힘의 마법서 NPC 상점 구매\\n - 기원의 탑",
+                "explain_en": "<Main Uses>\\n- Oath Crystal Promotion\\n- Oath Crystal Transcendence\\n- Purchase Primeval Oath Crystal Pot\\n\\n<Main Sources>\\n- Mystical Grimoire NPC shop purchase\\n- Tower of Origin",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "icon_id": "chaotic_radiance_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/doom_oracle.PNG",
+              "count": 150,
+              "name": "深渊入场 : 终末之启示礼盒 (1个)",
+              "name_kr": "종말의 계시 1개 상자",
+              "tooltip": {
+                "image": "/rewards/doom_oracle.PNG",
+                "name": "深渊入场 : 终末之启示礼盒 (1个)",
+                "name_kr": "종말의 계시 1개 상자",
+                "explain": "开启后， 可以获得1个[深渊入场 : 终末之启示]。",
+                "explain_kr": "종말의 계시 1개를 획득할 수 있습니다.",
+                "explain_en": "Grants 1 Doom Oracle when used.",
+                "rarity_slug": "rare",
+                "item_type": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:item_type",
+                "attach": "$19:props:children:0:props:floor:nodes:10:rewards:0:tooltip:attach"
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "icon_id": "central_checkpoint"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "icon_id": "chaotic_life_pilgrimage",
+          "rewards": [
+            {
+              "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+              "name": "祝圣防具升级券",
+              "name_kr": "축성 방어구 업그레이드권",
+              "tooltip": {
+                "image": "/rewards/consecrated_armor_upgrade_ticket.PNG",
+                "name": "祝圣防具升级券",
+                "name_kr": "축성 방어구 업그레이드권",
+                "explain": "使用后， 无需消耗金币/巡礼之印即可将侵蚀套装/通宝防具升级为祝圣套装/通宝防具。\\n\\n<祝圣防具升级消耗材料>\\n- 史诗灵魂 1个\\n- 黎明的光晕 240个",
+                "explain_kr": "사용 시 잠식 세트/고유 방어구를 골드/순례의 인장 없이 축성 세트/고유 방어구로 업그레이드할 수 있습니다.\\n\\n<축성 방어구 업그레이드 시 소모 재료>\\n- 에픽 소울 1개\\n- 여명의 빛망울 240개",
+                "explain_en": "When used, upgrades Erosion Set/Distinct armor into Consecrated Set/Distinct armor without spending Gold or Pilgrimage Seals.\\n\\n<Materials Consumed for the Consecrated Armor Upgrade>\\n- Epic Soul x1\\n- Glimmer of Dawn x240",
+                "rarity_slug": "unique",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "icon_id": "armament_warehouse",
+          "tier": "primeval",
+          "rewards": [
+            {
+              "image": "/rewards/primeval_legacy_select_box.PNG",
+              "name": "太初传世武器自选礼盒",
+              "name_kr": "태초 레거시 무기 선택 상자",
+              "tooltip": {
+                "image": "/rewards/primeval_legacy_select_box.PNG",
+                "name": "太初传世武器自选礼盒",
+                "name_kr": "태초 레거시 무기 선택 상자",
+                "explain": "开启后， 可以选择获得太初传世武器。",
+                "explain_kr": "사용 시 태초 레거시 무기를 선택하여 획득할 수 있습니다.",
+                "explain_en": "Lets you choose and obtain a Primeval Legacy weapon when used.",
+                "rarity_slug": "primeval",
+                "item_type": {
+                  "kr": "소모품",
+                  "slug": "stackable"
+                },
+                "attach": {
+                  "code": "account",
+                  "label_kr": "계정귀속"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "icon_id": "relic_excavation_zone"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "icon_id": "central_checkpoint_last"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "key"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "icon_id": "labyrinth_supply_base",
+          "tier": "ticket"
+        }
+      ],
+      "edges": [
+        {
+          "from": [
+            1,
+            4
+          ],
+          "to": [
+            2,
+            4
+          ]
+        },
+        {
+          "from": [
+            3,
+            4
+          ],
+          "to": [
+            4,
+            4
+          ]
+        }
+      ]
     }
   ],
   "iconDict": {
