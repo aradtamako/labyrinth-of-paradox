@@ -14,6 +14,7 @@ export type Route =
   | { name: 'floor'; key: string }
   | { name: 'rewards' }
   | { name: 'system' }
+  | { name: 'release-notes' }
 
 function parse(hash: string): Route {
   const path = hash.replace(/^#\/?/, '').split('?')[0]
@@ -26,6 +27,7 @@ function parse(hash: string): Route {
   }
   if (parts[0] === 'rewards') return { name: 'rewards' }
   if (parts[0] === 'system') return { name: 'system' }
+  if (parts[0] === 'release-notes') return { name: 'release-notes' }
   return { name: 'overview' }
 }
 
@@ -56,6 +58,8 @@ export function hrefFor(route: Route, locale?: Locale): string {
         return '#/rewards'
       case 'system':
         return '#/system'
+      case 'release-notes':
+        return '#/release-notes'
       default:
         return '#/'
     }

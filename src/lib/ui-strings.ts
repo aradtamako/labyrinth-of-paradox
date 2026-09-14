@@ -26,6 +26,7 @@ const ja = {
     floors: '区域マップ',
     rewards: '報酬一覧',
     system: 'システム',
+    releaseNotes: '更新履歴',
     menu: 'メニュー',
     openMenu: 'メニューを開く',
     github: 'GitHub リポジトリを開く',
@@ -101,6 +102,10 @@ const ja = {
     featureSystemCta: 'システムへ',
     featureSubjugationTitle: '討伐券と傭兵団',
     featureSubjugationBody: '討伐券7種の必要名声・入手条件、傭兵団レベルとバッファー派遣の仕様。',
+    featureNotesTitle: '更新履歴',
+    featureNotesBody:
+      'いつどの区域を収録し、表示や検索をどう変えたか。サイト側の変更だけを時系列に並べる。',
+    featureNotesCta: '更新履歴へ',
 
     sourcesTitle: '出典',
     sourceOfficialLabel: 'ダンジョン&ファイター 公式 — Season12 Act0 2-2 アップデート',
@@ -269,6 +274,28 @@ const ja = {
     mercenaryTitle: '傭兵団',
     dispatchTitle: 'バッファー派遣',
   },
+
+  releaseNotes: {
+    title: '更新履歴',
+    lead:
+      '収録区域の追加、表示の作り方、検索の挙動など、サイト側で変わったことを時系列に並べる。ゲーム内の仕様変更そのものは扱わない。',
+    repoLink: 'リポジトリのコミット履歴',
+    filterLabel: '種類で絞り込む',
+    filterAll: 'すべて',
+    /** Timeline 全体の読み上げ用ラベル。 */
+    timelineLabel: '更新履歴のタイムライン',
+    count: (n: number) => `${n} 件`,
+    prLabel: (n: number) => `PR #${n}`,
+    empty: 'その種類の更新はまだ無い。',
+    kinds: {
+      data: 'データ',
+      feature: '機能',
+      fix: '修正',
+      internal: '開発',
+    },
+    footnote:
+      '更新はコミットログをそのまま写したものでなく、区域の収録や操作まわりの変更など、見どころ単位に畳んで書いている。',
+  },
 }
 
 export type UiText = typeof ja
@@ -290,6 +317,7 @@ const en: UiText = {
     floors: 'Area Maps',
     rewards: 'Rewards',
     system: 'System',
+    releaseNotes: 'Release notes',
     menu: 'Menu',
     openMenu: 'Open menu',
     github: 'Open the GitHub repository',
@@ -362,6 +390,10 @@ const en: UiText = {
     featureSubjugationTitle: 'Subjugation tickets & mercenaries',
     featureSubjugationBody:
       'Required fame and unlock conditions for all seven subjugation tickets, plus mercenary levels and buffer dispatch.',
+    featureNotesTitle: 'Release notes',
+    featureNotesBody:
+      'When each area was recorded and how the pages and search changed — site changes only, in date order.',
+    featureNotesCta: 'Go to release notes',
 
     sourcesTitle: 'Sources',
     sourceOfficialLabel: 'Dungeon & Fighter official — Season 12 Act 0 2-2 update',
@@ -525,6 +557,27 @@ const en: UiText = {
     altSource: 'Other source',
     mercenaryTitle: 'Mercenary group',
     dispatchTitle: 'Buffer dispatch',
+  },
+
+  releaseNotes: {
+    title: 'Release notes',
+    lead:
+      'What changed on the site itself, in order: newly recorded areas, how the pages are laid out, how search behaves. Changes to the game itself are not listed here.',
+    repoLink: 'Commit history',
+    filterLabel: 'Filter by type',
+    filterAll: 'All',
+    timelineLabel: 'Release notes timeline',
+    count: (n: number) => `${n} ${n === 1 ? 'entry' : 'entries'}`,
+    prLabel: (n: number) => `PR #${n}`,
+    empty: 'No updates of that type yet.',
+    kinds: {
+      data: 'Data',
+      feature: 'Feature',
+      fix: 'Fix',
+      internal: 'Internal',
+    },
+    footnote:
+      'Entries are not a raw dump of the commit log: work is folded down to the parts worth reading, such as newly recorded areas or changes to how you navigate the site.',
   },
 }
 

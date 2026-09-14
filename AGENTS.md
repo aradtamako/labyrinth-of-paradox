@@ -58,6 +58,7 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 | `floors.ts` | 手書き | 区域ごとの攻略メタ・シードコード |
 | `official.ts` | 手書き | 公式ページ由来の仕様 |
 | `item-icons.ts` | 手書き | 報酬名 → ゲーム内アイコンパスの対応 |
+| `release-notes.ts` | 手書き | 更新履歴。コミットログを写さず、見どころ単位に畳んで書く |
 
 `node-types.ts` が生の `labyrinth-nodes.ts` を読み、`namu.ts` の訳・区域別上書き・`item-icons.ts` のアイコンを重ねて、UI が使う `SEED_MAPS` / `REWARDS` / `NODE_TYPE_STATS` をモジュール初期化時に組み立てる。**UI コンポーネントは `labyrinth-nodes.ts` を直接 import しない。**
 
@@ -81,6 +82,7 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 - `index.html` の `<meta name="description">` も同じ文言なので更新
 - `src/data/namu.ts` の `AREA_STATS` に区域を追加しないと、`floors/[id]` ページで31区域以前と表示が変わる（`floor-detail.tsx:52` が `AREA_STAT_BY_AREA` から引いており、無い区域は `FamePanel` にフォールバックする）
 - `README.md` の収録範囲の記述も更新
+- `src/data/release-notes.ts` に1件追加（収録した区域と同じ日付・該当 PR 番号）
 
 **シードコードの割り当ては、元記事の「원본 첨부파일」リストの並び順をそのまま使ってはならない。** `download-images.mjs` は本文の画像出現順（トークン順）で `fNN-0X` を保存するので、`floors.ts` の `meta` の index は本文の画像順に対応する。添付リストの順序と本文の順序は一致しないことがある（32/33区域で実際にズレた）。追加時は、ダウンロードした画像と元記事の添付画像を内容で照合（dHash / aHash など）して確定すること。
 
@@ -100,6 +102,7 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 ### UI
 
 - shadcn/ui (new-york, neutral, CSS 変数) — `src/components/ui/` は生成物なので基本触らない。`components.json` 経由で追加する
+- `src/components/timeline.tsx` は shadcn に無い自前部品（HeroUI の Timeline 由来）。`Timeline` > `Timeline.Item` > `Timeline.Marker` + `Timeline.Content` の組み合わせで、`Item` が Marker / Content を拾って2列グリッドに組み替える。別の場所で使うときは `Timeline.Item` の直下に Marker / Content を置き、間に別のコンポーネントを挟まない（型比較で分類しているため、挟むと既定マーカーになる）
 - Tailwind v4（設定ファイルなし、`src/index.css` にトークン）
 - ダークモードは `src/lib/theme.ts` が `documentElement` に `.dark` を付ける（localStorage `lop-theme`）
 - サーバー側状態は無いので、利用者依存の内容は全部 localStorage。キーは区域キーで持つ（`lib/hidden-floors.ts` の `lop-hidden-floors`、`lib/seed-selection.ts` の `lop-seed-selection`、`lib/floor-memos.ts` の `lop-floor-memos`）。read/write を try-catch で握り潰す書式を揃えること

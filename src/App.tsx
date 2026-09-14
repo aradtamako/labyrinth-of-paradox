@@ -4,6 +4,7 @@ import { useRoute, useScrollRestoration } from '@/lib/router'
 import { FloorDetailPage } from '@/pages/floor-detail'
 import { FloorListPage } from '@/pages/floor-list'
 import { OverviewPage } from '@/pages/overview'
+import { ReleaseNotesPage } from '@/pages/release-notes'
 import { RewardsPage } from '@/pages/rewards'
 import { SystemPage } from '@/pages/system'
 
@@ -21,6 +22,7 @@ export default function App() {
         {route.name === 'floor' && <FloorDetailPage floorKey={route.key} />}
         {route.name === 'rewards' && <RewardsPage />}
         {route.name === 'system' && <SystemPage />}
+        {route.name === 'release-notes' && <ReleaseNotesPage />}
       </main>
 
       <SiteFooter />

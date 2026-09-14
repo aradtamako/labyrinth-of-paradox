@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
+import { useHasUnreadReleaseNotes } from '@/lib/release-notes-read'
 import { useI18n } from '@/lib/i18n'
 import { localizedHash } from '@/lib/locale'
 import type { UiText } from '@/lib/ui-strings'
@@ -15,12 +16,20 @@ const NAV = [
   { href: '#/floors', label: (t: UiText) => t.nav.floors, match: 'floors' },
   { href: '#/rewards', label: (t: UiText) => t.nav.rewards, match: 'rewards' },
   { href: '#/system', label: (t: UiText) => t.nav.system, match: 'system' },
+  {
+    href: '#/release-notes',
+    label: (t: UiText) => t.nav.releaseNotes,
+    match: 'release-notes',
+  },
 ] as const
 
 export function SiteHeader({ route }: { route: Route }) {
   const { theme, toggle } = useTheme()
   const { t, locale, toggle: toggleLocale } = useI18n()
   const [open, setOpen] = useState(false)
+  // 更新履歴を開くまで赤い通知マークを出す。開いたら既読として消える。
+  const hasUnread = useHasUnreadReleaseNotes()
+  const showDot = hasUnread && route.name !== 'release-notes'
 
   const isActive = (match: string) =>
     match === 'floors' ? route.name === 'floors' || route.name === 'floor' : route.name === match
@@ -36,19 +45,26 @@ export function SiteHeader({ route }: { route: Route }) {
           </span>
         </a>
 
-        <nav className="ml-6 hidden items-center gap-1 sm:flex">
+        {/* 項目が5つになったため、インライン表示は md から（640px 幅では収まらない） */}
+        <nav className="ml-6 hidden items-center gap-1 md:flex">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={localizedHash(locale, item.href)}
               className={cn(
-                'rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
+                'relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
                 isActive(item.match)
                   ? 'bg-secondary text-secondary-foreground'
                   : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
               )}
             >
               {item.label(t)}
+              {item.match === 'release-notes' && showDot && (
+                <span
+                  aria-hidden="true"
+                  className="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-red-500 ring-2 ring-background"
+                />
+              )}
             </a>
           ))}
         </nav>
@@ -87,7 +103,7 @@ export function SiteHeader({ route }: { route: Route }) {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="sm:hidden" aria-label={t.nav.openMenu}>
+              <Button variant="ghost" size="icon" className="md:hidden" aria-label={t.nav.openMenu}>
                 <Menu className="size-4" />
               </Button>
             </SheetTrigger>
@@ -102,13 +118,19 @@ export function SiteHeader({ route }: { route: Route }) {
                     href={localizedHash(locale, item.href)}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                      'relative rounded-md px-3 py-2 text-sm font-medium transition-colors',
                       isActive(item.match)
                         ? 'bg-secondary text-secondary-foreground'
                         : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
                     )}
                   >
                     {item.label(t)}
+                    {item.match === 'release-notes' && showDot && (
+                      <span
+                        aria-hidden="true"
+                        className="absolute top-1 right-1 size-2 rounded-full bg-red-500 ring-2 ring-background"
+                      />
+                    )}
                   </a>
                 ))}
               </nav>
