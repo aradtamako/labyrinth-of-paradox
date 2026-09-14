@@ -162,7 +162,7 @@ export function ReleaseNotesPage() {
 function cnBadge(kind: ReleaseKind): string {
   const tone = KIND_TONE[kind]
   return cn(
-    'shrink-0 font-normal',
+    'h-6 shrink-0 self-start font-normal',
     tone === 'primary' && 'border-primary/40 text-primary',
     tone === 'success' && 'border-rarity-legendary/45 text-rarity-legendary',
     tone === 'warning' && 'border-rarity-unique/45 text-rarity-unique',
