@@ -102,6 +102,8 @@ React Router は使わない。`src/lib/router.ts` の自前ハッシュルー�
 - shadcn/ui (new-york, neutral, CSS 変数) — `src/components/ui/` は生成物なので基本触らない。`components.json` 経由で追加する
 - Tailwind v4（設定ファイルなし、`src/index.css` にトークン）
 - ダークモードは `src/lib/theme.ts` が `documentElement` に `.dark` を付ける（localStorage `lop-theme`）
+- サーバー側状態は無いので、利用者依存の内容は全部 localStorage。キーは区域キーで持つ（`lib/hidden-floors.ts` の `lop-hidden-floors`、`lib/seed-selection.ts` の `lop-seed-selection`、`lib/floor-memos.ts` の `lop-floor-memos`）。read/write を try-catch で握り潰す書式を揃えること
+- `floor-list.tsx` の区域カード全体は `<a>` なので、ボタン系（非表示・メモ）はリンクと並べて絶対配置で重ねる。メモ編集は `components/floor-memo-dialog.tsx`（閉じる動線なら Esc / 背景 / × でも保存する）
 - React Compiler が babel plugin として有効（`vite.config.ts`）。手動 memo 化は基本不要
 - パスエイリアスは `@/` → `src/`
 
