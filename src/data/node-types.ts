@@ -199,6 +199,24 @@ const REWARD_TEXT: Record<string, Localized> = {
     ja: '黒い病気のレガシー ▶ ディレジエ レガシー変換書 箱',
     en: 'Legacy of the Black Plague ▶ Diregie Legacy Conversion Scroll Box',
   },
+  '115레벨 세트 태초 흑아 악세서리 선택 상자': {
+    ja: '115Lvセット 太初黒牙アクセサリー選択箱',
+    en: 'Lv.115 Set Primordial Black Fang Accessory Selection Box',
+  },
+  '에픽 서약 결정 항아리': { ja: 'エピック誓約結晶壺', en: 'Epic Oath Crystal Jar' },
+  '영롱한 조율의 추 스페셜 상자': {
+    ja: '燦爛たる調律の錘スペシャル箱',
+    en: 'Iridescent Tuning Weight Special Box',
+  },
+  '축성 방어구 업그레이드권': {
+    ja: '祝聖防具アップグレード券',
+    en: 'Consecrated Armor Upgrade Ticket',
+  },
+  '태초 서약 결정 항아리': { ja: '太初誓約結晶壺', en: 'Primordial Oath Crystal Jar' },
+  '태초 레거시 무기 선택 상자': {
+    ja: '太初レガシー武器選択箱',
+    en: 'Primordial Legacy Weapon Selection Box',
+  },
 }
 
 /** 報酬名（日本語表記）から引く補足文。 */
@@ -431,9 +449,12 @@ function buildNode(area: number, raw: RawNode): MapNode {
  * 34区域は route1..5 のように返すため、ここで区域ごとに seedIndex 順の正しいシードコードへ上書きする。
  * 34区域は3種が同じ「22222」を持つ（A/B/C で区別）ため、末尾に注記を添えてタブや保存キーを一意にする。
  * 32221・32222 は元データ側が明示している；route の3枚は順に 22222-A..C へ振る。
+ * 37区域も同じく route 形式で、4枚の 22222（A/B/C/D）と 22322 からなる。
+ * route 番号順に A..D を振る（34区域の route1..3 → A..C と同じ規則）。
  */
 const SEED_CODE_OVERRIDES: Record<number, string[]> = {
   34: ['22222-A', '32222', '22222-B', '32221', '22222-C'],
+  37: ['22222-A', '22222-B', '22322', '22222-C', '22222-D'],
 }
 
 const perAreaCount = new Map<number, number>()

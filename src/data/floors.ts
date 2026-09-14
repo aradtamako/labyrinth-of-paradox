@@ -771,6 +771,69 @@ const SEEDS: FloorSeed[] = [
       4: { seed: '31323' },
     },
   },
+  {
+    key: '36',
+    areas: [36],
+    no: 5631558,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初黒牙アクセサリー選択箱', en: 'Primordial Black Fang Accessory Selection Box' },
+      { ja: '光輝の痕跡', en: 'Trace of Radiance' },
+      {
+        ja: '祝聖防具アップグレード券（夜明けの光の玉／エピックソウル消費）',
+        en: 'Consecrated Armor Upgrade Ticket (consumes Glimmer of Dawn / Epic Souls)',
+      },
+      { ja: '燦爛たる調律の錘スペシャル箱', en: 'Iridescent Tuning Weight Special Box' },
+      { ja: 'エピック誓約結晶壺', en: 'Epic Oath Crystal Jar' },
+      { ja: '啓示 1,000個', en: 'Doom Oracle ×1,000' },
+    ],
+    notes: [
+      {
+        ja: '36区域も34・35区域と同じ 7×5 配置。',
+        en: 'Area 36 keeps the same 7×5 layout introduced in area 34.',
+      },
+      {
+        ja: '最初の黒牙アクセサリーはネックレスがおすすめ（スキル攻撃力の伸びはネックレス＝指輪＞腕輪のため）。',
+        en: 'For your first Black Fang accessory, the necklace is recommended (skill attack gains rank necklace = ring > bracelet).',
+      },
+    ],
+    meta: {
+      0: { seed: '22222' },
+      1: { seed: '22232' },
+      2: { seed: '23322' },
+      3: { seed: '23122' },
+      4: { seed: '32223' },
+    },
+  },
+  {
+    key: '37',
+    areas: [37],
+    no: 5653407,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初レガシー武器選択箱', en: 'Primordial Legacy Weapon Selection Box' },
+      { ja: '太初誓約結晶壺', en: 'Primordial Oath Crystal Jar' },
+      { ja: 'エピック誓約結晶製作書選択箱', en: 'Epic Oath Crystal Crafting Scroll Selection Box' },
+      {
+        ja: '祝聖防具アップグレード券（夜明けの光の玉／エピックソウル消費）',
+        en: 'Consecrated Armor Upgrade Ticket (consumes Glimmer of Dawn / Epic Souls)',
+      },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '37区域も34区域以降と同じ 7×5 配置。22222 が4種類（A・B・C・D）あり、青い点線の位置で区別する。',
+        en: 'Area 37 keeps the same 7×5 layout introduced in area 34, and 22222 comes in four variants (A, B, C, D) told apart by the blue dotted lines.',
+      },
+    ],
+    meta: {
+      0: { seed: '22222', seedNote: { ja: 'A', en: 'A' } },
+      1: { seed: '22222', seedNote: { ja: 'B', en: 'B' } },
+      2: { seed: '22222', seedNote: { ja: 'C', en: 'C' } },
+      3: { seed: '22222', seedNote: { ja: 'D', en: 'D' } },
+      4: { seed: '22322' },
+    },
+  },
 ]
 
 export const FLOORS: Floor[] = SEEDS.map((s) => {
@@ -792,12 +855,12 @@ export const FLOORS: Floor[] = SEEDS.map((s) => {
 
 export const FLOOR_BY_KEY = new Map(FLOORS.map((f) => [f.key, f]))
 
-/** 区域番号（1〜33）から、その区域を扱う記事を引く。 */
+/** 区域番号から、その区域を扱う記事を引く。 */
 export const FLOOR_BY_AREA = new Map<number, Floor>(
   FLOORS.flatMap((f) => f.areas.map((a) => [a, f] as const)),
 )
 
-export const MAX_AREA = 35
+export const MAX_AREA = 37
 
 /**
  * 一覧表示用の軽量サムネイル（scripts/make-thumbs.mjs で生成）のパス。

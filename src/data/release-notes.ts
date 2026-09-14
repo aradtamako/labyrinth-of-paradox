@@ -31,6 +31,62 @@ export const prUrl = (no: number) => `${REPOSITORY_URL}/pull/${no}`
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    date: '2026-09-14',
+    title: { ja: '36区域を収録', en: 'Area 36 added' },
+    prs: [22, 23, 24],
+    entries: [
+      {
+        kind: 'data',
+        text: {
+          ja: '36-37区域のシードマップ画像とサムネイルを追加し、収録範囲を1〜36区域に拡大。',
+          en: 'Seed map images and thumbnails for area 36-37, extending coverage to areas 1-37.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '36-37区域のノードデータ（マスごとの種別・等級・報酬）を取り込み、報酬一覧の逆引き対象も拡大。',
+          en: 'Node data — per-cell type, tier and reward — imported for area 36-37, widening the reward index.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '区域別の推奨名声とボス体力倍率を37区域まで延長。',
+          en: 'Per-area recommended fame and boss HP multipliers extended through area 37.',
+        },
+      },
+      {
+        kind: 'feature',
+        text: {
+          ja: '更新履歴をタイムラインで見られるページを追加。種類（データ・機能・修正・開発）での絞り込みに対応。',
+          en: 'A new page showing the update history as a timeline, filterable by kind (data, feature, fix or internal).',
+        },
+      },
+      {
+        kind: 'feature',
+        text: {
+          ja: 'ヘッダーと概要ページから更新履歴へ飛べるように。未読がある間はヘッダーにドットが出て、開くと既読になる。',
+          en: 'The header and the overview page link to the release notes. The header shows a dot while there are unread entries, cleared once you open the page.',
+        },
+      },
+      {
+        kind: 'feature',
+        text: {
+          ja: '区域カードに自分用のメモを書けるように。自分のブラウザにだけ保存され、他人には見えない。',
+          en: 'Each area card accepts a private note, kept in your own browser and never shown to anyone else.',
+        },
+      },
+      {
+        kind: 'feature',
+        text: {
+          ja: 'メモ本文での検索と、メモの有無での絞り込みに対応。',
+          en: 'Search within note text and filter the list by whether an area has a note.',
+        },
+      },
+    ],
+  },
+  {
     date: '2026-09-02',
     title: { ja: '34・35区域を収録', en: 'Areas 34 and 35 added' },
     prs: [21],
@@ -39,14 +95,14 @@ export const RELEASE_NOTES: ReleaseNote[] = [
         kind: 'data',
         text: {
           ja: '34・35区域のシードマップ画像とサムネイルを追加し、収録範囲を1〜35区域に拡大。',
-          en: 'Seed map images and thumbnails for areas 34–35, extending coverage to areas 1–35.',
+          en: 'Seed map images and thumbnails for areas 34-35, extending coverage to areas 1-35.',
         },
       },
       {
         kind: 'data',
         text: {
           ja: '34・35区域のノードデータ（マスごとの種別・等級・報酬）を取り込み、報酬一覧の逆引き対象も拡大。',
-          en: 'Node data — per-cell type, tier and reward — imported for areas 34–35, widening the reward index.',
+          en: 'Node data — per-cell type, tier and reward — imported for areas 34-35, widening the reward index.',
         },
       },
       {
@@ -60,7 +116,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
         kind: 'fix',
         text: {
           ja: '32〜35区域で元記事の添付リストの並び順と本文の画像順がズレており、シードコードの割り当てを画像内容で照合して付け直した。',
-          en: 'For areas 32–35 the attachment list and the in-body image order disagreed; seed codes were re-assigned by matching the images themselves.',
+          en: 'For areas 32-35 the attachment list and the in-body image order disagreed; seed codes were re-assigned by matching the images themselves.',
         },
       },
     ],
@@ -74,7 +130,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
         kind: 'data',
         text: {
           ja: '32・33区域のマップ画像、ノードデータ、区域別報酬、推奨名声を追加。',
-          en: 'Map images, node data, area rewards and recommended fame for areas 32–33.',
+          en: 'Map images, node data, area rewards and recommended fame for areas 32-33.',
         },
       },
       {
@@ -249,7 +305,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
         kind: 'data',
         text: {
           ja: '1〜31区域のシードマップ、名声上昇値、主要報酬を掲載。マップ画像を参照するところから始まった。',
-          en: 'Seed maps, fame gains and key rewards for areas 1–31 — the site began as a way to browse map images.',
+          en: 'Seed maps, fame gains and key rewards for areas 1-31 — the site began as a way to browse map images.',
         },
       },
       {

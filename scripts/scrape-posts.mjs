@@ -44,6 +44,8 @@ const POSTS = [
   { key: "33", no: 5571209, title: "33층" },
   { key: "34", no: 5594349, title: "34층" },
   { key: "35", no: 5613558, title: "35층" },
+  { key: "36", no: 5631558, title: "36층" },
+  { key: "37", no: 5653407, title: "37층" },
 ];
 
 const UA =
@@ -80,7 +82,10 @@ function extractBody(html) {
     .map((m) => html.indexOf(m, start + 20))
     .filter((x) => x > 0)
     .sort((a, b) => a - b)[0];
-  return html.slice(start, stop ?? start + 400000);
+  const body = html.slice(start, stop ?? start + 400000);
+  // リンクのプレビュー（og-div）は記事本文の画像ではないので除く。
+  // 36区域の記事から付き始めたもので、除かないとサムネイルがマップ画像に混ざる。
+  return body.replace(/<div class="og-div"[\s\S]*?<\/a>\s*<\/div>/g, "");
 }
 
 function stripTags(s) {
