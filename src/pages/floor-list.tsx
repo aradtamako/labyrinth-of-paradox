@@ -1,6 +1,8 @@
-import { Check, EyeOff, Plus, Search, X } from 'lucide-react'
+import { Check, EyeOff, NotebookPen, Plus, Search, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
+import type { ReactNode } from 'react'
 
+import { FloorMemoDialog } from '@/components/floor-memo-dialog'
 import { TierBadge } from '@/components/tier-badge'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -15,6 +17,8 @@ import {
   searchAreaRewards,
 } from '@/data/node-types'
 import type { AreaHighlight } from '@/data/node-types'
+import { useFloorMemos } from '@/lib/floor-memos'
+import type { FloorMemos } from '@/lib/floor-memos'
 import { useHiddenFloors } from '@/lib/hidden-floors'
 import type { HiddenFloors } from '@/lib/hidden-floors'
 import { useI18n } from '@/lib/i18n'
@@ -23,22 +27,51 @@ import { cn } from '@/lib/utils'
 
 const FLOOR_KEYS = FLOORS.map((floor) => floor.key)
 
+/** 検索欄の対象。報酬名か、自分で書いたメモか。 */
+type Scope = 'rewards' | 'memos'
+
+/** メモの有無で一覧を絞る条件。 */
+type MemoFilter = 'all' | 'with' | 'without'
+
 export function FloorListPage() {
   const { t } = useI18n()
   const [query, setQuery] = useState('')
+  const [scope, setScope] = useState<Scope>('rewards')
+  const [memoFilter, setMemoFilter] = useState<MemoFilter>('all')
   const hidden = useHiddenFloors(FLOOR_KEYS)
+  const memos = useFloorMemos(FLOOR_KEYS)
   // 非表示にした区域は一覧からも検索結果からも外す。
   const visible = FLOORS.filter((floor) => !hidden.has(floor.key))
   const q = query.trim()
-  // 報酬名で区域を絞り込む。一致した報酬はカード側でそのまま並べる。
-  const hits = useMemo(
+  const keyword = q.toLowerCase()
+
+  // メモの有無で絞った一覧。検索中は絞り込み効かない（下のピル自体を消す）。
+  const listed = useMemo(
     () =>
-      q
+      memoFilter === 'all'
+        ? visible
+        : visible.filter((floor) => !!memos.memos[floor.key] === (memoFilter === 'with')),
+    [memoFilter, visible, memos.memos],
+  )
+
+  // 報酬名で区域を絞り込む。一致した報酬はカード側でそのまま並べる。
+  const rewardHits = useMemo(
+    () =>
+      q && scope === 'rewards'
         ? visible
             .map((floor) => ({ floor, rewards: searchAreaRewards(floor.areas, q) }))
             .filter((hit) => hit.rewards.length > 0)
         : [],
-    [q, visible],
+    [q, scope, visible],
+  )
+
+  // メモ本文で区域を絞り込む。部分一致だけ見ればよく、形態素解析はしない。
+  const memoHits = useMemo(
+    () =>
+      q && scope === 'memos'
+        ? visible.filter((floor) => (memos.memos[floor.key] ?? '').toLowerCase().includes(keyword))
+        : [],
+    [q, scope, visible, keyword, memos.memos],
   )
 
   return (
@@ -48,45 +81,124 @@ export function FloorListPage() {
         <p className="mt-2 leading-relaxed text-muted-foreground">{t.floors.lead}</p>
       </header>
 
-      <div className="relative mt-6 max-w-md">
-        <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder={t.floors.searchPlaceholder}
-          aria-label={t.floors.searchLabel}
-          className="pr-9 pl-9"
-        />
-        {query && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setQuery('')}
-            aria-label={t.common.clearSearch}
-            className="absolute top-1/2 right-1 size-7 -translate-y-1/2"
-          >
-            <X className="size-3.5" />
-          </Button>
-        )}
+      <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
+        <div className="relative w-full max-w-md">
+          <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={
+              scope === 'memos' ? t.floors.memoSearchPlaceholder : t.floors.searchPlaceholder
+            }
+            aria-label={scope === 'memos' ? t.floors.memoSearchLabel : t.floors.searchLabel}
+            className="pr-9 pl-9"
+          />
+          {query && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setQuery('')}
+              aria-label={t.common.clearSearch}
+              className="absolute top-1/2 right-1 size-7 -translate-y-1/2"
+            >
+              <X className="size-3.5" />
+            </Button>
+          )}
+        </div>
+
+        <div role="group" aria-label={t.floors.searchScopeLabel} className="flex items-center gap-1.5">
+          <span className="text-xs text-muted-foreground">{t.floors.searchScopeLabel}</span>
+          <Pill active={scope === 'rewards'} onClick={() => setScope('rewards')}>
+            {t.floors.scopeRewards}
+          </Pill>
+          <Pill active={scope === 'memos'} onClick={() => setScope('memos')}>
+            {t.floors.scopeMemos}
+          </Pill>
+        </div>
       </div>
+
+      {/* メモが1件もないうちは絞り込みが空振りなので、ピル自体を出さない。 */}
+      {!q && memos.count > 0 && (
+        <div
+          role="group"
+          aria-label={t.floors.memoFilterLabel}
+          className="mt-3 flex flex-wrap items-center gap-1.5"
+        >
+          <span className="text-xs text-muted-foreground">{t.floors.memoFilterLabel}</span>
+          <Pill active={memoFilter === 'all'} onClick={() => setMemoFilter('all')}>
+            {t.floors.memoFilterAll}
+          </Pill>
+          <Pill active={memoFilter === 'with'} onClick={() => setMemoFilter('with')}>
+            {t.floors.memoFilterWith}
+          </Pill>
+          <Pill active={memoFilter === 'without'} onClick={() => setMemoFilter('without')}>
+            {t.floors.memoFilterWithout}
+          </Pill>
+          <span className="font-mono text-xs text-muted-foreground tabular-nums">
+            {t.floors.memoFilterCount(memos.count)}
+          </span>
+        </div>
+      )}
 
       {/* 一覧の上に置く。下端だと非表示にした区域を戻せることに気づかれない。 */}
       {hidden.keys.length > 0 && <HiddenFloorsPanel hidden={hidden} />}
 
-      {q ? (
-        <RewardResults query={q} hits={hits} hidden={hidden} />
-      ) : visible.length > 0 ? (
+      {q && scope === 'memos' ? (
+        <MemoResults query={q} floors={memoHits} hidden={hidden} memos={memos} />
+      ) : q ? (
+        <RewardResults query={q} hits={rewardHits} hidden={hidden} memos={memos} />
+      ) : listed.length > 0 ? (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((floor) => (
-            <FloorCard key={floor.key} floor={floor} onHide={() => hidden.hide(floor.key)} />
+          {listed.map((floor) => (
+            <FloorCard
+              key={floor.key}
+              floor={floor}
+              memos={memos}
+              onHide={() => hidden.hide(floor.key)}
+            />
           ))}
         </div>
+      ) : hidden.keys.length === FLOORS.length ? (
+        <EmptyState title={t.floors.allHiddenTitle} body={t.floors.allHiddenBody} />
       ) : (
-        <div className="mt-8 rounded-xl border border-dashed px-6 py-14 text-center">
-          <p className="font-medium">{t.floors.allHiddenTitle}</p>
-          <p className="mt-1.5 text-sm text-muted-foreground">{t.floors.allHiddenBody}</p>
-        </div>
+        <EmptyState
+          title={t.floors.memoFilterEmptyTitle}
+          body={t.floors.memoFilterEmptyBody}
+        />
       )}
+    </div>
+  )
+}
+
+/** 検索対象や絞り込み条件を選ぶピル。排他的な選択肢を並べる。 */
+function Pill({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean
+  onClick: () => void
+  children: ReactNode
+}) {
+  return (
+    <Button
+      size="sm"
+      variant={active ? 'secondary' : 'outline'}
+      aria-pressed={active}
+      onClick={onClick}
+      className={cn(!active && 'bg-transparent text-muted-foreground hover:text-foreground')}
+    >
+      {children}
+    </Button>
+  )
+}
+
+/** 検索結果が空・全区域非表示・絞り込みで0件で同じ形になるので、共通化しておく。 */
+function EmptyState({ title, body }: { title: string; body: string }) {
+  return (
+    <div className="mt-8 rounded-xl border border-dashed px-6 py-14 text-center">
+      <p className="font-medium">{title}</p>
+      <p className="mt-1.5 text-sm text-muted-foreground">{body}</p>
     </div>
   )
 }
@@ -204,20 +316,17 @@ function RewardResults({
   query,
   hits,
   hidden,
+  memos,
 }: {
   query: string
   hits: FloorHit[]
   hidden: HiddenFloors
+  memos: FloorMemos
 }) {
   const { t } = useI18n()
 
   if (hits.length === 0) {
-    return (
-      <div className="mt-8 rounded-xl border border-dashed px-6 py-14 text-center">
-        <p className="font-medium">{t.floors.noHitsTitle(query)}</p>
-        <p className="mt-1.5 text-sm text-muted-foreground">{t.floors.noHitsBody}</p>
-      </div>
-    )
+    return <EmptyState title={t.floors.noHitsTitle(query)} body={t.floors.noHitsBody} />
   }
 
   return (
@@ -229,7 +338,47 @@ function RewardResults({
             key={hit.floor.key}
             floor={hit.floor}
             rewards={hit.rewards}
+            memos={memos}
             onHide={() => hidden.hide(hit.floor.key)}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/** 検索対象を「メモ」に切り替えたときの結果。ヒットしたのはメモ本文だけで、報酬は畳む。 */
+function MemoResults({
+  query,
+  floors,
+  hidden,
+  memos,
+}: {
+  query: string
+  floors: Floor[]
+  hidden: HiddenFloors
+  memos: FloorMemos
+}) {
+  const { t } = useI18n()
+
+  if (floors.length === 0) {
+    return (
+      <EmptyState title={t.floors.memoNoHitsTitle(query)} body={t.floors.memoNoHitsBody} />
+    )
+  }
+
+  return (
+    <div className="mt-8">
+      <p className="text-sm text-muted-foreground">{t.floors.memoHits(query, floors.length)}</p>
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {/* カードにはメモの有無に関わらず目玉報酬も並べる。メモ本文自体は
+            FloorCard が下に出しているので、一致語の強調はここでしない。 */}
+        {floors.map((floor) => (
+          <FloorCard
+            key={floor.key}
+            floor={floor}
+            memos={memos}
+            onHide={() => hidden.hide(floor.key)}
           />
         ))}
       </div>
@@ -322,21 +471,25 @@ function RewardIcon({ highlight }: { highlight: AreaHighlight }) {
 
 /**
  * rewards を渡すと、その区域の目玉報酬の代わりに渡されたものを並べる（検索結果用）。
- * 非表示ボタンはリンクの中に置けない（a の中の button は不正）ので、
+ *
+ * 非表示ボタンもメモボタンもリンクの中に置けない（a の中の button は不正）ので、
  * カード全体を包む div の中でリンクと並べ、右上に重ねる。
  */
 function FloorCard({
   floor,
   rewards,
+  memos,
   onHide,
 }: {
   floor: Floor
   rewards?: AreaHighlight[]
+  memos: FloorMemos
   onHide: () => void
 }) {
   const { t, x, locale } = useI18n()
   const thumb = floor.images.find((i) => !i.legend && !i.figure) ?? floor.images[0]
   const highlights = rewards ?? areaHighlights(floor.areas)
+  const memo = memos.get(floor.key)
 
   return (
     <div className="group relative">
@@ -350,6 +503,13 @@ function FloorCard({
       >
         <EyeOff className="size-3.5" />
       </Button>
+
+      <FloorMemoDialog
+        label={floor.label}
+        memo={memo}
+        onSave={(text) => memos.set(floor.key, text)}
+        className="absolute top-2 right-11 z-10"
+      />
 
       <a
         href={localizedHash(locale, `#/floors/${floor.key}`)}
@@ -367,12 +527,27 @@ function FloorCard({
         )}
 
         <div className="flex flex-1 flex-col p-4">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <h2 className="font-semibold tracking-tight">{x(floor.label)}</h2>
+            {memo && (
+              // フォーカス対象を増やさないよう span のまま（Badge は div 由来）。
+              <Badge variant="secondary" className="gap-1 font-normal">
+                <NotebookPen aria-hidden className="size-3" />
+                {t.floors.memoBadge}
+              </Badge>
+            )}
           </div>
 
+          {memo && (
+            // 省略すると「自分が何を書いたか」が読めない。メモは自分で入れたものなので
+            // 長さを気にせず全文出し、本文が報酬欄と混ざらないよう箱にする。
+            <p className="mt-2 rounded-md bg-muted/60 px-2.5 py-1.5 text-xs leading-relaxed whitespace-pre-line">
+              {memo}
+            </p>
+          )}
+
           {floor.fame && (
-            <p className="mt-1 font-mono text-xs text-muted-foreground tabular-nums">
+            <p className={cn('font-mono text-xs text-muted-foreground tabular-nums', memo ? 'mt-2' : 'mt-1')}>
               {t.floors.cardFame} {floor.fame.from.toLocaleString()} →{' '}
               {floor.fame.to.toLocaleString()}
             </p>
