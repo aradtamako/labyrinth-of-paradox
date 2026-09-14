@@ -116,7 +116,7 @@ const ja = {
 
   floors: {
     title: '区域マップ',
-    lead: '区域を選ぶと5種類のシードマップを表示する。報酬名で検索すれば、その報酬が出る区域だけを絞り込める。',
+    lead: '区域を選ぶと5種類のシードマップを表示する。報酬名で検索すれば、その報酬が出る区域だけを絞り込める。区域ごとのメモは自分のブラウザにだけ残り、他人には見えない。',
     searchPlaceholder: '報酬名で検索（例：終末の啓示）',
     searchLabel: '報酬名で検索',
     noHitsTitle: (query: string) => `「${query}」に一致する報酬は見つからなかった。`,
@@ -145,6 +145,42 @@ const ja = {
     restoreAll: 'すべて表示',
     allHiddenTitle: 'すべての区域を非表示にしている。',
     allHiddenBody: '上の一覧から表示に戻せる。',
+
+    /** カード右上のメモボタン（非表示ボタンの隣）。読み上げ用。 */
+    memoButton: (label: string) => `${label} のメモを書く`,
+    /** メモ本文の入力欄の読み上げ用ラベル。 */
+    memoLabel: (label: string) => `${label} のメモ本文`,
+    /** メモが保存済みであることを示すバッジ。 */
+    memoBadge: 'メモあり',
+    memoDialogTitle: (label: string) => `${label} のメモ`,
+    memoDialogLead:
+      '保存される自分用のメモで、他の人には見えない。閉じるとそのまま保存される。',
+    memoPlaceholder:
+      'この区域では太初アクセサリー選択箱が出る',
+    memoSave: '保存して閉じる',
+    memoDelete: 'メモを削除',
+
+    /** 一覧をメモの有無で絞るピル。メモが1件もないうちは出さない。 */
+    memoFilterLabel: 'メモで絞り込む',
+    memoFilterAll: 'すべて',
+    memoFilterWith: 'メモあり',
+    memoFilterWithout: 'メモなし',
+    memoFilterCount: (n: number) => `メモ ${n} 件`,
+    /** メモの有無で絞った結果が空になることはある（非表示と組み合わさったとき）。 */
+    memoFilterEmptyTitle: '条件に合う区域がない。',
+    memoFilterEmptyBody: 'メモの有無と、非表示にしている区域を合わせて見てみてほしい。',
+
+    /** 検索欄の対象を報酬名かメモか切り替える。 */
+    searchScopeLabel: '検索対象',
+    scopeRewards: '報酬',
+    scopeMemos: 'メモ',
+    memoSearchPlaceholder: 'メモ内容で検索',
+    memoSearchLabel: 'メモ内容で検索',
+    memoHits: (query: string, n: number) => `「${query}」を含むメモ ${n} 件`,
+    memoNoHitsTitle: (query: string) => `「${query}」を含むメモはまだない。`,
+    memoNoHitsBody: '区域カード右上のメモボタンから書ける。',
+    /** 検索結果のカードで、一致したメモ本文を出す見出し。 */
+    memoMatchedLabel: 'メモ',
   },
 
   floorDetail: {
@@ -341,7 +377,7 @@ const en: UiText = {
 
   floors: {
     title: 'Area Maps',
-    lead: 'Pick an area to see its five seed maps. Search by reward name to narrow the list down to the areas that drop it.',
+    lead: 'Pick an area to see its five seed maps. Search by reward name to narrow the list down to the areas that drop it. Per-area notes stay in your own browser and are never shown to anyone else.',
     searchPlaceholder: 'Search by reward name (e.g. Revelation)',
     searchLabel: 'Search by reward name',
     noHitsTitle: (query: string) => `No reward matches "${query}".`,
@@ -369,6 +405,36 @@ const en: UiText = {
     restoreAll: 'Show all',
     allHiddenTitle: 'Every area is hidden.',
     allHiddenBody: 'Bring them back from the list above.',
+
+    memoButton: (label: string) => `Write a note for ${label}`,
+    memoLabel: (label: string) => `Note text for ${label}`,
+    memoBadge: 'Noted',
+    memoDialogTitle: (label: string) => `Note for ${label}`,
+    memoDialogLead:
+      'A private note kept in this browser only, invisible to everyone else. Closing the dialog saves it.',
+    memoPlaceholder:
+      'e.g. blue lines on the second column from the right, research ticket in the top room, farm these two next run.',
+    memoSave: 'Save and close',
+    memoDelete: 'Delete note',
+
+    memoFilterLabel: 'Filter by note',
+    memoFilterAll: 'All',
+    memoFilterWith: 'With notes',
+    memoFilterWithout: 'Without notes',
+    memoFilterCount: (n: number) => (n === 1 ? '1 note' : `${n} notes`),
+    memoFilterEmptyTitle: 'No area matches this filter.',
+    memoFilterEmptyBody: 'Check the note filter together with the areas you have hidden.',
+
+    searchScopeLabel: 'Search',
+    scopeRewards: 'Rewards',
+    scopeMemos: 'Notes',
+    memoSearchPlaceholder: 'Search your notes',
+    memoSearchLabel: 'Search note text',
+    memoHits: (query: string, n: number) =>
+      n === 1 ? `1 note mentions "${query}"` : `${n} notes mention "${query}"`,
+    memoNoHitsTitle: (query: string) => `No note mentions "${query}" yet.`,
+    memoNoHitsBody: 'Write one with the note button in the top-right of an area card.',
+    memoMatchedLabel: 'Note',
   },
 
   floorDetail: {
