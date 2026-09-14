@@ -15,6 +15,11 @@ const NAV = [
   { href: '#/floors', label: (t: UiText) => t.nav.floors, match: 'floors' },
   { href: '#/rewards', label: (t: UiText) => t.nav.rewards, match: 'rewards' },
   { href: '#/system', label: (t: UiText) => t.nav.system, match: 'system' },
+  {
+    href: '#/release-notes',
+    label: (t: UiText) => t.nav.releaseNotes,
+    match: 'release-notes',
+  },
 ] as const
 
 export function SiteHeader({ route }: { route: Route }) {
@@ -36,7 +41,8 @@ export function SiteHeader({ route }: { route: Route }) {
           </span>
         </a>
 
-        <nav className="ml-6 hidden items-center gap-1 sm:flex">
+        {/* 項目が5つになったため、インライン表示は md から（640px 幅では収まらない） */}
+        <nav className="ml-6 hidden items-center gap-1 md:flex">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -87,7 +93,7 @@ export function SiteHeader({ route }: { route: Route }) {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="sm:hidden" aria-label={t.nav.openMenu}>
+              <Button variant="ghost" size="icon" className="md:hidden" aria-label={t.nav.openMenu}>
                 <Menu className="size-4" />
               </Button>
             </SheetTrigger>

@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Gift, KeySquare, Layers, ScrollText, Timer } from 'lucide-react'
+import { ArrowRight, ExternalLink, Gift, History, KeySquare, Layers, ScrollText, Timer } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -89,6 +89,13 @@ export function OverviewPage() {
             body={t.overview.featureSubjugationBody}
             href={localizedHash(locale, '#/system')}
             cta={t.overview.featureSystemCta}
+          />
+          <FeatureCard
+            icon={<History className="size-4" />}
+            title={t.overview.featureNotesTitle}
+            body={t.overview.featureNotesBody}
+            href={localizedHash(locale, '#/release-notes')}
+            cta={t.overview.featureNotesCta}
           />
         </div>
       </section>
