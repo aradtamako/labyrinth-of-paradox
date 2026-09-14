@@ -18,7 +18,7 @@ const ja = {
   meta: {
     title: '逆説の迷宮 攻略 | ダンジョン&ファイター',
     description:
-      'ダンジョン&ファイター「逆説の迷宮」の攻略データベース。1〜35区域のシードマップ、名声上昇値、主要報酬、調査券・討伐券・傭兵団の仕様をまとめています。',
+      'ダンジョン&ファイター「逆説の迷宮」の攻略データベース。1〜37区域のシードマップ、名声上昇値、主要報酬、調査券・討伐券・傭兵団の仕様をまとめています。',
   },
 
   nav: {
@@ -110,7 +110,7 @@ const ja = {
     sourcesTitle: '出典',
     sourceOfficialLabel: 'ダンジョン&ファイター 公式 — Season12 Act0 2-2 アップデート',
     sourceOfficialNote: '入場条件・討伐券・傭兵団などの仕様',
-    sourceGuideLabel: 'DCインサイド 던파IP マイナーギャラリー — 미궁 1~35층 모음',
+    sourceGuideLabel: 'DCインサイド 던파IP マイナーギャラリー — 미궁 1~37층 모음',
     sourceGuideNote: '各区域のシードマップと報酬情報',
     sourceNodeNote: (areas: string) => `マスごとのノード配置・報酬データ（${areas}）`,
     sourceNamuNote: (license: string) =>
@@ -309,7 +309,7 @@ const en: UiText = {
   meta: {
     title: 'Labyrinth of Paradox Guide | Dungeon & Fighter',
     description:
-      'A strategy database for the Dungeon & Fighter dungeon "Labyrinth of Paradox": seed maps for areas 1–35, fame gains, key rewards, and the rules behind survey tickets, subjugation tickets and the mercenary group.',
+      'A strategy database for the Dungeon & Fighter dungeon "Labyrinth of Paradox": seed maps for areas 1–37, fame gains, key rewards, and the rules behind survey tickets, subjugation tickets and the mercenary group.',
   },
 
   nav: {
@@ -398,7 +398,7 @@ const en: UiText = {
     sourcesTitle: 'Sources',
     sourceOfficialLabel: 'Dungeon & Fighter official — Season 12 Act 0 2-2 update',
     sourceOfficialNote: 'Entry requirements, subjugation tickets, mercenary group',
-    sourceGuideLabel: 'DCInside 던파IP minor gallery — 미궁 1~35층 모음',
+    sourceGuideLabel: 'DCInside 던파IP minor gallery — 미궁 1~37층 모음',
     sourceGuideNote: 'Seed maps and reward information for each area',
     sourceNodeNote: (areas: string) => `Per-room node layout and reward data (${areas})`,
     sourceNamuNote: (license: string) =>
