@@ -29,6 +29,7 @@ const PAGES = [
   { key: '21-25', title: `${BASE}/제 21~25구역` },
   { key: '26-30', title: `${BASE}/제 26~30구역` },
   { key: '31-35', title: `${BASE}/제 31~35구역` },
+  { key: '36-40', title: `${BASE}/제 36~40구역` },
 ]
 
 function fetchPage(key, title) {
