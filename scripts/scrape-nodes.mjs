@@ -91,6 +91,25 @@ function extract(payload, key) {
   }
 }
 
+/**
+ * umi のペイロードは undefined を "$undefined" という文字列で埋め込んでくる。
+ * そのままにすると生成物に混ざる（文字列なので `?? []` も効かない）ため、
+ * 取り込み時点で本来の undefined に戻す。36区域の取り込みで混ざり始めた。
+ */
+function clean(value) {
+  if (value === '$undefined') return undefined
+  if (Array.isArray(value)) return value.map(clean)
+  if (value && typeof value === 'object') {
+    const out = {}
+    for (const [k, v] of Object.entries(value)) {
+      const c = clean(v)
+      if (c !== undefined) out[k] = c
+    }
+    return out
+  }
+  return value
+}
+
 const floors = []
 let iconDict = null
 
@@ -105,8 +124,8 @@ for (const area of AREAS) {
         console.log('NO FLOOR DATA')
         continue
       }
-      if (!iconDict) iconDict = extract(payload, 'iconDict')
-      floors.push({ area, seedIndex: seed, ...floor })
+      if (!iconDict) iconDict = clean(extract(payload, 'iconDict'))
+      floors.push({ area, seedIndex: seed, ...clean(floor) })
       const code = /_(\d+)$/.exec(floor.floor_id)?.[1] ?? '?'
       console.log(`${floor.nodes.length} nodes, ${floor.edges?.length ?? 0} edges, code ${code}`)
     } catch (e) {

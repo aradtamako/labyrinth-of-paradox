@@ -14,10 +14,11 @@ const manifest = JSON.parse(fs.readFileSync(path.join(SCRIPTS, "image-manifest.j
 
 const byFloor = new Map();
 for (const m of manifest) {
-  if (!m.file) {
-    // dccon.php はギャラリー用スタンプ画像。攻略には関係ないので黙って捨てる。
-    if (!/dccon\.php/.test(m.src)) console.warn(`MISSING image for floor ${m.floorKey} #${m.index}`);
-    continue;
+  // dccon.php はギャラリー用スタンプ画像。攻略には関係ないので黙って捨てる。
+  if (!m.file || /dccon\.php/.test(m.src)) {
+    if (m.file) fs.rmSync(path.join(PROJECT, 'public/maps', m.file.replace(/^\//, '')), { force: true })
+    else if (!/dccon\.php/.test(m.src)) console.warn(`MISSING image for floor ${m.floorKey} #${m.index}`)
+    continue
   }
   if (!byFloor.has(m.floorKey)) byFloor.set(m.floorKey, []);
   byFloor.get(m.floorKey)[m.index - 1] = `/maps/${m.file}`;
