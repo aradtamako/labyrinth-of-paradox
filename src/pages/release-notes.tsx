@@ -1,5 +1,5 @@
 import { Database, ExternalLink, FileText, Sparkles, Wrench } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -12,6 +12,7 @@ import {
   type ReleaseKind,
 } from '@/data/release-notes'
 import { useI18n } from '@/lib/i18n'
+import { markReleaseNotesRead } from '@/lib/release-notes-read'
 import { canonical } from '@/lib/locale'
 import { cn } from '@/lib/utils'
 import type { TimelineTone } from '@/components/timeline'
@@ -38,6 +39,11 @@ type Filter = (typeof FILTERS)[number]
 export function ReleaseNotesPage() {
   const { t, x, locale } = useI18n()
   const [filter, setFilter] = useState<Filter>('all')
+
+  // 開いたら既読にして、ヘッダーの通知マークを消す。
+  useEffect(() => {
+    markReleaseNotesRead()
+  }, [])
 
   // 該当する更新が入ったリリース自体を残す。リリース内の他の行も文脈として見せる。
   const notes =
