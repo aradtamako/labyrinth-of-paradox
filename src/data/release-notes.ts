@@ -38,7 +38,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       {
         kind: 'data',
         text: {
-          ja: '36-37区域のシードマップ画像とサムネイルを追加し、収録範囲を1〜36区域に拡大。',
+          ja: '36-37区域のシードマップ画像とサムネイルを追加し、収録範囲を1〜37区域に拡大。',
           en: 'Seed map images and thumbnails for area 36-37, extending coverage to areas 1-37.',
         },
       },
