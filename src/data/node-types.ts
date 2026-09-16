@@ -195,6 +195,10 @@ const REWARD_TEXT: Record<string, Localized> = {
     ja: 'エピック誓約結晶製作書選択箱',
     en: 'Epic Oath Crystal Crafting Scroll Selection Box',
   },
+  '태초 서약 결정 제작서 선택 상자': {
+    ja: '太初誓約結晶製作書選択箱',
+    en: 'Primordial Oath Crystal Crafting Scroll Selection Box',
+  },
   '검은 질병의 레거시 ▶ 디레지에 레거시 변환서 상자': {
     ja: '黒い病気のレガシー ▶ ディレジエ レガシー変換書 箱',
     en: 'Legacy of the Black Plague ▶ Diregie Legacy Conversion Scroll Box',
