@@ -46,5 +46,15 @@ export const rewardIconForName = (name: string) => {
 
   if (name === '外郭入場券') return '/minimap/3.png'
   if (name === '迷宮調査券') return '/minimap/4.png'
+  if (name === '115Lvセット 太初黒牙アクセサリー選択箱')
+    return '/rewards/primeval_black_fang_accessory_select_box.png'
+  if (name === '115Lvセット 太初アクセサリー壺 選択箱')
+    return '/rewards/primordial_accessory_jar_select_box.png'
+  if (name === '115Lvセット 太初アクセサリー 選択箱')
+    return '/rewards/primordial_accessory_select_box.png'
+  if (name === '太初レガシー武器選択箱') return '/rewards/primeval_legacy_weapon_select_box.png'
+  if (name === '太初 一般武器 選択箱') return '/rewards/primordial_normal_weapon_select_box.png'
+  if (name === 'エピック誓約結晶壺') return '/rewards/epic_oath_crystal_pot.png'
+  if (name === '太初誓約結晶壺') return '/rewards/primordial_oath_crystal_pot.png'
   return undefined
 }
