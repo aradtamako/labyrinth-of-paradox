@@ -390,6 +390,9 @@ export const AREA_REWARDS: Record<string, AreaReward> = {
 
   // --- 第34区域 ---
   '34:giant_armament_warehouse:primeval': R.primordialAccessoryJarBox,
+
+  // --- 第35区域 ---
+  '35:armament_warehouse:primeval': R.primordialAccessoryJarBox,
 }
 
 /** 区域ごとの推奨名声と、ボス体力の倍率。 */
