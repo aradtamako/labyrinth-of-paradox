@@ -1,4 +1,4 @@
-import { SiteHeader } from '@/components/site-header'
+import { CONTACT_URL, SiteHeader } from '@/components/site-header'
 import { useI18n } from '@/lib/i18n'
 import { useRoute, useScrollRestoration } from '@/lib/router'
 import { FloorDetailPage } from '@/pages/floor-detail'
@@ -35,7 +35,15 @@ function SiteFooter() {
 
   return (
     <footer className="mt-16 border-t">
-      <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-muted-foreground">
+        <a
+          href={CONTACT_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="w-fit hover:text-foreground hover:underline"
+        >
+          {t.nav.contact}
+        </a>
         <p>{t.footer.disclaimer}</p>
       </div>
     </footer>

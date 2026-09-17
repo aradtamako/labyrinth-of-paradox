@@ -1,4 +1,4 @@
-import { Languages, Menu, Moon, Sun } from 'lucide-react'
+import { ArrowUpRight, Languages, Menu, Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -11,7 +11,18 @@ import type { UiText } from '@/lib/ui-strings'
 import type { Route } from '@/lib/router'
 import { useTheme } from '@/lib/theme'
 
-const NAV = [
+/** お問い合わせの受け付け先（外部フォーム）。 */
+export const CONTACT_URL = 'https://arad.pure-db.com/contact'
+
+interface NavItem {
+  href: string
+  label: (t: UiText) => string
+  match: string
+  /** 真なら内部ハッシュではなく外部 URL としてそのまま開く。 */
+  external?: boolean
+}
+
+const NAV: NavItem[] = [
   { href: '#/', label: (t: UiText) => t.nav.overview, match: 'overview' },
   { href: '#/floors', label: (t: UiText) => t.nav.floors, match: 'floors' },
   { href: '#/rewards', label: (t: UiText) => t.nav.rewards, match: 'rewards' },
@@ -21,7 +32,13 @@ const NAV = [
     label: (t: UiText) => t.nav.releaseNotes,
     match: 'release-notes',
   },
-] as const
+  {
+    href: CONTACT_URL,
+    label: (t: UiText) => t.nav.contact,
+    match: 'contact',
+    external: true,
+  },
+]
 
 export function SiteHeader({ route }: { route: Route }) {
   const { theme, toggle } = useTheme()
@@ -45,28 +62,41 @@ export function SiteHeader({ route }: { route: Route }) {
           </span>
         </a>
 
-        {/* 項目が5つになったため、インライン表示は md から（640px 幅では収まらない） */}
+        {/* 項目が6つになったため、インライン表示は md から（640px 幅では収まらない） */}
         <nav className="ml-6 hidden items-center gap-1 md:flex">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={localizedHash(locale, item.href)}
-              className={cn(
-                'relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
-                isActive(item.match)
-                  ? 'bg-secondary text-secondary-foreground'
-                  : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
-              )}
-            >
-              {item.label(t)}
-              {item.match === 'release-notes' && showDot && (
-                <span
-                  aria-hidden="true"
-                  className="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-red-500 ring-2 ring-background"
-                />
-              )}
-            </a>
-          ))}
+          {NAV.map((item) =>
+            item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-0.5 rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
+              >
+                {item.label(t)}
+                <ArrowUpRight className="size-3.5" />
+              </a>
+            ) : (
+              <a
+                key={item.href}
+                href={localizedHash(locale, item.href)}
+                className={cn(
+                  'relative rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
+                  isActive(item.match)
+                    ? 'bg-secondary text-secondary-foreground'
+                    : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
+                )}
+              >
+                {item.label(t)}
+                {item.match === 'release-notes' && showDot && (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-0.5 -right-0.5 size-2 rounded-full bg-red-500 ring-2 ring-background"
+                  />
+                )}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="ml-auto flex items-center gap-1">
@@ -112,27 +142,40 @@ export function SiteHeader({ route }: { route: Route }) {
                 <SheetTitle>{t.nav.menu}</SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4">
-                {NAV.map((item) => (
-                  <a
-                    key={item.href}
-                    href={localizedHash(locale, item.href)}
-                    onClick={() => setOpen(false)}
-                    className={cn(
-                      'relative rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                      isActive(item.match)
-                        ? 'bg-secondary text-secondary-foreground'
-                        : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
-                    )}
-                  >
-                    {item.label(t)}
-                    {item.match === 'release-notes' && showDot && (
-                      <span
-                        aria-hidden="true"
-                        className="absolute top-1 right-1 size-2 rounded-full bg-red-500 ring-2 ring-background"
-                      />
-                    )}
-                  </a>
-                ))}
+                {NAV.map((item) =>
+                  item.external ? (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-0.5 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
+                    >
+                      {item.label(t)}
+                      <ArrowUpRight className="size-3.5" />
+                    </a>
+                  ) : (
+                    <a
+                      key={item.href}
+                      href={localizedHash(locale, item.href)}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        'relative rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                        isActive(item.match)
+                          ? 'bg-secondary text-secondary-foreground'
+                          : 'text-muted-foreground hover:bg-secondary/60 hover:text-foreground',
+                      )}
+                    >
+                      {item.label(t)}
+                      {item.match === 'release-notes' && showDot && (
+                        <span
+                          aria-hidden="true"
+                          className="absolute top-1 right-1 size-2 rounded-full bg-red-500 ring-2 ring-background"
+                        />
+                      )}
+                    </a>
+                  ),
+                )}
               </nav>
             </SheetContent>
           </Sheet>
