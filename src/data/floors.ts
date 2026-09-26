@@ -834,6 +834,88 @@ const SEEDS: FloorSeed[] = [
       4: { seed: '22322' },
     },
   },
+  {
+    key: '38',
+    areas: [38],
+    no: 5671605,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初アクセサリー「選択」箱', en: 'Primordial Accessory "Selection" Box' },
+      { ja: 'エピック誓約選択書', en: 'Epic Oath Selection Scroll' },
+      { ja: 'エピック〜太初誓約結晶壺', en: 'Epic–Primordial Oath Crystal Jar' },
+      { ja: 'エピック天秤', en: 'Epic Scale' },
+      { ja: '誓約経験値 143,500', en: 'Oath EXP 143,500' },
+      { ja: 'レジェンダリー誓約結晶選択箱', en: 'Legendary Oath Crystal Selection Box' },
+    ],
+    notes: [
+      {
+        ja: '38区域も34区域以降と同じ 7×5 配置。22222 が4種類（A・B・C・D）あり、青い点線の位置で区別する。',
+        en: 'Area 38 keeps the same 7×5 layout introduced in area 34, and 22222 comes in four variants (A, B, C, D) told apart by the blue dotted lines.',
+      },
+    ],
+    meta: {
+      0: { seed: '22222', seedNote: { ja: 'A', en: 'A' } },
+      1: { seed: '22222', seedNote: { ja: 'B', en: 'B' } },
+      2: { seed: '22222', seedNote: { ja: 'C', en: 'C' } },
+      3: { seed: '22222', seedNote: { ja: 'D', en: 'D' } },
+      4: { seed: '22332' },
+    },
+  },
+  {
+    key: '39',
+    areas: [39],
+    no: 5691001,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶選択箱', en: 'Primordial Oath Crystal Selection Box' },
+      { ja: 'エピック装備選択箱', en: 'Epic Equipment Selection Box' },
+      { ja: '光輝のソウル 100個', en: 'Radiance Soul ×100' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+      { ja: '啓示 1,000個', en: 'Doom Oracle ×1,000' },
+    ],
+    notes: [
+      {
+        ja: '39区域も34区域以降と同じ 7×5 配置。',
+        en: 'Area 39 keeps the same 7×5 layout introduced in area 34.',
+      },
+    ],
+    meta: {
+      0: { seed: '22222' },
+      1: { seed: '22322' },
+      2: { seed: '22232' },
+      3: { seed: '23223' },
+      4: { seed: '32222' },
+    },
+  },
+  {
+    key: '40',
+    areas: [40],
+    no: 5707438,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初啓示の書（太初誓約選択）', en: 'Primordial Book of Revelation (Primordial Oath Selection)' },
+      { ja: '太初装備昇級書', en: 'Primordial Equipment Upgrade Scroll' },
+      {
+        ja: '祝聖防具アップグレード券（夜明けの光の玉／エピックソウル消費）',
+        en: 'Consecrated Armor Upgrade Ticket (consumes Glimmer of Dawn / Epic Souls)',
+      },
+      { ja: 'エピック〜太初誓約結晶壺', en: 'Epic–Primordial Oath Crystal Jar' },
+      { ja: '誓約経験値 143,500', en: 'Oath EXP 143,500' },
+    ],
+    notes: [
+      {
+        ja: '40区域も34区域以降と同じ 7×5 配置。22323 が2種類（A・B）あり、青い点線の位置で区別する。',
+        en: 'Area 40 keeps the same 7×5 layout introduced in area 34, and 22323 comes in two variants (A, B) told apart by the blue dotted lines.',
+      },
+    ],
+    meta: {
+      0: { seed: '21222' },
+      1: { seed: '21322' },
+      2: { seed: '22323', seedNote: { ja: 'A', en: 'A' } },
+      3: { seed: '22323', seedNote: { ja: 'B', en: 'B' } },
+      4: { seed: '32222' },
+    },
+  },
 ]
 
 export const FLOORS: Floor[] = SEEDS.map((s) => {
@@ -860,7 +942,7 @@ export const FLOOR_BY_AREA = new Map<number, Floor>(
   FLOORS.flatMap((f) => f.areas.map((a) => [a, f] as const)),
 )
 
-export const MAX_AREA = 37
+export const MAX_AREA = 40
 
 /**
  * 一覧表示用の軽量サムネイル（scripts/make-thumbs.mjs で生成）のパス。

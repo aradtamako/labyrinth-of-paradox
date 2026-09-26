@@ -221,6 +221,20 @@ const REWARD_TEXT: Record<string, Localized> = {
     ja: '太初レガシー武器選択箱',
     en: 'Primordial Legacy Weapon Selection Box',
   },
+  '영롱한 에픽~태초 서약 결정 항아리': {
+    ja: '燦爛たるエピック〜太初 誓約結晶壺',
+    en: 'Iridescent Epic–Primordial Oath Crystal Jar',
+  },
+  '찬란한 레전더리~태초 세트 서약 결정 항아리 선택 상자': {
+    ja: '燦爛たるレジェンダリー〜太初 セット誓約結晶壺選択箱',
+    en: 'Brilliant Legendary–Primordial Set Oath Crystal Jar Selection Box',
+  },
+  '태초 서약 결정 선택 상자': {
+    ja: '太初誓約結晶選択箱',
+    en: 'Primordial Oath Crystal Selection Box',
+  },
+  '태초 계시의 서': { ja: '太初啓示の書', en: 'Primordial Book of Revelation' },
+  '에픽 계시의 서': { ja: 'エピック啓示の書', en: 'Epic Book of Revelation' },
 }
 
 /** 報酬名（日本語表記）から引く補足文。 */
@@ -454,11 +468,13 @@ function buildNode(area: number, raw: RawNode): MapNode {
  * 34区域は3種が同じ「22222」を持つ（A/B/C で区別）ため、末尾に注記を添えてタブや保存キーを一意にする。
  * 32221・32222 は元データ側が明示している；route の3枚は順に 22222-A..C へ振る。
  * 37区域も同じく route 形式で、4枚の 22222（A/B/C/D）と 22322 からなる。
+ * 38区域も同じく route 形式で、4枚の 22222（A/B/C/D）と 22332 からなる。
  * route 番号順に A..D を振る（34区域の route1..3 → A..C と同じ規則）。
  */
 const SEED_CODE_OVERRIDES: Record<number, string[]> = {
   34: ['22222-A', '32222', '22222-B', '32221', '22222-C'],
   37: ['22222-A', '22222-B', '22322', '22222-C', '22222-D'],
+  38: ['22222-A', '22222-B', '22222-C', '22332', '22222-D'],
 }
 
 const perAreaCount = new Map<number, number>()
