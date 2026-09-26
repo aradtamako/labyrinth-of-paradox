@@ -31,6 +31,34 @@ export const prUrl = (no: number) => `${REPOSITORY_URL}/pull/${no}`
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    date: '2026-09-26',
+    title: { ja: '38〜40区域を収録', en: 'Areas 38–40 added' },
+    prs: [29],
+    entries: [
+      {
+        kind: 'data',
+        text: {
+          ja: '38〜40区域のシードマップ画像とサムネイルを追加し、収録範囲を1〜40区域に拡大。',
+          en: 'Seed map images and thumbnails for areas 38-40, extending coverage to areas 1-40.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '38〜40区域のノードデータ（マスごとの種別・等級・報酬）を取り込み、報酬一覧の逆引き対象も拡大。',
+          en: 'Node data — per-cell type, tier and reward — imported for areas 38-40, widening the reward index.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '区域別の推奨名声とボス体力倍率を40区域まで延長。',
+          en: 'Per-area recommended fame and boss HP multipliers extended through area 40.',
+        },
+      },
+    ],
+  },
+  {
     date: '2026-09-14',
     title: { ja: '36区域を収録', en: 'Area 36 added' },
     prs: [22, 23, 24],
