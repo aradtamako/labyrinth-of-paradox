@@ -276,4 +276,25 @@ export const FLOOR_IMAGES: Record<string, readonly string[]> = {
     '/maps/f37-04.png',
     '/maps/f37-05.png',
   ],
+  '38': [
+    '/maps/f38-01.png',
+    '/maps/f38-02.png',
+    '/maps/f38-03.png',
+    '/maps/f38-04.png',
+    '/maps/f38-05.png',
+  ],
+  '39': [
+    '/maps/f39-01.png',
+    '/maps/f39-02.png',
+    '/maps/f39-03.png',
+    '/maps/f39-04.png',
+    '/maps/f39-05.png',
+  ],
+  '40': [
+    '/maps/f40-01.png',
+    '/maps/f40-02.png',
+    '/maps/f40-03.png',
+    '/maps/f40-04.png',
+    '/maps/f40-05.png',
+  ],
 }
