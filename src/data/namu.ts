@@ -223,7 +223,7 @@ const R = {
   },
   apostateFinalTaskTicket: {
     name: {
-      ja: '背教者の城 + 最後の任務 討伐券',
+      ja: '背教者の城 + 最後の試練 討伐券',
       en: 'Castle of the Apostate + The Final Task Subjugation Ticket',
     },
     nameKr: '배교자의 성 + 최후의 과업 토벌권',

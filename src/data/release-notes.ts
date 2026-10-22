@@ -283,7 +283,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       {
         kind: 'data',
         text: {
-          ja: '討伐券を2種追加（背教者の城 & 最後の任務、アポカリプス：アンティエンバイの軍団討伐）。',
+          ja: '討伐券を2種追加（背教者の城 & 最後の試練、アポカリプス：アンティエンバイの軍団討伐）。',
           en: 'Two subjugation tickets added (Castle of the Apostate & The Final Task, and the Legion gate Apocalypse: Antienbai).',
         },
       },

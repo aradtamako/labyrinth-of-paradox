@@ -181,7 +181,7 @@ export const SUBJUGATION_TICKETS: SubjugationTicket[] = [
     // 「最後の過業」実装後に追加された6番目の討伐券。公式アップデートページ未掲載のため、
     // 必要名声は「最後の過業」の入場名声から採る。
     name: {
-      ja: '背教者の城 & 最後の任務 討伐券',
+      ja: '背教者の城 & 最後の試練 討伐券',
       en: 'Castle of the Apostate & The Final Task — Subjugation Ticket',
     },
     iconId: TICKET_ICON.apostateFinalTask,

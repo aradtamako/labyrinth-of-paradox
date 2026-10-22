@@ -17,7 +17,7 @@ export const TICKET_ICON = {
   nightmareLibrary: 1023,
   /** 星座亀の大書庫 & 背教者の城 討伐券 */
   libraryApostate: 1024,
-  /** 背教者の城 & 最後の任務 討伐券 */
+  /** 背教者の城 & 最後の試練 討伐券 */
   apostateFinalTask: 1025,
   /** アポカリプス：アンティエンバイ 2段階討伐券 */
   apocalypseAntienbai: 1026,
@@ -30,7 +30,7 @@ export const SUBJUGATION_REWARD_ICON: Record<string, number> = {
   '死の女神殿 + 解放された凶夢 討伐券': TICKET_ICON.deathGoddessNightmare,
   '解放された凶夢 + 星座亀の大書庫 討伐券': TICKET_ICON.nightmareLibrary,
   '星座亀の大書庫 + 背教者の城 討伐券': TICKET_ICON.libraryApostate,
-  '背教者の城 + 最後の任務 討伐券': TICKET_ICON.apostateFinalTask,
+  '背教者の城 + 最後の試練 討伐券': TICKET_ICON.apostateFinalTask,
   'アポカリプス：アンティエンバイ 2段階討伐券': TICKET_ICON.apocalypseAntienbai,
 }
 
