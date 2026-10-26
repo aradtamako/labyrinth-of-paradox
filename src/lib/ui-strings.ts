@@ -18,7 +18,7 @@ const ja = {
   meta: {
     title: '逆説の迷宮 攻略 | ダンジョン&ファイター',
     description:
-      'ダンジョン&ファイター「逆説の迷宮」の攻略データベース。1〜40区域のシードマップ、名声上昇値、主要報酬、調査券・討伐券・傭兵団の仕様をまとめています。',
+      'ダンジョン&ファイター「逆説の迷宮」の攻略データベース。1〜49区域のシードマップ、名声上昇値、主要報酬、調査券・討伐券・傭兵団の仕様をまとめています。',
   },
 
   nav: {
@@ -65,7 +65,7 @@ const ja = {
     heroMaps: '区域マップを見る',
     heroSystem: 'システム解説',
     heroTimeLimit: '制限時間 4分／区域',
-    heroAreaCount: (maxArea: number) => `全40区域（マップ収録は ${maxArea} 区域まで）`,
+    heroAreaCount: (maxArea: number) => `全49区域（マップ収録は ${maxArea} 区域まで）`,
 
     entryEyebrow: '入場条件',
     entryTitle: 'ダンジョン基本情報',
@@ -111,7 +111,7 @@ const ja = {
     sourcesTitle: '出典',
     sourceOfficialLabel: 'ダンジョン&ファイター 公式 — Season12 Act0 2-2 アップデート',
     sourceOfficialNote: '入場条件・討伐券・傭兵団などの仕様',
-    sourceGuideLabel: 'DCインサイド 던파IP マイナーギャラリー — 미궁 1~40층 모음',
+    sourceGuideLabel: 'DCインサイド 던파IP マイナーギャラリー — 미궁 1~45층 모음',
     sourceGuideNote: '各区域のシードマップと報酬情報',
     sourceNodeNote: (areas: string) => `マスごとのノード配置・報酬データ（${areas}）`,
     sourceNamuNote: (license: string) =>
@@ -310,7 +310,7 @@ const en: UiText = {
   meta: {
     title: 'Labyrinth of Paradox Guide | Dungeon & Fighter',
     description:
-      'A strategy database for the Dungeon & Fighter dungeon "Labyrinth of Paradox": seed maps for areas 1–40, fame gains, key rewards, and the rules behind survey tickets, subjugation tickets and the mercenary group.',
+      'A strategy database for the Dungeon & Fighter dungeon "Labyrinth of Paradox": seed maps for areas 1–49, fame gains, key rewards, and the rules behind survey tickets, subjugation tickets and the mercenary group.',
   },
 
   nav: {
@@ -353,7 +353,7 @@ const en: UiText = {
     heroMaps: 'View area maps',
     heroSystem: 'System guide',
     heroTimeLimit: '4-minute limit per area',
-    heroAreaCount: (maxArea: number) => `40 areas total (maps cover areas 1–${maxArea})`,
+    heroAreaCount: (maxArea: number) => `49 areas total (maps cover areas 1–${maxArea})`,
 
     entryEyebrow: 'Entry requirements',
     entryTitle: 'Dungeon basics',
@@ -400,7 +400,7 @@ const en: UiText = {
     sourcesTitle: 'Sources',
     sourceOfficialLabel: 'Dungeon & Fighter official — Season 12 Act 0 2-2 update',
     sourceOfficialNote: 'Entry requirements, subjugation tickets, mercenary group',
-    sourceGuideLabel: 'DCInside 던파IP minor gallery — 미궁 1~40층 모음',
+    sourceGuideLabel: 'DCInside 던파IP minor gallery — 미궁 1~45층 모음',
     sourceGuideNote: 'Seed maps and reward information for each area',
     sourceNodeNote: (areas: string) => `Per-room node layout and reward data (${areas})`,
     sourceNamuNote: (license: string) =>

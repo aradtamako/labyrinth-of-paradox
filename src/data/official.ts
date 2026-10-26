@@ -43,7 +43,7 @@ export const ENTRY_SPECS: SpecRow[] = [
   },
   {
     label: { ja: '構成', en: 'Structure' },
-    value: { ja: 'アカウント単位 / 1〜40区域', en: 'Account-wide / areas 1–40' },
+    value: { ja: 'アカウント単位 / 1〜49区域', en: 'Account-wide / areas 1–49' },
   },
 ]
 
