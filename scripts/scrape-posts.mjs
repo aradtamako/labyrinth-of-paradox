@@ -49,6 +49,12 @@ const POSTS = [
   { key: "38", no: 5671605, title: "38층" },
   { key: "39", no: 5691001, title: "39층" },
   { key: "40", no: 5707438, title: "40층" },
+  { key: "41", no: 5727845, title: "41층" },
+  { key: "42", no: 5745223, title: "42층" },
+  { key: "43", no: 5765480, title: "43층" },
+  { key: "44", no: 5780628, title: "44층" },
+  { key: "45", no: 5797805, title: "45층" },
+  { key: "46", no: 5811411, title: "46층" },
 ];
 
 const UA =

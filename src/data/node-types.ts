@@ -235,6 +235,38 @@ const REWARD_TEXT: Record<string, Localized> = {
   },
   '태초 계시의 서': { ja: '太初啓示の書', en: 'Primordial Book of Revelation' },
   '에픽 계시의 서': { ja: 'エピック啓示の書', en: 'Epic Book of Revelation' },
+  '에픽 서약 결정 선택 상자': {
+    ja: 'エピック誓約結晶選択箱',
+    en: 'Epic Oath Crystal Selection Box',
+  },
+  '115레벨 세트 영롱한 에픽~태초 장비 항아리 선택 상자': {
+    ja: '115Lvセット 燦爛たるエピック〜太初 装備壺 選択箱',
+    en: 'Lv.115 Set Iridescent Epic–Primordial Equipment Jar Selection Box',
+  },
+  '115레벨 세트 태초 악세서리 항아리 선택 상자': {
+    ja: '115Lvセット 太初アクセサリー壺 選択箱',
+    en: 'Lv.115 Set Primordial Accessory Jar Selection Box',
+  },
+  '영롱한 에픽~태초 세트 서약 결정 항아리 선택 상자': {
+    ja: '燦爛たるエピック〜太初 セット誓約結晶壺選択箱',
+    en: 'Iridescent Epic–Primordial Set Oath Crystal Jar Selection Box',
+  },
+  '태초 광휘의 의지': { ja: '太初 光輝の意志', en: 'Primordial Will of Radiance' },
+  '미궁 파편': { ja: '迷宮の欠片', en: 'Labyrinth Fragment' },
+  '에픽 소울': { ja: 'エピックソウル', en: 'Epic Soul' },
+  'SD 디소, 난티아 상자': { ja: 'SD ディソ・ナンティア箱', en: 'SD Diso / Nantia Box' },
+  '드리운 어둠을 가르는 빛 상자': {
+    ja: '垂れ込めた闇を切り裂く光の箱',
+    en: 'Box of Light That Cleaves the Hanging Darkness',
+  },
+  '미련의 전당 배경화면 등록권': {
+    ja: '未練の殿堂 背景登録券',
+    en: 'Hall of Regret Background Ticket',
+  },
+  '미련의 전당 내 정보 프레임': {
+    ja: '未練の殿堂 プロフィールフレーム',
+    en: 'Hall of Regret Profile Frame',
+  },
 }
 
 /** 報酬名（日本語表記）から引く補足文。 */

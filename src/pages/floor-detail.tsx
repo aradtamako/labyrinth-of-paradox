@@ -139,12 +139,14 @@ export function FloorDetailPage({ floorKey }: { floorKey: string }) {
       <Separator className="mt-12" />
 
       <section className="mt-6 flex flex-wrap items-center gap-3">
-        <Button asChild variant="outline" size="sm">
-          <a href={floor.sourceUrl} target="_blank" rel="noreferrer noopener">
-            <ExternalLink className="size-3.5" />
-            {t.floorDetail.linkSourcePost}
-          </a>
-        </Button>
+        {floor.sourceUrl && (
+          <Button asChild variant="outline" size="sm">
+            <a href={floor.sourceUrl} target="_blank" rel="noreferrer noopener">
+              <ExternalLink className="size-3.5" />
+              {t.floorDetail.linkSourcePost}
+            </a>
+          </Button>
+        )}
         {maps.length > 0 && (
           <Button asChild variant="outline" size="sm">
             <a href={NODE_DATA_SOURCE.url} target="_blank" rel="noreferrer noopener">

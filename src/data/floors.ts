@@ -38,14 +38,16 @@ export interface Floor {
   /** 攻略の要点。 */
   notes?: Localized[]
   images: FloorImage[]
-  sourceUrl: string
+  /** 元記事。まだ投稿されていない区域（47区域以降）は持たない。 */
+  sourceUrl?: string
   videoUrl?: string
 }
 
 interface FloorSeed {
   key: string
   areas: number[]
-  no: number
+  /** 元記事の番号。マップ画像がまだ投稿されていない区域では省略する。 */
+  no?: number
   fame?: { from: number; to: number; delta: number }
   rewards?: Localized[]
   notes?: Localized[]
@@ -916,6 +918,290 @@ const SEEDS: FloorSeed[] = [
       4: { seed: '32222' },
     },
   },
+  {
+    key: '41',
+    areas: [41],
+    no: 5727845,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶レシピ選択箱', en: 'Primordial Oath Crystal Recipe Selection Box' },
+      { ja: 'エピック結晶選択箱', en: 'Epic Crystal Selection Box' },
+      { ja: 'エピック装備選択箱', en: 'Epic Equipment Selection Box' },
+      { ja: 'エピック〜太初壺選択箱', en: 'Epic–Primordial Jar Selection Box' },
+      { ja: 'エピック結晶壺', en: 'Epic Crystal Jar' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '41区域も34区域以降と同じ 7×5 配置。22222 が3種類（A・B・C）、32222 が2種類（A・B）あり、青い点線の位置で区別する。',
+        en: 'Area 41 keeps the 7×5 layout introduced in area 34. 22222 comes in three variants (A, B, C) and 32222 in two (A, B), told apart by the blue dotted lines.',
+      },
+      {
+        ja: 'dnf.umi.cat 側がシードコードを持っていない配置があり、そのタブは「配置1」のような仮名になる。元記事の画像のラベルと見比べて判別してほしい。',
+        en: 'dnf.umi.cat has no seed code for some of the layouts, so those tabs show placeholder names such as “配置1”. Compare them with the labels on the original map images.',
+      },
+    ],
+    meta: {
+      0: { seed: '22222', seedNote: { ja: 'A', en: 'A' } },
+      1: { seed: '22222', seedNote: { ja: 'B', en: 'B' } },
+      2: { seed: '22222', seedNote: { ja: 'C', en: 'C' } },
+      3: { seed: '32222', seedNote: { ja: 'A', en: 'A' } },
+      4: { seed: '32222', seedNote: { ja: 'B', en: 'B' } },
+      5: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた42区域の先行情報。',
+          en: "The area 42 preview the original post included.",
+        },
+      },
+    },
+  },
+  {
+    key: '42',
+    areas: [42],
+    no: 5745223,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      {
+        ja: '黒い病気のレガシー ▶ デガシー変換書',
+        en: 'Legacy of the Black Plague ▶ Degacy Conversion Scroll',
+      },
+      {
+        ja: '太初レガシー選択変換書（デガシーにも使用可）',
+        en: 'Primordial Legacy Selection Change Ticket (works on Degacies too)',
+      },
+      { ja: 'エピック〜太初結晶壺選択箱', en: 'Epic–Primordial Crystal Jar Selection Box' },
+      { ja: '太初アクセサリー壺選択箱', en: 'Primordial Accessory Jar Selection Box' },
+      { ja: '祝聖アップグレード券', en: 'Consecrated Upgrade Ticket' },
+    ],
+    notes: [
+      {
+        ja: '42区域も 7×5 配置で、5種類のシードコードはすべて異なる。',
+        en: 'Area 42 also uses the 7×5 layout, and all five seed codes differ.',
+      },
+    ],
+    meta: {
+      0: { seed: '12221' },
+      1: { seed: '21123' },
+      2: { seed: '22122' },
+      3: { seed: '22222' },
+      4: { seed: '32221' },
+      5: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた43区域の先行情報。',
+          en: 'The area 43 preview the original post included.',
+        },
+      },
+    },
+  },
+  {
+    key: '43',
+    areas: [43],
+    no: 5765480,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初 光輝の意志', en: 'Primordial Will of Radiance' },
+      {
+        ja: 'レジェンダリー〜太初誓約壺選択箱',
+        en: 'Legendary–Primordial Oath Jar Selection Box',
+      },
+      { ja: '祝聖アップグレード券', en: 'Consecrated Upgrade Ticket' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '43区域も 7×5 配置。22222 が2種類（A・B）あり、青い点線の位置で区別する。',
+        en: 'Area 43 also uses the 7×5 layout. 22222 comes in two variants (A, B), told apart by the blue dotted lines.',
+      },
+      {
+        ja: 'dnf.umi.cat 側がシードコードを持っていない配置があり、そのタブは「配置1」のような仮名になる。元記事の画像のラベルと見比べて判別してほしい。',
+        en: 'dnf.umi.cat has no seed code for some of the layouts, so those tabs show placeholder names such as “配置1”. Compare them with the labels on the original map images.',
+      },
+    ],
+    meta: {
+      0: { seed: '13221' },
+      1: { seed: '22221' },
+      2: { seed: '22222', seedNote: { ja: 'A', en: 'A' } },
+      3: { seed: '22222', seedNote: { ja: 'B', en: 'B' } },
+      4: { seed: '32232' },
+      5: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた44区域の先行情報。',
+          en: 'The area 44 preview the original post included.',
+        },
+      },
+    },
+  },
+  {
+    key: '44',
+    areas: [44],
+    no: 5780628,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶レシピ選択箱', en: 'Primordial Oath Crystal Recipe Selection Box' },
+      { ja: '太初誓約結晶壺', en: 'Primordial Oath Crystal Jar' },
+      { ja: '太初アクセサリー選択箱', en: 'Primordial Accessory Selection Box' },
+      { ja: 'エピック誓約結晶選択箱', en: 'Epic Oath Crystal Selection Box' },
+      { ja: '光輝のソウル 100個', en: 'Radiance Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '44区域も 7×5 配置で、5種類のシードコードはすべて異なる。',
+        en: 'Area 44 also uses the 7×5 layout, and all five seed codes differ.',
+      },
+    ],
+    meta: {
+      0: { seed: '12222' },
+      1: { seed: '22122' },
+      2: { seed: '22221' },
+      3: { seed: '23122' },
+      4: { seed: '31212' },
+      5: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた45区域の先行情報。',
+          en: 'The area 45 preview the original post included.',
+        },
+      },
+    },
+  },
+  {
+    key: '45',
+    areas: [45],
+    no: 5797805,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶選択箱', en: 'Primordial Oath Crystal Selection Box' },
+      { ja: '太初レガシー武器選択箱', en: 'Primordial Legacy Weapon Selection Box' },
+      { ja: 'エピック装備選択箱', en: 'Epic Equipment Selection Box' },
+      { ja: '祝聖アップグレード券', en: 'Consecrated Upgrade Ticket' },
+      { ja: 'ソリッドソウル 100個', en: 'Solid Soul ×100' },
+    ],
+    notes: [
+      {
+        ja: '45区域も 7×5 配置。元記事では 12212(B) のラベルが2枚に付いており、片方は 12222(B) の誤記と思われる。',
+        en: 'Area 45 also uses the 7×5 layout. The original post labels two different maps 12212 (B); one of them is probably a typo for 12222 (B).',
+      },
+    ],
+    meta: {
+      0: { seed: '12212', seedNote: { ja: 'A', en: 'A' } },
+      1: { seed: '12212', seedNote: { ja: 'B', en: 'B' } },
+      2: { seed: '12222', seedNote: { ja: 'A', en: 'A' } },
+      3: { seed: '12212', seedNote: { ja: 'B（2枚目）', en: 'B (second)' } },
+      4: { seed: '22321' },
+      5: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた、46〜50区域についての公式コメント。',
+          en: 'The official comment on areas 46–50 that the original post included.',
+        },
+      },
+    },
+  },
+  {
+    key: '46',
+    areas: [46],
+    no: 5811411,
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初黒牙アクセサリー選択箱', en: 'Primordial Black Fang Accessory Selection Box' },
+      { ja: '太初誓約結晶選択箱', en: 'Primordial Oath Crystal Selection Box' },
+      { ja: 'SD ディソ・ナンティア クリーチャー', en: 'SD Diso / Nantia Creature' },
+      { ja: 'エピックソウル 10個×2', en: 'Epic Soul ×10 (×2)' },
+      { ja: '迷宮の欠片', en: 'Labyrinth Fragment' },
+    ],
+    notes: [
+      {
+        ja: '46区域からは報酬に迷宮の欠片が加わる。46〜50区域の討伐報酬で合計600個まで集められる。',
+        en: 'From area 46 the rewards include Labyrinth Fragments, up to 600 in total from the area 46–50 subjugation rewards.',
+      },
+      {
+        ja: '迷宮の欠片 200個は、NPC「ナミ・オルンは誰か、ノア」の商店でSDクリーチャー・オーラアバター・プロフィールフレーム・キャラクター選択画面の背景と交換できる。',
+        en: '200 fragments can be traded at the shop of the NPC “Nami Orun, Who Is Someone — Noah” for an SD creature, an aura avatar, a profile frame or a character-select background.',
+      },
+    ],
+    meta: {
+      0: {
+        figure: true,
+        caption: {
+          ja: '46区域から追加された迷宮の欠片と、交換に使うNPC商店。',
+          en: 'The Labyrinth Fragments added from area 46, and the NPC shop they are traded at.',
+        },
+      },
+      1: { seed: '12022' },
+      2: { seed: '12222' },
+      3: { seed: '21212' },
+      4: { seed: '21222' },
+      5: { seed: '22211' },
+      6: {
+        figure: true,
+        caption: {
+          ja: '元記事に添えられた47区域の先行情報。',
+          en: 'The area 47 preview the original post included.',
+        },
+      },
+    },
+  },
+  {
+    key: '47',
+    areas: [47],
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: 'エピック誓約結晶選択箱', en: 'Epic Oath Crystal Selection Box' },
+      {
+        ja: '垂れ込めた闇を切り裂く光の箱',
+        en: 'Box of Light That Cleaves the Hanging Darkness',
+      },
+      { ja: '迷宮の欠片', en: 'Labyrinth Fragment' },
+      { ja: 'エピックソウル 10個', en: 'Epic Soul ×10' },
+    ],
+    notes: [
+      {
+        ja: '47区域のシードマップ画像はまだ元記事に投稿されていない。マスごとのノードデータだけを dnf.umi.cat から取り込んでいる。',
+        en: 'No seed-map post for area 47 has been published yet, so only the per-cell node data from dnf.umi.cat is included.',
+      },
+    ],
+  },
+  {
+    key: '48',
+    areas: [48],
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初 光輝の意志', en: 'Primordial Will of Radiance' },
+      {
+        ja: '燦爛たるエピック〜太初 セット誓約結晶壺選択箱',
+        en: 'Brilliant Epic–Primordial Set Oath Crystal Jar Selection Box',
+      },
+      { ja: '未練の殿堂 背景登録券', en: 'Hall of Regret Background Ticket' },
+      { ja: '迷宮の欠片', en: 'Labyrinth Fragment' },
+      { ja: 'エピックソウル 10個', en: 'Epic Soul ×10' },
+    ],
+    notes: [
+      {
+        ja: '48区域のシードマップ画像も未投稿。マスごとのノードデータのみを収録している。',
+        en: 'Area 48 has no seed-map post either; only the per-cell node data is included.',
+      },
+    ],
+  },
+  {
+    key: '49',
+    areas: [49],
+    fame: { from: 127000, to: 127000, delta: 0 },
+    rewards: [
+      { ja: '太初誓約結晶選択箱', en: 'Primordial Oath Crystal Selection Box' },
+      { ja: '未練の殿堂 プロフィールフレーム', en: 'Hall of Regret Profile Frame' },
+      { ja: '迷宮の欠片', en: 'Labyrinth Fragment' },
+      { ja: 'エピックソウル 10個', en: 'Epic Soul ×10' },
+    ],
+    notes: [
+      {
+        ja: '49区域のシードマップ画像も未投稿。マスごとのノードデータのみを収録している。',
+        en: 'Area 49 has no seed-map post either; only the per-cell node data is included.',
+      },
+    ],
+  },
 ]
 
 export const FLOORS: Floor[] = SEEDS.map((s) => {
@@ -930,7 +1216,7 @@ export const FLOORS: Floor[] = SEEDS.map((s) => {
     rewards: s.rewards,
     notes: s.notes,
     videoUrl: s.videoUrl,
-    sourceUrl: postUrl(s.no),
+    sourceUrl: s.no === undefined ? undefined : postUrl(s.no),
     images: slice.map((src, i) => ({ src, ...(s.meta?.[i] ?? {}) })),
   }
 })
@@ -942,7 +1228,7 @@ export const FLOOR_BY_AREA = new Map<number, Floor>(
   FLOORS.flatMap((f) => f.areas.map((a) => [a, f] as const)),
 )
 
-export const MAX_AREA = 40
+export const MAX_AREA = 49
 
 /**
  * 一覧表示用の軽量サムネイル（scripts/make-thumbs.mjs で生成）のパス。

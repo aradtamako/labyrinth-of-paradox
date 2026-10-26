@@ -31,6 +31,33 @@ export const prUrl = (no: number) => `${REPOSITORY_URL}/pull/${no}`
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    date: '2026-10-26',
+    title: { ja: '41〜49区域を収録', en: 'Areas 41–49 added' },
+    entries: [
+      {
+        kind: 'data',
+        text: {
+          ja: '41〜46区域のシードマップ画像とサムネイルを追加。47〜49区域は元記事の画像がまだ無いため、ノードデータのみを収録した。',
+          en: 'Seed map images and thumbnails for areas 41-46. Areas 47-49 come with node data only, since no seed-map post exists for them yet.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '41〜49区域のノードデータ（マスごとの種別・等級・報酬）を取り込み、報酬一覧の逆引き対象も拡大。迷宮の欠片・エピックソウルなど新しい報酬名の訳も追加した。',
+          en: 'Node data — per-cell type, tier and reward — imported for areas 41-49, widening the reward index. New reward names such as Labyrinth Fragment and Epic Soul are translated too.',
+        },
+      },
+      {
+        kind: 'data',
+        text: {
+          ja: '区域別の推奨名声とボス体力倍率を49区域まで延長。',
+          en: 'Per-area recommended fame and boss HP multipliers extended through area 49.',
+        },
+      },
+    ],
+  },
+  {
     date: '2026-09-26',
     title: { ja: '38〜40区域を収録', en: 'Areas 38–40 added' },
     prs: [29],
